@@ -1,11 +1,16 @@
 {
-  "name": "fountain-inject",
-  "version": "0.0.1",
+  "name": "terres.info",
+  "version": "0.1",
   "dependencies": {
     "angular": "^1.5.0",
-    "angular-ui-router": "^0.3.1"
+    "angular-magnificent": "^0.1.1",
+    "angular-material": "^1.0.9",
+    "angular-route": "^1.5.8"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
   }
 }

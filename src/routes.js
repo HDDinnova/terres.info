@@ -3,13 +3,28 @@ angular
   .config(routesConfig);
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+function routesConfig($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
-  $urlRouterProvider.otherwise('/');
+  // $urlRouterProvider.otherwise('/');
+  //
+  // $stateProvider
+  //   .state('app', {
+  //     url: '/',
+  //     template: '<app></app>'
+  //   })
+  //   .state('register', {
+  //     url: '/register',
+  //     template: '<register></register>'
+  //   });
 
-  $stateProvider
-    .state('app', {
-      url: '/',
-      template: '<app></app>'
+  $routeProvider
+    .when('/', {
+      templateUrl: 'app/main.html'
+    })
+    .when('/register', {
+      templateUrl: 'app/register.html'
+    })
+    .otherwise({
+      redirectTo: 'app/main.html'
     });
 }
