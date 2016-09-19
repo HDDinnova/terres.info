@@ -122,7 +122,7 @@ var catalan = {
 };
 
 angular
-  .module('app', ['ui.router', 'ngAnimate', 'ngMaterial', 'angular-magnificent', 'pascalprecht.translate', 'ngSanitize'])
+  .module('app', ['ui.router', 'ngAnimate', 'ngMaterial', 'angular-magnificent', 'pascalprecht.translate', 'ngSanitize', 'ngCovervid'])
   .config(function ($mdThemingProvider, $translateProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('blue-grey', {

@@ -29,8 +29,9 @@ register-cf:hover{
   transition: .5s ease-in-out;
   color: rgba(255, 255, 255, .3);
   cursor: pointer;
+  z-index: 5;
 }
-register-doc{
+/*register-doc{
   background: url('../img/IMG_9982.jpg') no-repeat center bottom;
   background-size: cover;
 }
@@ -41,7 +42,7 @@ register-tf{
 register-cf{
   background: url('../img/IMG_9982.jpg') no-repeat center center;
   background-size: cover;
-}
+}*/
 .registerform{
   height: 100%;
 }

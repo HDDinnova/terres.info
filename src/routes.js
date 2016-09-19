@@ -13,7 +13,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('register', {
       url: '/register',
-      templateUrl: 'app/register/register.html'
+      templateUrl: 'app/register/register.html',
+      controller: 'RegisterCtrl'
     })
     .state('tourfilm', {
       url: '/register/tourfilm',
