@@ -75,8 +75,8 @@ var spanish = {
     TERART: 'Terres + '
   },
   NEWSLETTER: {
-    THANKS: 'Gracias per suscribir-te a la Newsletter',
-    EMAIL: 'Por favor, escribe tu dirección de email'
+    THANKS: 'Gracias por suscribir-te a la Newsletter',
+    EMAIL: 'Por favor, escribe tu email'
   }
 };
 
@@ -117,7 +117,7 @@ var catalan = {
   },
   NEWSLETTER: {
     THANKS: 'Gràcies per subscriure\'t a la Newsletter',
-    EMAIL: 'Si us plau, escriu la teva adreça d\'email'
+    EMAIL: 'Si us plau, escriu el teu email'
   }
 };
 
@@ -190,11 +190,7 @@ angular
       };
 
       $scope.subscribe = function () {
-        if ($scope.newsEmail != 'undefined') {
-          console.log($scope.newsEmail);
-        }
-
-        // $mdDialog.hide($scope.newsEmail);
+        $mdDialog.hide($scope.newsEmail);
       };
     }
   })

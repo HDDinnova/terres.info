@@ -1,5 +1,5 @@
 <md-dialog aria-label="Subscribe to our newsletter">
-  <form ng-cloak>
+  <form ng-cloak name="formSubscribe">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>terres film festival</h2>
@@ -7,11 +7,11 @@
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content">
+      <div layout="column" layout-align="start" flex="">
         <h2>{{'NEWSLETTER.THANKS' | translate}}</h2>
-        <md-input-container flex>
+        <md-input-container>
           <label for="EMAIL">{{'NEWSLETTER.EMAIL' | translate}}</label>
-          <input type="email" name="newsEmail" ng-model="newsEmail" required="true">
+          <input type="email" name="newsEmail" ng-model="newsEmail" required="true" flex="100">
         </md-input-container>
       </div>
     </md-dialog-content>
@@ -21,7 +21,7 @@
       <md-button ng-click="cancel()">
        Cancel
       </md-button>
-      <md-button ng-click="subscribe()">
+      <md-button ng-click="subscribe()" ng-disabled="formSubscribe.$invalid">
         OK
       </md-button>
     </md-dialog-actions>

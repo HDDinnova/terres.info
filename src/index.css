@@ -127,3 +127,7 @@ terres-footer{
   text-align: center;
   color: white;
 }
+md-dialog-content{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
