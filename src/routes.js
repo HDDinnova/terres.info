@@ -2,29 +2,26 @@ angular
   .module('app')
   .config(routesConfig);
 
-/** @ngInject */
-function routesConfig($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode(true).hashPrefix('!');
-  // $urlRouterProvider.otherwise('/');
-  //
-  // $stateProvider
-  //   .state('app', {
-  //     url: '/',
-  //     template: '<app></app>'
-  //   })
-  //   .state('register', {
-  //     url: '/register',
-  //     template: '<register></register>'
-  //   });
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/');
 
-  $routeProvider
-    .when('/', {
+  $stateProvider
+    .state('index', {
+      url: '/',
       templateUrl: 'app/main.html'
     })
-    .when('/register', {
-      templateUrl: 'app/register.html'
+    .state('register', {
+      url: '/register',
+      templateUrl: 'app/register/register.html'
     })
-    .otherwise({
-      redirectTo: 'app/main.html'
+    .state('tourfilm', {
+      url: '/register/tourfilm',
+      templateUrl: 'app/register/tourfilm/registertourfilm.html',
+      controller: 'regTf'
+    })
+    .state('tourfilm.form', {
+      url: '/',
+      templateUrl: 'app/register/tourfilm/data.html'
     });
 }

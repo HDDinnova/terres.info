@@ -1,5 +1,5 @@
 angular
   .module('app')
   .component('registerTf', {
-    templateUrl: 'app/registertf.html'
+    templateUrl: 'app/register/registertf.html'
   });

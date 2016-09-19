@@ -23,8 +23,11 @@ terres-menu{
   top: -50px;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
   transition: 1s ease-in-out;
+}
+.logomenu{
+  height: 1.2rem;
 }
 .actiu{
   top: 0;
@@ -32,11 +35,26 @@ terres-menu{
 .noindex{
   top: 0 !important;
 }
+/*.md-select-menu-container{
+  z-index: 9999;
+}*/
+md-toolbar md-select .md-text{
+  font-size: 15px;
+}
+md-select-menu md-content{
+  min-width: 45px;
+}
+md-select-menu md-option{
+  height: 35px;
+}
+md-select-menu .md-text{
+  font-size: 15px;
+}
 
 .main-container {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 // Estils per a la pàgina principal
@@ -78,6 +96,9 @@ terres-menu{
   margin: .5rem;
   position: relative;
   z-index: 1;
+}
+.title-h2 img{
+  height: 1.5rem;
 }
 .magnificent-slider{
   z-index: 0 !important;

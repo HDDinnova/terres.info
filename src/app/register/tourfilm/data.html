@@ -1,0 +1,72 @@
+<section class="register-form-data">
+  <h1>{{'REGISTER.NEW' | translate}}</h1>
+  <hr>
+  <h2>{{'CATEGORY' | translate}}: <strong>{{'TOURFILM' | translate}}</strong></h2>
+  <h3>{{'REGISTER.G_INF' | translate}}</h3>
+  <div layout="row" layout-align="start" flex="">
+    <md-radio-group ng-model="formData.section" flex="20" ng-change="updateImport()">
+      <md-radio-button value="terres" aria-label="terres"><img class="mini" src="img/terres-mini.png" alt="terres" /></md-radio-button>
+      <md-radio-button value="terres_arttur" aria-label="terres + Art&Tur"><img class="mini" src="img/terres-art-mini.png" alt="terres + Art&Tur" /></md-radio-button>
+    </md-radio-group>
+    <md-input-container flex="10">
+      <label for="nfilms">{{'REGISTER.N_FILMS' | translate}}</label>
+      <input type="number" name="nfilms" ng-model="formData.nfilms" min="1" max="3" required="true" ng-change="updateImport()">
+    </md-input-container>
+    <md-input-container flex="10">
+      <label for="import">{{'REGISTER.AMOUNT' | translate}}</label>
+      <input type="text" name="import" ng-model="formData.import" ng-value="preu" ng-disabled="true">
+    </md-input-container>
+    <md-input-container flex="10" ng-hide="true">
+      <label for="category">Category</label>
+      <input type="text" name="category" ng-model="formData.category" ng-value="valCat">
+    </md-input-container>
+  </div>
+  <h3>{{'REGISTER.P_INF' | translate}}</h3>
+  <div layout="row" layout-align="start" flex="">
+    <md-input-container flex="45">
+      <label for="pname">{{'REGISTER.P_NAME' | translate}}</label>
+      <input type="text" name="pname" ng-model="formData.pname" required="true">
+    </md-input-container>
+    <md-input-container flex="45">
+      <label for="cname">{{'REGISTER.C_NAME' | translate}}</label>
+      <input type="text" name="cname" ng-model="formData.cname" required="true">
+    </md-input-container>
+    <md-input-container flex="10">
+      <label for="vat">{{'REGISTER.VAT' | translate}}</label>
+      <input type="text" name="vat" ng-model="formData.vat" required="true" maxlength="9">
+    </md-input-container>
+  </div>
+  <div layout="row" layout-align="start" flex="">
+    <md-input-container flex="60">
+      <label for="address">{{'REGISTER.ADDR' | translate}}</label>
+      <input type="text" name="address" ng-model="formData.address" required="true">
+    </md-input-container>
+    <md-input-container flex="15">
+      <label for="address">{{'REGISTER.ZIP' | translate}}</label>
+      <input type="text" name="zip" ng-model="formData.zip" required="true" maxlength="5">
+    </md-input-container>
+    <md-input-container flex="25">
+      <label for="city">{{'REGISTER.CITY' | translate}}</label>
+      <input type="text" name="city" ng-model="formData.city" required="true">
+    </md-input-container>
+  </div>
+  <div layout="row" layout-align="start" flex="">
+    <md-input-container flex="25">
+      <label for="phone">{{'REGISTER.PHONE' | translate}}</label>
+      <input type="tel" name="phone" ng-model="formData.phone" required="true" maxlength="13">
+    </md-input-container>
+    <md-input-container flex="25">
+      <label for="email">{{'REGISTER.EMAIL' | translate}}</label>
+      <input type="email" name="email" ng-model="formData.email" required="true">
+    </md-input-container>
+    <md-input-container flex="25">
+      <label for="web">{{'REGISTER.WEB' | translate}}</label>
+      <input type="url" name="web" ng-model="formData.web">
+    </md-input-container>
+    <md-input-container flex="25">
+      <label for="facebook">Facebook</label>
+      <input type="text" name="facebook" ng-model="formData.facebook">
+    </md-input-container>
+  </div>
+</section>
+<!-- <button type="submit">Enviar</button> -->
