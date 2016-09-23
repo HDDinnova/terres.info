@@ -11,8 +11,9 @@ var english = {
   DOCUMENTARY: 'Documentary',
   CATEGORY: 'Category',
   SECTION: 'Section',
+  SUBMIT: 'Submit',
   REGISTER: {
-    NEW: 'Register new film',
+    NEW: 'Register new competitor',
     AMOUNT: 'Amount',
     N_FILMS: 'Number of films',
     G_INF: 'General Information',
@@ -35,7 +36,9 @@ var english = {
   },
   NEWSLETTER: {
     THANKS: 'Thank you for your subscription to our newsletter',
-    EMAIL: 'Please, enter your email address'
+    EMAIL: 'Please, enter your email address',
+    NAME: 'Name',
+    SURNAME: 'Surname'
   }
 };
 
@@ -52,8 +55,9 @@ var spanish = {
   DOCUMENTARY: 'Documental',
   CATEGORY: 'Categoria',
   SECTION: 'Sección',
+  SUBMIT: 'Enviar',
   REGISTER: {
-    NEW: 'Registro de nuevo film',
+    NEW: 'Registro de nuevo participante',
     AMOUNT: 'Importe',
     N_FILMS: 'Núm. de films',
     G_INF: 'Información general',
@@ -75,8 +79,10 @@ var spanish = {
     TERART: 'Terres + '
   },
   NEWSLETTER: {
-    THANKS: 'Gracias por suscribir-te a la Newsletter',
-    EMAIL: 'Por favor, escribe tu email'
+    THANKS: 'Gracias por suscribirte a la Newsletter',
+    EMAIL: 'Por favor, escribe tu email',
+    NAME: 'Nombre',
+    SURNAME: 'Apellidos'
   }
 };
 
@@ -93,8 +99,9 @@ var catalan = {
   DOCUMENTARY: 'Documental',
   CATEGORY: 'Categoria',
   SECTION: 'Secció',
+  SUBMIT: 'Enviar',
   REGISTER: {
-    NEW: 'Registre de nou film',
+    NEW: 'Registre de nou participant',
     AMOUNT: 'Import',
     N_FILMS: 'Nombre de films',
     G_INF: 'Informació general',
@@ -117,7 +124,9 @@ var catalan = {
   },
   NEWSLETTER: {
     THANKS: 'Gràcies per subscriure\'t a la Newsletter',
-    EMAIL: 'Si us plau, escriu el teu email'
+    EMAIL: 'Si us plau, escriu el teu email',
+    NAME: 'Nom',
+    SURNAME: 'Cognoms'
   }
 };
 
@@ -143,7 +152,7 @@ angular
       .translations('ca', catalan)
       .useSanitizeValueStrategy('escape');
   })
-  .controller('menuCtrl', function ($scope, $translate, $timeout, $mdDialog) {
+  .controller('menuCtrl', function ($scope, $translate, $timeout, $mdDialog, $http) {
     $scope.langs = [
       'CA',
       'ES',
@@ -173,24 +182,33 @@ angular
         clickOutsideToClose: false,
         fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
       })
-      .then(function (email) {
-        console.log(email);
+      .then(function (user) {
+        $http.post('/mapi/subscribe.php', user, null)
+          .success(function (data, status, headers) {
+            console.log(data);
+            console.log(status);
+            console.log(headers);
+          })
+          .error(function (data) {
+            console.log(data);
+          });
       }, function () {
         console.log('You cancelled the dialog.');
       });
     };
 
     function NewsCtrl($scope, $mdDialog) {
-      $scope.hide = function () {
-        $mdDialog.hide();
-      };
-
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
 
       $scope.subscribe = function () {
-        $mdDialog.hide($scope.newsEmail);
+        var persona = {
+          name: $scope.newsName,
+          surname: $scope.newsSurname,
+          mail: $scope.newsEmail
+        };
+        $mdDialog.hide(persona);
       };
     }
   })

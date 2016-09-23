@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope) {
+  .controller('regTf', function ($scope, $http) {
     $scope.formData = {};
     $scope.formData.section = 'terres';
     $scope.formData.nfilms = 1;
@@ -23,6 +23,12 @@ angular
     $scope.processTf = function () {
       $scope.formData.import = $scope.preu;
       $scope.formData.date = new Date();
-      console.log($scope.formData);
+      // console.log($scope.formData);
+      $http.post('/api/newCompetitor', $scope.formData)
+      .success(function (data, status, headers) {
+        console.log(data);
+        console.log(status);
+        console.log(headers);
+      });
     };
   });

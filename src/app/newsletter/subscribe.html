@@ -9,7 +9,15 @@
     <md-dialog-content>
       <div layout="column" layout-align="start" flex="">
         <h2>{{'NEWSLETTER.THANKS' | translate}}</h2>
-        <md-input-container>
+        <md-input-container flex="100">
+          <label for="newsName">{{'NEWSLETTER.NAME' | translate}}</label>
+          <input type="text" name="newsName" ng-model="newsName" required="true" flex="100">
+        </md-input-container>
+        <md-input-container flex="100">
+          <label for="newsSurname">{{'NEWSLETTER.SURNAME' | translate}}</label>
+          <input type="text" name="newsSurname" ng-model="newsSurname" required="true" flex="100">
+        </md-input-container>
+        <md-input-container flex="100">
           <label for="EMAIL">{{'NEWSLETTER.EMAIL' | translate}}</label>
           <input type="email" name="newsEmail" ng-model="newsEmail" required="true" flex="100">
         </md-input-container>
