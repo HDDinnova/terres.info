@@ -1,0 +1,42 @@
+{
+  "LANGUAGE": "Idioma",
+  "REGISTRATION_MENU": "Registre",
+  "PARTNERS_MENU": "Patrocinadors",
+  "NEWS_MENU": "Notícies",
+  "ABOUT_MENU": "Qui som",
+  "NEWSLETTER_MENU": "Newsletter",
+  "TITLE_MAIN": "TORTOSA / 31 de maig - 3 de juny de 2017",
+  "DEVELOPED_FOOTER": "Desenvolupat per",
+  "TOURFILM": "film turístic",
+  "DOCUMENTARY": "Documental",
+  "CORPORATE": "Films corporatius",
+  "CATEGORY": "Categoria",
+  "SECTION": "Secció",
+  "SUBMIT": "Enviar",
+  "EARLYFEE": "Oferta de registre",
+  "SINCE31": "Fins el 31 de desembre",
+  "REGISTER": {
+    "NEW": "Registre de nou participant",
+    "AMOUNT": "Import",
+    "N_FILMS": "Nombre de films",
+    "G_INF": "Informació general",
+    "P_INF": "Informació del participant",
+    "P_NAME": "Nom (Persona de contacte)",
+    "C_NAME": "Empresa / Entitat (Per a factura)",
+    "ADDR": "Adreça",
+    "ZIP": "Codi postal",
+    "CITY": "Població",
+    "VAT": "NIF (Per a factura)",
+    "PHONE": "Telèfon",
+    "EMAIL": "Correu electrònic",
+    "WEB": "Pàgina web",
+    "COUNTRY": "País"
+  },
+  "NEWSLETTER": {
+    "THANKS": "Gràcies per subscriure\"t a la Newsletter",
+    "EMAIL": "Si us plau, escriu el teu email",
+    "NAME": "Nom",
+    "SURNAME": "Cognoms",
+    "ALREADY": "L\"usuari ja està registrat"
+  }
+}

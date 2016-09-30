@@ -1,6 +1,13 @@
 angular
   .module('app')
   .controller('MainCtrl', function ($scope) {
+    $scope.earlyfee = function () {
+      var data = new Date();
+      var dataFinal = new Date('2016-12-31');
+      if (data <= dataFinal) {
+        return true;
+      }
+    };
     $scope.magnificent = {
       current: 0,
       slides: [

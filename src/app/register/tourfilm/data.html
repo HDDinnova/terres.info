@@ -37,7 +37,7 @@
     </md-input-container>
   </div>
   <div layout="row" layout-align="start" flex="">
-    <md-input-container flex="60">
+    <md-input-container flex="40">
       <label for="address">{{'REGISTER.ADDR' | translate}}</label>
       <input type="text" name="address" ng-model="formData.address" required="true">
     </md-input-container>
@@ -48,6 +48,14 @@
     <md-input-container flex="25">
       <label for="city">{{'REGISTER.CITY' | translate}}</label>
       <input type="text" name="city" ng-model="formData.city" required="true">
+    </md-input-container>
+    <md-input-container flex="20">
+      <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
+      <md-select ng-model="formData.country" required="true">
+        <md-option ng-repeat="country in countries" ng-value="country.translations.es">
+          {{country.translations.es}}
+        </md-option>
+      </md-select>
     </md-input-container>
   </div>
   <div layout="row" layout-align="start" flex="">

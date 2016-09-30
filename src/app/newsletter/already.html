@@ -1,0 +1,20 @@
+<md-dialog aria-label="User already subscribed">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>terres film festival</h2>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div layout="column" layout-align="start" flex="">
+      <p>{{'NEWSLETTER.ALREADY' | translate}}</p>
+    </div>
+  </md-dialog-content>
+
+  <md-dialog-actions layout="row">
+    <span flex></span>
+    <md-button ng-click="accept()">
+      OK
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

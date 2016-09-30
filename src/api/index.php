@@ -20,7 +20,7 @@ Flight::route('/newCompetitor', function(){
     $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
 
     $post = json_decode($dades,true);
-    $sql = "INSERT INTO competitors(section, nfilms, fullName, comName, vat, address, zip, city, phone, email, date, website, facebook) VALUES (:section, :nfilms, :fullName, :comName, :vat, :address, :zip, :city, :phone, :email, :date, :website, :facebook)";
+    $sql = "INSERT INTO competitors(section, nfilms, fullName, comName, vat, address, zip, city, country, phone, email, date, website, facebook) VALUES (:section, :nfilms, :fullName, :comName, :vat, :address, :zip, :city, :country, :phone, :email, :date, :website, :facebook)";
 
     $new = $db->prepare($sql);
     $new->bindParam(':section', $post['section']);
@@ -31,6 +31,7 @@ Flight::route('/newCompetitor', function(){
     $new->bindParam(':address', $post['address']);
     $new->bindParam(':zip', $post['zip']);
     $new->bindParam(':city', $post['city']);
+    $new->bindParam(':country', $post['country']);
     $new->bindParam(':phone', $post['phone']);
     $new->bindParam(':email', $post['email']);
     $new->bindParam(':date', $post['date']);
@@ -44,16 +45,11 @@ Flight::route('/newCompetitor', function(){
         echo false;
       }
     } catch (Exception $e) {
-      echo 'Caught exception: ',  $e->getMessage(), "\n";
+      echo 'Exception: ',  $e->getMessage();
     }
-    echo $post['section'].'/n'.$post['nfilms'];
 
     $db = NULL;
 
 });
 
 Flight::start();
-
-/* INSERT INTO `competitors`(`id`, `section`, `nfilms`, `fullName`, `comName`, `vat`, `address`, `zip`, `city`, `phone`,
-`email`, `date`, `website`, `facebook`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],
-[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14])

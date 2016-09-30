@@ -1,0 +1,42 @@
+{
+  "LANGUAGE": "Idioma",
+  "REGISTRATION_MENU": "Registro",
+  "PARTNERS_MENU": "Patrocinadores",
+  "NEWS_MENU": "Notícias",
+  "ABOUT_MENU": "Quienes somos",
+  "NEWSLETTER_MENU": "Newsletter",
+  "TITLE_MAIN": "TORTOSA / 31 de mayo - 3 de junio de 2017",
+  "DEVELOPED_FOOTER": "Desarrollado por",
+  "TOURFILM": "Film turístico",
+  "DOCUMENTARY": "Documental",
+  "CORPORATE": "Películas corporativas",
+  "CATEGORY": "Categoria",
+  "SECTION": "Sección",
+  "SUBMIT": "Enviar",
+  "EARLYFEE": "Oferta de registro",
+  "SINCE31": "Hasta el 31 de diciembre",
+  "REGISTER": {
+    "NEW": "Registro de nuevo participante",
+    "AMOUNT": "Importe",
+    "N_FILMS": "Núm. de films",
+    "G_INF": "Información general",
+    "P_INF": "Información del participante",
+    "P_NAME": "Nombre (Persona de contacto)",
+    "C_NAME": "Empresa / Entidad (Para factura)",
+    "ADDR": "Dirección",
+    "ZIP": "Código postal",
+    "CITY": "Municipio",
+    "VAT": "NIF (Para factura)",
+    "PHONE": "Teléfono",
+    "EMAIL": "Correo electrónico",
+    "WEB": "Página web",
+    "COUNTRY": "País"
+  },
+  "NEWSLETTER": {
+    "THANKS": "Gracias por suscribirte a la Newsletter",
+    "EMAIL": "Por favor, escribe tu email",
+    "NAME": "Nombre",
+    "SURNAME": "Apellidos",
+    "ALREADY": "El usuario ya està registrado"
+  }
+}

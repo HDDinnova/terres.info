@@ -1,0 +1,42 @@
+{
+  "LANGUAGE": "Language",
+  "REGISTRATION_MENU": "Registration",
+  "PARTNERS_MENU": "Partners",
+  "NEWS_MENU": "News",
+  "ABOUT_MENU": "About Us",
+  "NEWSLETTER_MENU": "Newsletter",
+  "TITLE_MAIN": "TORTOSA / May 31th - June 3rd 2017",
+  "DEVELOPED_FOOTER": "Developed by",
+  "TOURFILM": "tourfilm",
+  "DOCUMENTARY": "Documentary",
+  "CORPORATE": "Corporate Films",
+  "CATEGORY": "Category",
+  "SECTION": "Section",
+  "SUBMIT": "Submit",
+  "EARLYFEE": "Early fee",
+  "SINCE31": "Since december 31th",
+  "REGISTER": {
+    "NEW": "Register new competitor",
+    "AMOUNT": "Amount",
+    "N_FILMS": "Number of films",
+    "G_INF": "General Information",
+    "P_INF": "Participant information",
+    "P_NAME": "Name (Contact person)",
+    "C_NAME": "Company / Entity (For invoice)",
+    "ADDR": "Address",
+    "ZIP": "Zip code",
+    "CITY": "City",
+    "VAT": "Tax number / VAT (For invoice)",
+    "PHONE": "Phone number",
+    "EMAIL": "E-mail",
+    "WEB": "Website",
+    "COUNTRY": "Country"
+  },
+  "NEWSLETTER": {
+    "THANKS": "Thank you for your subscription to our newsletter",
+    "EMAIL": "Please, enter your email address",
+    "NAME": "Name",
+    "SURNAME": "Surname",
+    "ALREADY": "User already registered"
+  }
+}

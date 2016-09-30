@@ -1,5 +1,22 @@
-<div class="main-container">
+<div class="main-container" ng-controller="MainCtrl">
+  <!-- Start Early fee -->
+  <div class="overlay-ribbon" ng-show="earlyfee()">
+    <div class="ribbon-content">
+      <h2>60€</h2>
+      <h3><strong>{{'EARLYFEE' | translate}}</strong></h3>
+      <p>{{'SINCE31' | translate}}</p>
+    </div>
+  </div>
+  <!-- End Early fee -->
   <main class="main">
-    <terres-title></terres-title>
+    <terres-title>
+      <div class="title">
+        <div>
+          <img class="title-logo" src="img/logo-terres.png"/>
+          <h2 class="title-h2"><a href="https://www.google.es/maps/place/Tortosa,+Tarragona/@40.8061257,0.5035078,14z/data=!3m1!4b1!4m5!3m4!1s0x12a0e4a4887de549:0x4750f0d9aa735b5c!8m2!3d40.8125777!4d0.5214423" target="_blank"><img src="img/mark.png" alt="Tortosa location" /></a> {{'TITLE_MAIN' | translate}}</h2>
+        </div>
+        <magnificent magnificent="magnificent"></magnificent>
+      </div>
+    </terres-title>
   </main>
 </div>

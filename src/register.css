@@ -11,14 +11,17 @@
 register-doc:hover{
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 5px black;
 }
 register-tf:hover{
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 3px black;
 }
 register-cf:hover{
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 3px black;
 }
 .select-register{
   display: flex;
@@ -31,18 +34,6 @@ register-cf:hover{
   cursor: pointer;
   z-index: 5;
 }
-/*register-doc{
-  background: url('../img/IMG_9982.jpg') no-repeat center bottom;
-  background-size: cover;
-}
-register-tf{
-  background: url('../img/Horta_MG_9983.jpg') no-repeat center center;
-  background-size: cover;
-}
-register-cf{
-  background: url('../img/IMG_9982.jpg') no-repeat center center;
-  background-size: cover;
-}*/
 .registerform{
   height: 100%;
 }
