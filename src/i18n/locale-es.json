@@ -9,7 +9,7 @@
   "DEVELOPED_FOOTER": "Desarrollado por",
   "TOURFILM": "Film turístico",
   "DOCUMENTARY": "Documental",
-  "CORPORATE": "Películas corporativas",
+  "CORPORATE": "Película corporativa",
   "CATEGORY": "Categoria",
   "SECTION": "Sección",
   "SUBMIT": "Enviar",
@@ -37,6 +37,7 @@
     "EMAIL": "Por favor, escribe tu email",
     "NAME": "Nombre",
     "SURNAME": "Apellidos",
-    "ALREADY": "El usuario ya està registrado"
+    "ALREADY": "El usuario ya està registrado",
+    "THANKYOU": "El registro se ha realitzado correctamente"
   }
 }

@@ -9,7 +9,7 @@
   "DEVELOPED_FOOTER": "Desenvolupat per",
   "TOURFILM": "film turístic",
   "DOCUMENTARY": "Documental",
-  "CORPORATE": "Films corporatius",
+  "CORPORATE": "Film corporatiu",
   "CATEGORY": "Categoria",
   "SECTION": "Secció",
   "SUBMIT": "Enviar",
@@ -37,6 +37,7 @@
     "EMAIL": "Si us plau, escriu el teu email",
     "NAME": "Nom",
     "SURNAME": "Cognoms",
-    "ALREADY": "L\"usuari ja està registrat"
+    "ALREADY": "L\'usuari ja està registrat",
+    "THANKYOU": "El registre s'ha realitzat correctament"
   }
 }

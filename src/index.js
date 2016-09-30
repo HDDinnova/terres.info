@@ -53,24 +53,26 @@ angular
         fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
       })
       .then(function (user) {
-        console.log($translate('NEWSLETTER.ALREADY').value);
         $http.post('/mapi/subscribe.php', user, null)
           .success(function (data) {
             if (data === "subscribed") {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent('Simple Toast!')
-                  .position('top right')
-                  .hideDelay(3000)
-              );
-              // $mdDialog.show({
-              //   controller: DialogCtrl,
-              //   templateUrl: 'app/newsletter/already.html',
-              //   parent: angular.element(document.body),
-              //   clickOutsideToClose: true
-              // });
+              $translate('NEWSLETTER.ALREADY').then(function (value) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent(value)
+                    .position('top right')
+                    .hideDelay(3000)
+                );
+              });
             } else {
-
+              $translate('NEWSLETTER.THANKYOU').then(function (value) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent(value)
+                    .position('top right')
+                    .hideDelay(3000)
+                );
+              });
             }
           })
           .error(function (data) {
@@ -95,12 +97,6 @@ angular
         $mdDialog.hide(persona);
       };
     }
-
-    // function DialogCtrl($scope, $mdDialog) {
-    //   $scope.accept = function () {
-    //     $mdDialog.hide();
-    //   };
-    // }
   })
   .controller('footerCtrl', function ($scope) {
     $scope.any = new Date();

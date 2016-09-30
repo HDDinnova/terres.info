@@ -9,7 +9,7 @@
   "DEVELOPED_FOOTER": "Developed by",
   "TOURFILM": "tourfilm",
   "DOCUMENTARY": "Documentary",
-  "CORPORATE": "Corporate Films",
+  "CORPORATE": "Corporate Film",
   "CATEGORY": "Category",
   "SECTION": "Section",
   "SUBMIT": "Submit",
@@ -37,6 +37,7 @@
     "EMAIL": "Please, enter your email address",
     "NAME": "Name",
     "SURNAME": "Surname",
-    "ALREADY": "User already registered"
+    "ALREADY": "User already registered",
+    "THANKYOU": "Register succesfull"
   }
 }
