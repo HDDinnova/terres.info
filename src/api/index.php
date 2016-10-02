@@ -16,6 +16,9 @@ Flight::route('/', function(){
 Flight::route('/newCompetitor', function(){
     $db = Flight::db();
 
+    ///////
+    // Function to generate a random password at registry
+    ///////
     function randomPassword() {
         $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
         $pass = array();
@@ -32,7 +35,9 @@ Flight::route('/newCompetitor', function(){
 
     $post = json_decode($dades,true);
 
-    // Primer comprovem que l'usuari no estigui registrat
+    ///////
+    // Check if user is registered
+    ///////
     $sql = "SELECT * FROM competitors WHERE email = :email LIMIT 1";
     $check = $db->prepare($sql);
     $check->bindParam(':email', $post['email']);
