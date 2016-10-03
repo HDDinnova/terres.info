@@ -27,40 +27,40 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
       $import = $nfilms * 60;
     }
   } else {
-    $import = $nfilms * 90;
+    $import = $nfilms * 150;
   }
-
-
 
   $subject = "terres register confirmation";
 
   $htmlContent = '
-    <html>
-    <head>
-      <img src="http://terres.info/img/terres.png" />
-    </head>
+  <html>
     <body>
-      <p>Thank you <i>'.$name.'</i></p>
-      <br/>
-      <p>User created successfully</p>
-      <br/><br/>
-      <table cellspacing="0" style="border: 2px dashed #FB4314; width: 300px; height: 200px;">
-        <th>
-          <td>User</td>
-          <td>Password</td>
-          <td>N. of films</td>
-          <td>Amount</td>
-        </th>
-        <tr>
-          <td>'.$email.'</td>
-          <td>'.$password.'</td>
-          <td>'.$nfilms.'</td>
-          <td>'.$import.'</td>
-        </tr>
+      <h3>Thank you <i>'.$name.'</i></h3>
+      <h4>User created successfully</h4>
+      <hr>
+      <p>Your personal information is:</p>
+      <table style="border: 1px solid black;" cellspacing="0">
+        <thead>
+          <tr style="background-color: #eceff1;">
+            <th style="padding: 10px;"><strong>User</strong></td>
+            <th style="padding: 10px;"><strong>Password</strong></td>
+            <th style="padding: 10px;"><strong>N. of films</strong></td>
+            <th style="padding: 10px;"><strong>Amount</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="">
+            <td style="padding: 10px;">'.$email.'</td>
+            <td style="padding: 10px;">'.$password.'</td>
+            <td style="padding: 10px;">'.$nfilms.'</td>
+            <td style="padding: 10px;">'.$import.'</td>
+          </tr>
+        </tbody>
       </table>
-      <p>Your link to your personal account is <a href="http://terres.info/users/'.$dni.'"></a></p>
+      <p>Your link to your personal account is <a href="http://terres.info/users/'.$dni.'">http://terres.info/users/'.$dni.'</a></p>
+      <img src="http://terres.info/img/logo-terres.png" style="height: 110px" />
     </body>
-    </html>';
+  </html>';
 
   // Set content-type header for sending HTML email
   $headers = "MIME-Version: 1.0" . "\r\n";
@@ -68,13 +68,13 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
 
   // Additional headers
   $headers .= 'From: terres International Film Festival<info@terres.info>' . "\r\n";
-  $headers .= 'Bcc: info@filmsnomades.com.com' . "\r\n";
+  $headers .= 'Bcc: info@makeinapps.com' . "\r\n";
 
   // Send email
   if(mail($email,$subject,$htmlContent,$headers)):
-    $successMsg = 'Email has sent successfully.';
+    echo 'emailOK';
   else:
-    $errorMsg = 'Email sending fail.';
+    echo 'emailKO';
   endif;
 });
 
@@ -137,7 +137,8 @@ Flight::route('/newCompetitor', function(){
 
       try {
         if ($new->execute()) {
-          echo true;
+          $mail = Flight::htmlmail($post['pname'],$post['email'],$newpass,$post['nfilms'],$post['vat'],$post['section']);
+          echo $mail;
         } else {
           echo false;
         }
