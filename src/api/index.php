@@ -3,11 +3,80 @@ require 'flight/Flight.php';
 
 $dbuser = 'zk1woweu_admin';
 $dbpass = '6S8,fs)u.9Ra';
+
+///////
+// Connection to database
+///////
 Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=zk1woweu_terres',$dbuser,$dbpass),
   function($db){
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
 );
+
+///////
+// Function to send HTML email
+///////
+Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
+
+  $adate = new DateTime();
+  $ldate = new DateTime('2016-12-31');
+  if ($section == 1) {
+    if ($adate > $ldate) {
+      $import = $nfilms * 90;
+    } else {
+      $import = $nfilms * 60;
+    }
+  } else {
+    $import = $nfilms * 90;
+  }
+
+
+
+  $subject = "terres register confirmation";
+
+  $htmlContent = '
+    <html>
+    <head>
+      <img src="http://terres.info/img/terres.png" />
+    </head>
+    <body>
+      <p>Thank you <i>'.$name.'</i></p>
+      <br/>
+      <p>User created successfully</p>
+      <br/><br/>
+      <table cellspacing="0" style="border: 2px dashed #FB4314; width: 300px; height: 200px;">
+        <th>
+          <td>User</td>
+          <td>Password</td>
+          <td>N. of films</td>
+          <td>Amount</td>
+        </th>
+        <tr>
+          <td>'.$email.'</td>
+          <td>'.$password.'</td>
+          <td>'.$nfilms.'</td>
+          <td>'.$import.'</td>
+        </tr>
+      </table>
+      <p>Your link to your personal account is <a href="http://terres.info/users/'.$dni.'"></a></p>
+    </body>
+    </html>';
+
+  // Set content-type header for sending HTML email
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+  // Additional headers
+  $headers .= 'From: terres International Film Festival<info@terres.info>' . "\r\n";
+  $headers .= 'Bcc: info@filmsnomades.com.com' . "\r\n";
+
+  // Send email
+  if(mail($email,$subject,$htmlContent,$headers)):
+    $successMsg = 'Email has sent successfully.';
+  else:
+    $errorMsg = 'Email sending fail.';
+  endif;
+});
 
 Flight::route('/', function(){
     echo 'terres';
