@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope, $http) {
+  .controller('regTf', function ($scope, $http, $mdToast, $translate) {
     $scope.formData = {};
     $scope.formData.section = '1';
     $scope.formData.nfilms = 1;
@@ -25,7 +25,16 @@ angular
       $scope.formData.date = new Date();
       $http.post('/api/newCompetitor', $scope.formData)
       .success(function (data) {
-        console.log(data);
+        if (data == 'emailOK') {
+          $translate('REGISTER.SATISFACTORY').then(function (value) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent(value)
+                .position('top right')
+                .hideDelay(3000)
+            );
+          });
+        }
       });
     };
     $http.get('https://restcountries.eu/rest/v1/region/europe')

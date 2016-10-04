@@ -30,7 +30,8 @@
     "PHONE": "Teléfono",
     "EMAIL": "Correo electrónico",
     "WEB": "Página web",
-    "COUNTRY": "País"
+    "COUNTRY": "País",
+    "SATISFACTORY": "El registro se ha realitzado correctament, revisa el correo para más información"
   },
   "NEWSLETTER": {
     "THANKS": "Gracias por suscribirte a la Newsletter",

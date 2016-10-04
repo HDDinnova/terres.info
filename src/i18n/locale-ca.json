@@ -30,7 +30,8 @@
     "PHONE": "Telèfon",
     "EMAIL": "Correu electrònic",
     "WEB": "Pàgina web",
-    "COUNTRY": "País"
+    "COUNTRY": "País",
+    "SATISFACTORY": "El registre s\'ha realitzat satisfactòriament, revisa el correu per més informació"
   },
   "NEWSLETTER": {
     "THANKS": "Gràcies per subscriure\"t a la Newsletter",
