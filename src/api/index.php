@@ -136,7 +136,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
 
   // Additional headers
   $headers .= 'From: terres International Film Festival <info@terres.info>' . "\r\n";
-  $headers .= 'Bcc: info@makeinapps.com' . "\r\n";
+  $headers .= 'cc: info@makeinapps.com' . "\r\n";
 
   // Send email
   if(mail($email,$subject,$htmlContent,$headers)):
