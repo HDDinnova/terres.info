@@ -221,4 +221,17 @@ Flight::route('/newCompetitor', function(){
 
 });
 
+Flight::route('/competitors', function(){
+  $db = Flight::db();
+
+  $sql = "SELECT * FROM competitors";
+  $comp = $db->prepare($sql);
+  $comp->execute();
+  $comps = $comp->fetch(PDO::FETCH_ASSOC);
+
+  $db = NULL;
+
+  return json_encode($comps);
+});
+
 Flight::start();
