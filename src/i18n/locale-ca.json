@@ -31,14 +31,17 @@
     "EMAIL": "Correu electrònic",
     "WEB": "Pàgina web",
     "COUNTRY": "País",
-    "SATISFACTORY": "El registre s\'ha realitzat satisfactòriament, revisa el correu per més informació"
+    "SATISFACTORY": "El registre s'ha realitzat satisfactòriament, revisa el correu per més informació"
   },
   "NEWSLETTER": {
-    "THANKS": "Gràcies per subscriure\"t a la Newsletter",
+    "THANKS": "Gràcies per subscriure't a la Newsletter",
     "EMAIL": "Si us plau, escriu el teu email",
     "NAME": "Nom",
     "SURNAME": "Cognoms",
-    "ALREADY": "L\'usuari ja està registrat",
+    "ALREADY": "L'usuari ja està registrat",
     "THANKYOU": "El registre s'ha realitzat correctament"
-  }
+  },
+  "USER": "Usuari",
+  "PASSWORD": "Contrasenya",
+  "LOGIN": "Entrada"
 }

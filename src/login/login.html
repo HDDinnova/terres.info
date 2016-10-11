@@ -1,0 +1,16 @@
+﻿<section class="login">
+  <div layout="column" layout-align="center" flex="40" flex-offset="30" class="box">
+    <h1 translate>{{'LOGIN'}}</h1>
+    <md-input-container>
+      <label for="user" translate>{{'USER'}}</label>
+      <input type="email" name="user" ng-model="formLogin.user" required>
+    </md-input-container>
+    <md-input-container>
+      <label for="password" translate>{{'PASSWORD'}}</label>
+      <input type="password" name="password" ng-model="formLogin.password" required>
+    </md-input-container>
+    <div layout="row" layout-align="center" flex="">
+      <md-button class="md-raised md-primary" type="submit">{{'SUBMIT' | translate}}</md-button>
+    </div>
+  </div>
+</section>

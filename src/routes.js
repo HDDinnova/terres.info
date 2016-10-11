@@ -24,5 +24,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('tourfilm.form', {
       url: '/',
       templateUrl: 'app/register/tourfilm/data.html'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'login/login.html'
     });
 }

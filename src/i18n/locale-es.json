@@ -40,5 +40,8 @@
     "SURNAME": "Apellidos",
     "ALREADY": "El usuario ya està registrado",
     "THANKYOU": "El registro se ha realitzado correctamente"
-  }
+  },
+  "USER": "Usuario",
+  "PASSWORD": "Contraseña",
+  "LOGIN": "Entrada"
 }

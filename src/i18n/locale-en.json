@@ -40,5 +40,8 @@
     "SURNAME": "Surname",
     "ALREADY": "User already registered",
     "THANKYOU": "Register succesfull"
-  }
+  },
+  "USER": "User",
+  "PASSWORD": "Password",
+  "LOGIN": "Login"
 }

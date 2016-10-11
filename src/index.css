@@ -253,3 +253,18 @@ md-dialog-content{
     transform: translate(0, 60px);
   }
 }
+
+/**********************/
+/*      LOGIN         */
+/**********************/
+.login{
+  margin-top: 5%;
+}
+.login .box{
+  padding: 5px;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(150, 150, 150, 0.19);
+}
+.login h1{
+  text-align: center;
+}
