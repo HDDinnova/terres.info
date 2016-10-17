@@ -1,8 +1,11 @@
 <?php
 require 'flight/Flight.php';
+require 'flight/helpers.php';
 
 $dbuser = 'zk1woweu_admin';
 $dbpass = '6S8,fs)u.9Ra';
+
+Flight::set('secret_key', '##_T3rr35DOT1nf0@%%#');
 
 ///////
 // Connection to database
@@ -232,6 +235,24 @@ Flight::route('/competitors', function(){
   $db = NULL;
 
   return json_encode($comps);
+});
+
+Flight::route('/login', function(){
+  $db = Flight::db();
+
+  $dades = file_get_contents('php://input');
+  $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+  $get = json_decode($dades,true);
+
+  if (isset($get['email']) AND isset($get['password'])) {
+    $secret_key = Flight::get('secret_key');
+		$email = $get['email'];
+		$password = get_crypt_password($get['password'], $secret_key);
+
+  }
+
+  $db = NULL;
 });
 
 Flight::start();
