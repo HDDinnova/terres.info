@@ -1,7 +1,14 @@
 <div class="main-container" ng-controller="MainCtrl">
   <!-- Start Early fee -->
-  <div class="overlay-ribbon" ng-show="earlyfee()">
+  <div class="overlay-ribbon show-gt-md hide" ng-show="earlyfee()">
     <div class="ribbon-content">
+      <h2>60€</h2>
+      <h3><strong>{{'EARLYFEE' | translate}}</strong></h3>
+      <p>{{'SINCE31' | translate}}</p>
+    </div>
+  </div>
+  <div class="overlay-ribbon-mobile hide-gt-md" ng-show="earlyfee()">
+    <div class="ribbon-content-mobile">
       <h2>60€</h2>
       <h3><strong>{{'EARLYFEE' | translate}}</strong></h3>
       <p>{{'SINCE31' | translate}}</p>

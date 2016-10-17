@@ -254,6 +254,127 @@ md-dialog-content{
   }
 }
 
+.overlay-ribbon-mobile {
+  position: absolute;
+  width: 10em;
+  height: 7em;
+  z-index: 5;
+  bottom: 0;
+  left: calc(50% - 5em);
+  background: #2ec4b6;
+  padding: 5px 0;
+  /* IE10 Consumer Preview */
+  background-image: -ms-radial-gradient(center top, circle farthest-side, #cbf3f0 0%, #2ec4b6 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-radial-gradient(center top, circle farthest-side, #cbf3f0 0%, #2ec4b6 100%);
+  /* Opera */
+  background-image: -o-radial-gradient(center top, circle farthest-side, #cbf3f0 0%, #2ec4b6 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #cbf3f0), color-stop(1, #2ec4b6));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-radial-gradient(center top, circle farthest-side, #cbf3f0 0%, #2ec4b6 100%);
+  /* W3C Markup, IE10 Release Preview */
+  background-image: radial-gradient(circle farthest-side at center top, #cbf3f0 0%, #2ec4b6 100%);
+  -webkit-box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+  box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  animation: slideinmobile 1.5s ease-in-out forwards;
+}
+
+.ribbon-content-mobile {
+  z-index: 99999;
+  position: relative;
+  margin: 0 5px;
+}
+
+.ribbon-content-mobile h2 {
+  margin: 0;
+  padding: 5px 0 5px 0;
+  color: #24505a;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1em;
+}
+
+.ribbon-content-mobile h3 {
+  margin: 0;
+  padding: 5px 0 5px 0;
+  line-height: 8px;
+  color: #24505a;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ribbon-content-mobile > p {
+  color: #24505a;
+  margin: 0;
+  padding: 3px;
+  font-size: .8rem;
+}
+
+.overlay-ribbon-mobile:before {
+  content: "";
+  position: absolute;
+  bottom: -5em;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 6em solid #2ec4b6;
+  border-right: 6em solid transparent;
+  z-index: 997;
+}
+
+.overlay-ribbon-mobile:after {
+  content: "";
+  position: absolute;
+  bottom: -5em;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 6em solid #2ec4b6;
+  border-left: 6em solid transparent;
+  z-index: 998;
+}
+
+@-webkit-keyframes slideinmobile {
+  from {
+    transform: translate(0, 600px);
+  }
+  to {
+    transform: translate(0, -200px);
+  }
+}
+
+@-o-keyframes slideinmobile {
+  from {
+    transform: translate(0, 600px);
+  }
+  to {
+    transform: translate(0, -200px);
+  }
+}
+
+@-moz-keyframes slideinmobile {
+  from {
+    transform: translate(0, 600px);
+  }
+  to {
+    transform: translate(0, -200px);
+  }
+}
+
+@keyframes slideinmobile {
+  from {
+    transform: translate(0, 600px);
+  }
+  to {
+    transform: translate(0, -200px);
+  }
+}
+
 /**********************/
 /*      LOGIN         */
 /**********************/
