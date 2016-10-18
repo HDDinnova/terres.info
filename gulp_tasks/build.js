@@ -4,7 +4,7 @@ const useref = require('gulp-useref');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const uglify = require('gulp-uglify');
-const cssnano = require('gulp-cssnano');
+// const cssnano = require('gulp-cssnano');
 const htmlmin = require('gulp-htmlmin');
 const sourcemaps = require('gulp-sourcemaps');
 const uglifySaveLicense = require('uglify-save-license');
@@ -39,7 +39,7 @@ function build() {
     .pipe(jsFilter.restore)
     .pipe(cssFilter)
     .pipe(sourcemaps.init())
-    .pipe(cssnano())
+    // .pipe(cssnano())
     .pipe(rev())
     .pipe(sourcemaps.write('maps'))
     .pipe(cssFilter.restore)
