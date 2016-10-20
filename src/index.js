@@ -26,6 +26,15 @@ angular
     $scope.toggleRight = function () {
       $mdSidenav('right').toggle();
     };
+    $scope.close = function () {
+      $mdSidenav('right').close();
+    };
+
+    function rightMenu() {
+      if ($mdSidenav('right').isOpen()) {
+        $mdSidenav('right').close();
+      }
+    }
 
     $scope.langs = [
       'CA',
@@ -83,6 +92,7 @@ angular
             console.log(data);
           });
       }, function () {
+        rightMenu();
         console.log('You cancelled the dialog.');
       });
     };
@@ -90,6 +100,7 @@ angular
     function NewsCtrl($scope, $mdDialog) {
       $scope.cancel = function () {
         $mdDialog.cancel();
+        rightMenu();
       };
 
       $scope.subscribe = function () {
@@ -99,6 +110,7 @@ angular
           mail: $scope.newsEmail
         };
         $mdDialog.hide(persona);
+        rightMenu();
       };
     }
   })

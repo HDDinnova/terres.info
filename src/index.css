@@ -26,6 +26,17 @@ terres-menu{
   z-index: 10;
   transition: 1s ease-in-out;
 }
+.md-sidenav-right{
+  padding: 5px 25px;
+}
+.md-sidenav-right .md-button{
+  width: 100%;
+}
+.md-sidenav-right md-select{
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .logomenu{
   height: 1.2rem;
 }

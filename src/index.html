@@ -67,13 +67,13 @@
     </terres-menu>
     <div layout="row">
       <md-sidenav md-component-id="right" class="md-sidenav-right">
-          <md-button hide-gt-sm ui-sref="register">{{'REGISTRATION_MENU' | translate}}</md-button>
-          <md-button hide-gt-sm>{{'PARTNERS_MENU' | translate}}</md-button>
-          <md-button hide-gt-sm>{{'NEWS_MENU' | translate}}</md-button>
-          <md-button hide-gt-sm>{{'ABOUT_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm ui-sref="register" ng-click="close()">{{'REGISTRATION_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm ng-click="close()">{{'PARTNERS_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm ng-click="close()">{{'NEWS_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm ng-click="close()">{{'ABOUT_MENU' | translate}}</md-button>
           <md-button hide-gt-sm ng-click="showNewsletter($event)">{{'NEWSLETTER_MENU' | translate}}</md-button>
           <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
-            <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')">{{idi}}</md-option>
+            <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
           </md-select>
       </md-sidenav>
     </div>
