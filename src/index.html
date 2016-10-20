@@ -47,9 +47,9 @@
     </script>
   </head>
 
-  <body ng-app="app">
+  <body ng-app="app" ng-controller="menuCtrl">
     <terres-menu>
-      <md-toolbar class="md-hue-1" ng-controller="menuCtrl">
+      <md-toolbar class="md-hue-1">
         <div class="md-toolbar-tools">
           <h2><a ui-sref="index"><img class="logomenu" src="img/terres-mini.png" alt="Logo terres"></a></h2>
           <span flex></span>
@@ -61,10 +61,22 @@
           <md-select show-gt-sm hide ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
             <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')">{{idi}}</md-option>
           </md-select>
-          <md-button hide-gt-sm aria-label="menu"><md-icon class="md-default-theme" md-svg-src="img/ic_menu_black_24px.svg"></md-icon></md-button>
+          <md-button hide-gt-sm aria-label="menu" ng-click="toggleRight()"><md-icon class="md-default-theme" md-svg-src="img/ic_menu_black_24px.svg"></md-icon></md-button>
         </div>
       </md-toolbar>
     </terres-menu>
+    <div layout="row">
+      <md-sidenav md-component-id="right" class="md-sidenav-right">
+          <md-button hide-gt-sm ui-sref="register">{{'REGISTRATION_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm>{{'PARTNERS_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm>{{'NEWS_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm>{{'ABOUT_MENU' | translate}}</md-button>
+          <md-button hide-gt-sm ng-click="showNewsletter($event)">{{'NEWSLETTER_MENU' | translate}}</md-button>
+          <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
+            <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')">{{idi}}</md-option>
+          </md-select>
+      </md-sidenav>
+    </div>
     <div ui-view></div>
     <terres-footer>
       <footer class="footer" ng-controller="footerCtrl">

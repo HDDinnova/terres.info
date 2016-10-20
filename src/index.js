@@ -22,7 +22,11 @@ angular
       })
       .useSanitizeValueStrategy(null);
   })
-  .controller('menuCtrl', function ($scope, $translate, $timeout, $mdDialog, $http, $mdToast) {
+  .controller('menuCtrl', function ($scope, $translate, $timeout, $mdDialog, $http, $mdToast, $mdSidenav) {
+    $scope.toggleRight = function () {
+      $mdSidenav('right').toggle();
+    };
+
     $scope.langs = [
       'CA',
       'ES',

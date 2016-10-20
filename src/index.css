@@ -62,7 +62,7 @@ md-select-menu .md-text{
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .title {
@@ -256,11 +256,11 @@ md-dialog-content{
 
 .overlay-ribbon-mobile {
   position: absolute;
-  width: 10em;
-  height: 7em;
+  width: 5em;
+  height: 5em;
   z-index: 5;
   bottom: 0;
-  left: calc(50% - 5em);
+  left: calc(50% - 2.5em);
   background: #2ec4b6;
   padding: 5px 0;
   /* IE10 Consumer Preview */
@@ -284,6 +284,12 @@ md-dialog-content{
   animation: slideinmobile 1.5s ease-in-out forwards;
 }
 
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+  .overlay-ribbon-mobile {
+    left: 10px;
+  }
+}
+
 .ribbon-content-mobile {
   z-index: 99999;
   position: relative;
@@ -295,83 +301,83 @@ md-dialog-content{
   padding: 5px 0 5px 0;
   color: #24505a;
   text-align: center;
-  font-size: 4rem;
-  line-height: 1em;
+  font-size: 2.2rem;
+  line-height: .8em;
 }
 
 .ribbon-content-mobile h3 {
   margin: 0;
   padding: 5px 0 5px 0;
-  line-height: 8px;
+  line-height: 10px;
   color: #24505a;
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .ribbon-content-mobile > p {
   color: #24505a;
   margin: 0;
   padding: 3px;
-  font-size: .8rem;
+  font-size: .6rem;
 }
 
 .overlay-ribbon-mobile:before {
   content: "";
   position: absolute;
-  bottom: -5em;
+  bottom: -5.5em;
   left: 0;
   width: 0;
   height: 0;
   border-top: 6em solid #2ec4b6;
-  border-right: 6em solid transparent;
+  border-right: 4em solid transparent;
   z-index: 997;
 }
 
 .overlay-ribbon-mobile:after {
   content: "";
   position: absolute;
-  bottom: -5em;
+  bottom: -5.5em;
   right: 0;
   width: 0;
   height: 0;
   border-top: 6em solid #2ec4b6;
-  border-left: 6em solid transparent;
+  border-left: 4em solid transparent;
   z-index: 998;
 }
 
 @-webkit-keyframes slideinmobile {
   from {
-    transform: translate(0, 600px);
+    transform: translate(0, 400px);
   }
   to {
-    transform: translate(0, -200px);
+    transform: translate(0, -120px);
   }
 }
 
 @-o-keyframes slideinmobile {
   from {
-    transform: translate(0, 600px);
+    transform: translate(0, 400px);
   }
   to {
-    transform: translate(0, -200px);
+    transform: translate(0, -120px);
   }
 }
 
 @-moz-keyframes slideinmobile {
   from {
-    transform: translate(0, 600px);
+    transform: translate(0, 400px);
   }
   to {
-    transform: translate(0, -200px);
+    transform: translate(0, -120px);
   }
 }
 
 @keyframes slideinmobile {
   from {
-    transform: translate(0, 600px);
+    transform: translate(0, 400px);
   }
   to {
-    transform: translate(0, -200px);
+    transform: translate(0, -120px);
   }
 }
 
