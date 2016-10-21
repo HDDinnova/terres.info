@@ -102,6 +102,9 @@ register-cf:hover{
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.register-form-data .md-button{
+  margin-bottom: 30px;
+}
 .mini{
   height: 35px;
 }

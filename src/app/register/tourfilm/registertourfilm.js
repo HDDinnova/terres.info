@@ -1,16 +1,14 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope, $http, $mdToast, $translate, Cities) {
+  .controller('regTf', function ($scope, $http, $mdToast, $translate, Cities, EarlyFee) {
     $scope.countries = Cities.query();
     $scope.formData = {};
     $scope.formData.section = '1';
     $scope.formData.nfilms = 1;
     $scope.updateImport = function () {
       var im;
-      var data = new Date();
-      var dataFinal = new Date('2016-12-31');
       if ($scope.formData.section === '1') {
-        if (data > dataFinal) {
+        if (EarlyFee.state) {
           im = 90;
         } else {
           im = 60;

@@ -55,14 +55,14 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
           <td style="text-align: center; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 20px 0;" align="center">
-            <img src="http://terres.info/img/logo-terres.png" width="200px" alt="alt_text" border="0" style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic;" />
+            <img src="http://terres.info/img/logo-terres.png" width="200px" alt="Logo terres" border="0" style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic;" />
           </td>
         </tr>
       </table>
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
           <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
-            <img src="http://terres.info/img/Amp_MG_1390.jpg" width="680" height="" alt="alt_text" border="0" align="center" style="width: 100% !important; max-width: 100% !important; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic; height: auto !important; margin-left: auto !important; margin-right: auto !important; background-color: #dddddd;" />
+            <img src="http://terres.info/img/Amp_MG_1390.jpg" width="680" height="" alt="Foto del delta del Ebro" border="0" align="center" style="width: 100% !important; max-width: 100% !important; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic; height: auto !important; margin-left: auto !important; margin-right: auto !important; background-color: #dddddd;" />
           </td>
         </tr>
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
@@ -70,42 +70,22 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
               <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
-                  <h3>Thank you <i>'.$name.'</i></h3>
-                  <h4>Your user has succesfully created</h4>
+                  <h3>Hola <i>'.$name.'</i></h3>
+                  <h4>Gracias por inscribirte en terres Catalunya.<br/>Para terminar el proceso y poder subir tu película, haz el ingreso de la cuota de inscripción a esta cuenta bancaria:</h4>
                   <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
-                      <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-                        <td style="border-radius: 3px; text-align: center; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; transition: all 100ms ease-in; background-color: #222222;" align="center" bgcolor="#222222">
-                          <a href="http://www.terres.info/users/'.$dni.'" style="font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; transition: all 100ms ease-in; background-color: #222222; border: 15px solid #222222;">
-                            <span style="color: #ffffff; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Go to member zone</span>    
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
-        <p>Your personal information is:</p>
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
           <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
             <table role="presentation" cellspacing="0" cellpadding="0" border="1px solid black" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
               <tr>
-                <td style="padding:10px;background-color: #eceff1;">User</td>
-                <td style="padding:10px;">'.$email.'</td>
+                <td style="padding:10px;background-color: #eceff1;"><strong>BANC SABADELL</strong></td>
               </tr>
               <tr>
-                <td style="padding:10px;background-color: #eceff1;">Password</td>
-                <td style="padding:10px;">'.$password.'</td>
-              </tr>
-              <tr>
-                <td style="padding:10px;background-color: #eceff1;">N. films</td>
-                <td style="padding:10px;">'.$nfilms.'</td>
-              </tr>
-              <tr>
-                <td style="padding:10px;background-color: #eceff1;">Inscription fee</td>
-                <td style="padding:10px;">'.$import.' €</td>
+                <td style="padding:10px;background-color: #eceff1;">ES64 0081 0132 17 0001308136</td>
               </tr>
             </table>
           </td>
@@ -114,9 +94,16 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
           <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
               <tr>
-                <td style="padding:10px;">Before first access to the personal zone you may pay the inscription fee by bank transfer and send the receipt to <a href="mailto:info@terres.info">info@terres.info</a> to activate your acount</td>
+                <td style="padding:10px;">Una vez efectuado el pago recicibrás un correo con el enlace para subir tu película.</td>
               </tr>
             </table>
+          </td>
+        </tr>
+      </table>
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
+        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+          <td style="width: 100%; font-size: 14px; font-family: sans-serif; mso-height-rule: exactly; line-height: 18px; text-align: center; color: #888888; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px 10px;" align="center">
+            <p>¡Gracias!</p>
           </td>
         </tr>
       </table>
