@@ -65,7 +65,8 @@ md-select-menu .md-text{
 .main-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: calc(100vh - 50px);
+  padding-top: 50px;
 }
 
 // Estils per a la pàgina principal
@@ -85,8 +86,6 @@ md-select-menu .md-text{
   margin: 0;
   color: black;
   text-align: center;
-  height: 100vh;
-  width: 100vw;
 }
 .title-h1 {
   font-weight: 300;
@@ -97,7 +96,6 @@ md-select-menu .md-text{
   max-height: 18rem;
   max-width: 60vw;
   margin-top: 5rem;
-  /*border-bottom: 1px solid black;*/
   position: relative;
   z-index: 1;
 }

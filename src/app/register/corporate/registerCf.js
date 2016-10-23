@@ -1,14 +1,14 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope, $http, $mdToast, $translate, $state, $stateParams, Cities) {
-    $translate('TOURFILM').then(function (value) {
+  .controller('regCf', function ($scope, $http, $mdToast, $translate, $state, $stateParams, Cities) {
+    $translate('CORPORATE').then(function (value) {
       $scope.textCat = value;
     });
     $scope.countries = Cities.query();
     $scope.formData = {};
     $scope.formData.section = '1';
     $scope.formData.nfilms = 1;
-    $scope.formData.valCat = 1;
+    $scope.formData.valCat = 3;
     $scope.updateImport = function () {
       var im;
       var data = new Date();
@@ -25,11 +25,12 @@ angular
       $scope.preu = $scope.formData.nfilms * im + ' €';
     };
     $scope.updateImport();
-    $scope.processTf = function () {
+    $scope.processCf = function () {
       $scope.formData.date = new Date();
       $http.post('/api/newCompetitor', $scope.formData)
       .success(function (data) {
         if (data === 'emailOK') {
+          console.log(data);
           $translate('REGISTER.SATISFACTORY').then(function (value) {
             $mdToast.show(
               $mdToast.simple()

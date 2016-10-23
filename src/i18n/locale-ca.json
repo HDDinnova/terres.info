@@ -1,6 +1,7 @@
 {
   "LANGUAGE": "Idioma",
   "REGISTRATION_MENU": "Registre",
+  "PARTICIPATE_MENU": "COM PARTICIPAR",
   "PARTNERS_MENU": "Patrocinadors",
   "NEWS_MENU": "Notícies",
   "ABOUT_MENU": "Qui som",
@@ -8,7 +9,7 @@
   "TITLE_MAIN": "TORTOSA / 31 de maig - 3 de juny de 2017",
   "DEVELOPED_FOOTER": "Desenvolupat per",
   "TOURFILM": "Comunicació turística",
-  "DOCUMENTARY": "Documentals i Programes de TV",
+  "DOCUMENTARY": "Documentals",
   "CORPORATE": "Comunicació corporativa",
   "CATEGORY": "Categoria",
   "SECTION": "Secció",
@@ -43,5 +44,20 @@
   },
   "USER": "Usuari",
   "PASSWORD": "Contrasenya",
-  "LOGIN": "Entrada"
+  "LOGIN": "Entrada",
+  "ABOUT": {
+    "PAR1": "Benvingut a <strong>terres Catalunya!</strong>",
+    "PAR2": "El nostre festival vol aplegar produccions basades en el turisme natural i familiar i en el desenvolupament sostenible.",
+    "PAR3": "Amb <strong>terres LAB</strong> volem explorar les tendències més innovadores en la representació audiovisual de l’experiència del viatge.",
+    "PAR4": "El festival té lloc a Tortosa, la ciutat més gran de les Terres de l’Ebre. El 35% de la regió es troba protegida per 2 parcs naturals: el Delta de l’Ebre i els Ports. El seu patrimoni natural gaudeix de l’ampara del segell RESERVA DE LA BIOSFERA de la UNESCO.",
+    "PAR5": "Filmsnòmades és una productora situada a les Terres de l’Ebre. Des de l’any 2008 hem produït més de 50 documentals, espots de publicitat i films promocionals de regions i ciutats. La nostra producció “El Nacional – Barcelona” va guanyar el 1r Premi en la categoría “Gastronomy and Wine” en l’edició 2015 del festival ART&TUR."
+  },
+  "PARTNERS.SUPPORT": "Amb el suport de:",
+  "PARTNERS.ORGANIZER": "Organitzat per:",
+  "PARTICIPATE": {
+    "SECTION1": "<p><strong>terres Catalunya</strong> té tres seccions competitives - secció COMUNICACIÓ TURÍSTICA, secció DOCUMENTALS i secció COMUNICACIÓ CORPORATIVA.</p><p><strong>COMUNICACIÓ TURÍSTICA:</strong> destinada a produccions audiovisuals de promoció turística. Les produccions acceptades en aquesta secció competitiva inclouen:</p><p>Espots publicitaris  (de fins a 1’ de durada)</p><p>Films promocionals (de fins a 15’ de durada)</p><p>En aquesta secció hem determinat <u>11 temes o gèneres</u> relacionats amb el <u>turisme natural i familiar</u>. Cada pel·lícula presentada pot inscriure’s en un màxim de 3 dels temes o gèneres dels que s’esmenten a continuació:</p><ul><li>Destins turístics</li><li>Esports i Activitats a l’aire lliure</li><li>Expedicions i viatges</li><li>Hotels, Resorts & Spas</li><li>Events</li><li>Turisme de Salut i Benestar</li><li>Enoturisme</li><li>Turisme Rural i de Natura</li><li>Localitzacions per a la promoció de rodatges cinematogràfics</li><li>Destins innovadors</li><li>Animació</li>",
+    "SECTION2": "<p><strong>DOCUMENTALS:</strong> dedicada a l’exploració de la realitat i la promoció de l’experiència del viatge, posant especial èmfasi en el respecte pel medi ambient i la biodiversitat. Aquesta secció aplegarà en competició els millors documentals vinculats directament o indirectament amb el turisme i els viatges. En aquest cas hi ha tres competicions:</p><ul><li>Curtmetratges (de fins a 30’ de durada)</li><li>Llargmetratges documentals (de fins a 90’ de durada).</li><li>WebDocs</li></ul><p>En aquesta secció dedicada als documentals poden competir produccions que aborden els següents temes o gèneres:</p><ul><li>Esports i oci</li><li>Aventura, expedicions i viatges</li><li>Cuina</li><li>Medi ambient i ecologia</li><li>Natura i vida salvatge</li><li>Etnografia i Societat</li><li>Biografies</li><li>Destins innovadors</li></ul>",
+    "SECTION3": "<p><strong>COMUNICACIÓ CORPORATIVA:</strong> dedicada a les peces comunicatives sorgides d’organitzacions (institucions, ONG, empreses) que tracten temàtiques relacionades amb el desenvolupament sostenible. En aquest cas només hi ha una competició. Poden competir produccions que aborden els següents temes o gèneres:</p><ul><li>Lluita contra el canvi climàtic</li><li>Preservació de la biodiversitat</li><li>Les noves fonts d’energia</li><li>Transport i eco-mobilitat</li><li>Eco-turisme i viatge responsable</li><li>Producció sostenible i economia circular</li><li>Salut i millora de les condicions ambientals</li></ul>",
+    "SECTION4": "<p><strong>Condicions de Participació</strong></p><p>ANY DE PRODUCIÓ: Totes les pel·lícules inscrites al festival han d’haver estat produïdes després de l’1 de gener del 2015.</p><p>VERSIONS / IDIOMES: terres Catalunya accepta inscripcions en qualsevol llengua. Tanmateix, les peces que no estiguin produïdes originalment en català, castellà o anglès han de tenir:</p><ul><li>Subtítols en anglès o veu en off en català, castellà o anglès</li><li>Sinopsi escrita en català, castellà o anglès</li></ul><p>TERMINI PER A LES INSCRIPCIONS: Totes les inscripcions han d’efectuar-se abans del 31 de març de 2017 a les 24,00h (CET).</p><p>FORMATS I ENVIAMENTS: Per formalitzar la inscripció, per a cada una de les pel·lícules inscrites es requereix:</p><ul><li>Comprovant de Pagament de la taxa d’inscripció en el compte corrent  ES64 0081 0132 1700 0130 8136 (BANC SABADELL)</li><li>Arxiu Word/PDF amb la Sinopsi de la producció inscrita en anglès</li><li>Arxiu Word/PDF amb una breu presentació del director i del productor de la pel·lícula</li><li>1 fotografia del director de la pel·lícula</li><li>1 fotografia del productor de la pel·lícula</li><li>3 Screenshots de la pel·lícula</li><li>MP4 de la peça inscrita. (Resolució: Full HD 1920 x 1080; Video Codec: H264; Audio Codec: AAC)</li></ul><p><strong>Taxes d’inscripció</strong></p><p>Taxes d’inscripció per peça:</p><p>Fins al 15 de gener de 2017: 60 € + IVA</p><p>Des del 16 de gener fins al 30 de març de 2017: 90 € + IVA<br /><small>A partir de la 6a peça inscrita per un mateix productor, s’aplicarà un descompte del 50%</small></p>Inscripció conjunta terres + ART&TUR 2017: 150 € + IVA<br /><small>Les pel·lícules inscrites a <strong>terres Catalunya</strong> i a ART&TUR 2017 aspiraran, a més, al premi IBERIA, que es lliurarà en el marc de l’edició 2017 d’ART&TUR.</small></p><p><strong>Reglament i inscripcions</strong></p><p>Per formalitzar la inscripció, els participants han d’emplenar el formulari allotjat a la pàgina:</p><a href='http://terres.info/register'>http://terres.info/register</a>"
+  }
 }

@@ -1,0 +1,6 @@
+.about_img{
+  height: 150px;
+  background-image: url(../img/cabiscol_MG_2571.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}

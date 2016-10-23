@@ -1,7 +1,7 @@
 <section class="register-form-data">
   <h1>{{'REGISTER.NEW' | translate}}</h1>
   <hr>
-  <h2>{{'CATEGORY' | translate}}: <strong>{{'TOURFILM' | translate}}</strong></h2>
+  <h2>{{'CATEGORY' | translate}}: <strong>{{textCat}}</strong></h2>
   <h3>{{'REGISTER.G_INF' | translate}}</h3>
   <div layout="column" layout-gt-xs="row" flex>
     <md-radio-group ng-model="formData.section" ng-change="updateImport()">
@@ -10,7 +10,7 @@
     </md-radio-group>
     <md-input-container>
       <label for="nfilms">{{'REGISTER.N_FILMS' | translate}}</label>
-      <input type="number" name="nfilms" ng-model="formData.nfilms" min="1" max="3" required="true" ng-change="updateImport()">
+      <input type="number" name="nfilms" ng-model="formData.nfilms" min="1" required="true" ng-change="updateImport()">
     </md-input-container>
     <md-input-container>
       <label for="import">{{'REGISTER.AMOUNT' | translate}}</label>
@@ -76,7 +76,7 @@
     <div layout="column" layout-gt-xs="row" flex>
       <md-input-container flex="100">
         <label for="web">{{'REGISTER.WEB' | translate}}</label>
-        <input type="url" name="web" ng-model="formData.web">
+        <input type="text" name="web" ng-model="formData.web">
       </md-input-container>
       <md-input-container flex="100">
         <label for="facebook">Facebook</label>

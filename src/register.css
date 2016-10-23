@@ -98,7 +98,6 @@ register-cf:hover{
   text-shadow: 2px 2px #000000;
 }
 .register-form-data{
-  margin-top: 55px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -108,7 +107,7 @@ register-cf:hover{
 .mini{
   height: 35px;
 }
-@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {
   .register{
     flex-direction: row !important;
     -webkit-flex-direction: row !important;

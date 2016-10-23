@@ -16,6 +16,18 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/register/register.html',
       controller: 'RegisterCtrl'
     })
+    .state('participate', {
+      url: '/participate',
+      templateUrl: 'app/participate/participate.html'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'app/about/about.html'
+    })
+    .state('partners', {
+      url: '/partners',
+      templateUrl: 'app/partners/partners.html'
+    })
     .state('tourfilm', {
       url: '/register/tourfilm',
       templateUrl: 'app/register/tourfilm/registertourfilm.html',
@@ -23,7 +35,25 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('tourfilm.form', {
       url: '/',
-      templateUrl: 'app/register/tourfilm/data.html'
+      templateUrl: 'app/register/data.html'
+    })
+    .state('documentary', {
+      url: '/register/documentary',
+      templateUrl: 'app/register/documentary/registerdoc.html',
+      controller: 'regDoc'
+    })
+    .state('documentary.form', {
+      url: '/',
+      templateUrl: 'app/register/data.html'
+    })
+    .state('corporate', {
+      url: '/register/corporate',
+      templateUrl: 'app/register/corporate/registercf.html',
+      controller: 'regCf'
+    })
+    .state('corporate.form', {
+      url: '/',
+      templateUrl: 'app/register/data.html'
     })
     .state('login', {
       url: '/login',

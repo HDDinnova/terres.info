@@ -22,7 +22,7 @@ Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=zk1woweu_terres
 Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
 
   $adate = new DateTime();
-  $ldate = new DateTime('2016-12-31');
+  $ldate = new DateTime('2017-01-15');
   if ($section == 1) {
     if ($adate > $ldate) {
       $import = $nfilms * 90;
@@ -85,7 +85,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
                 <td style="padding:10px;background-color: #eceff1;"><strong>BANC SABADELL</strong></td>
               </tr>
               <tr>
-                <td style="padding:10px;background-color: #eceff1;">ES64 0081 0132 17 0001308136</td>
+                <td style="padding:10px;">ES64 0081 0132 17 0001308136</td>
               </tr>
             </table>
           </td>
@@ -94,7 +94,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
           <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
               <tr>
-                <td style="padding:10px;">Una vez efectuado el pago recicibrás un correo con el enlace para subir tu película.</td>
+                <td style="padding:10px;">Una vez efectuado el pago recibrás un correo con el enlace para subir tu película.</td>
               </tr>
             </table>
           </td>
@@ -140,6 +140,9 @@ Flight::route('/', function(){
     echo 'terres';
 });
 
+///////
+// Register a new competitor
+///////
 Flight::route('/newCompetitor', function(){
     $db = Flight::db();
 
@@ -165,18 +168,20 @@ Flight::route('/newCompetitor', function(){
     ///////
     // Check if user is registered
     ///////
-    $sql = "SELECT * FROM competitors WHERE email = :email LIMIT 1";
+    $sql = "SELECT * FROM competitors WHERE email = :email AND category = :category LIMIT 1";
     $check = $db->prepare($sql);
     $check->bindParam(':email', $post['email']);
+    $check->bindParam(':category', $post['valCat'], PDO::PARAM_INT);
     $check->execute();
     $count = $check->rowCount();
 
     if ($count === 0){
-      $sql = "INSERT INTO competitors(section, nfilms, fullName, comName, vat, address, zip, city, country, phone, email, date, website, facebook, password) VALUES (:section, :nfilms, :fullName, :comName, :vat, :address, :zip, :city, :country, :phone, :email, :date, :website, :facebook, :password)";
+      $sql = "INSERT INTO competitors(category, section, nfilms, fullName, comName, vat, address, zip, city, country, phone, email, date, website, facebook, password) VALUES (:category, :section, :nfilms, :fullName, :comName, :vat, :address, :zip, :city, :country, :phone, :email, :date, :website, :facebook, :password)";
 
       $newpass = randomPassword();
 
       $new = $db->prepare($sql);
+      $new->bindParam(':category', $post['valCat'], PDO::PARAM_INT);
       $new->bindParam(':section', $post['section']);
       $new->bindParam(':nfilms', $post['nfilms'], PDO::PARAM_INT);
       $new->bindParam(':fullName', $post['pname']);
@@ -211,6 +216,9 @@ Flight::route('/newCompetitor', function(){
 
 });
 
+///////
+// List all competitors
+///////
 Flight::route('/competitors', function(){
   $db = Flight::db();
 
