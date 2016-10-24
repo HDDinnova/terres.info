@@ -9,12 +9,16 @@ body, h1, h2, h3 {
   font-weight: 300
 }
 
-a {
+.main-container ._md{
+  padding-bottom: 30px;
+}
+
+.footer a {
   color: white;
   text-decoration: none;
 }
 
-a:hover {
+.footer a:hover {
   color: #5aadbb;
 }
 
@@ -111,6 +115,43 @@ md-select-menu .md-text{
 }
 .magnificent-slider{
   z-index: 0 !important;
+}
+.social{
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  bottom: 30px;
+}
+.social [socialshare]{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.terreslab_center{
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  top: calc(50% - 3vh);
+}
+.terreslab_center img{
+  height: 6vh;
+}
+.terreslab_center div:first-child{
+  margin-right: 5px;
+}
+.terreslablogo{
+  cursor: pointer;
+}
+#terreslab img{
+  width: 50vw;
+}
+#terreslab h1{
+  font-size: 3vw;
+  color: black;
+  text-decoration: none;
+}
+#terreslab a img{
+  margin-top: 1.5em;
+  width: 20px;
 }
 .terres{
   letter-spacing: -0.05rem;

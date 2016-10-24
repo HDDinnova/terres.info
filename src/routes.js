@@ -28,6 +28,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/partners',
       templateUrl: 'app/partners/partners.html'
     })
+    .state('news', {
+      url: '/news',
+      templateUrl: 'app/news/news.html'
+    })
+    .state('terreslab', {
+      url: '/terreslab',
+      templateUrl: 'app/terreslab/terreslab.html'
+    })
     .state('tourfilm', {
       url: '/register/tourfilm',
       templateUrl: 'app/register/tourfilm/registertourfilm.html',

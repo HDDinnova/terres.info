@@ -1,0 +1,22 @@
+.participate_big{
+  height: 250px;
+  background-size: cover;
+  background-position: center bottom;
+}
+.participate_small{
+  height: 100px;
+  background-size: cover;
+  background-position: center bottom;
+}
+#participate1{
+  background-image: url(../img/Hivern_badia.jpg);
+}
+#participate2{
+  background-image: url(../img/deltebre-b-9.jpg);
+}
+#participate3{
+  background-image: url(../img/deltebre-22.jpg);
+}
+#participate4{
+  background-image: url(../img/ares-1.jpg);
+}
