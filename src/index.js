@@ -22,7 +22,7 @@ angular
       })
       .useSanitizeValueStrategy(null);
   })
-  .controller('menuCtrl', function ($scope, $translate, $timeout, $mdDialog, $http, $mdToast, $mdSidenav) {
+  .controller('menuCtrl', function ($scope, $rootScope, $translate, $timeout, $mdDialog, $http, $mdToast, $mdSidenav) {
     $scope.toggleRight = function () {
       $mdSidenav('right').toggle();
     };
@@ -50,6 +50,7 @@ angular
     $scope.selOpt = $translate.use();
     $scope.setLang = function () {
       $translate.use($scope.userLang.toLowerCase());
+      $rootScope.$broadcast('langChange', $scope.userLang.toLowerCase());
     };
     $timeout(function () {
       angular.element(document.querySelector('terres-menu')).addClass('actiu');

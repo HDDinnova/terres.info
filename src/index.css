@@ -126,6 +126,10 @@ md-select-menu .md-text{
   margin-right: 5px;
   margin-left: 5px;
 }
+.news [socialshare]{
+  margin-right: 5px;
+  margin-left: 5px;
+}
 .terreslab_center{
   position: fixed;
   z-index: 10;

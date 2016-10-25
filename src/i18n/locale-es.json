@@ -62,10 +62,5 @@
   },
   "SOON": "Próximamente",
   "REGISTER_SINCE": "Registro disponible a partir del dia 2 de Noviembre",
-  "NOTICIA": {
-    "NOTICIA1": {
-      "HEADER": "terres Catalunya y ART&TUR presentan su acuerdo de asociación",
-      "CONTENT": "El pasado 19 de octubre tuvo lugar en Vila Nova da Gaia (Portugal), en el marco de la IX edición de ART&TUR - INTERNATIONAL TOURISM FILM FESTIVAL, la presentación del acuerdo de asociación entre <strong>terres Catalunya</strong> y ART&TUR. Fruto de este acuerdo, todas las películas inscritas en ambos festivales en las ediciones de 2017 podrán aspirar al premio IBERIA."
-    }
-  }
+  "READMORE": "Leer más"
 }

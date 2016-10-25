@@ -1,13 +1,16 @@
 <div class="main-container">
-  <md-content layout-padding layout-wrap>
-    <div flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
-      <md-card md-whiteframe-3>
-        <img class="md-card-image" src="img/news/artetur_01.jpg" alt="foto presentació">
-        <md-card-content>
-          <h2 translate>{{"NOTICIA.NOTICIA1.HEADER"}}</h2>
-          <p translate>{{"NOTICIA.NOTICIA1.CONTENT"}}</p>
-        </md-card-content>
-      </md-card>
-    </div>
-  </md-content>
+  <article ng-repeat="text in news.slice().reverse()">
+    <md-content layout-padding layout-wrap>
+      <div flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
+        <md-card md-whiteframe-3>
+          <img class="md-card-image" ng-src="{{text.img}}" alt="foto presentació">
+          <md-card-content>
+            <h2>{{text.title}}</h2>
+            <p ng-bind-html="text.excerpt"></p>
+            <a href="news/{{news.indexOf(text)}}">{{'READMORE' | translate}} &rarr;</a>
+          </md-card-content>
+        </md-card>
+      </div>
+    </md-content>
+  </article>
 </div>

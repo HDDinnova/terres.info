@@ -1,7 +1,8 @@
 angular
   .module('app')
   .factory('Cities', Cities)
-  .factory('Competitors', Competitors);
+  .factory('Competitors', Competitors)
+  .factory('News', News);
   // .factory('SaveMember', SaveMember);
 
 function Cities($resource) {
@@ -17,4 +18,7 @@ function Competitors($resource) {
       });
     }
   };
+}
+function News($resource) {
+  return $resource('news/ca.json');
 }

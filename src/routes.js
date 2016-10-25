@@ -30,7 +30,13 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('news', {
       url: '/news',
-      templateUrl: 'app/news/news.html'
+      templateUrl: 'app/news/news.html',
+      controller: 'NewsCtrl'
+    })
+    .state('post', {
+      url: '/news/:id',
+      templateUrl: 'app/news/news-post.html',
+      controller: 'NewsPostCtrl'
     })
     .state('terreslab', {
       url: '/terreslab',

@@ -1,0 +1,25 @@
+<div class="main-container">
+  <article>
+    <md-content layout-padding layout-wrap class="news">
+      <div flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
+        <md-card md-whiteframe-3>
+          <img class="md-card-image" ng-src="{{post.img}}" alt="foto presentació">
+          <md-card-content>
+            <h2>{{post.title}}</h2>
+            <p ng-bind-html="post.content"></p>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <div socialshare socialshare-provider="facebook" socialshare-media="http://terres.info/{{post.img}}" socialshare-url="{{socialurl}}" aria-label="Share to Facebook" ng-mouseenter="optface=true" ng-mouseleave="optface=false">
+              <md-icon md-svg-src="img/facebook_gray.svg" ng-hide="optface"></md-icon>
+              <md-icon md-svg-src="img/facebook_color.svg" ng-show="optface"></md-icon>
+            </div>
+            <div socialshare socialshare-provider="twitter" socialshare-url="{{socialurl}}" socialshare-text="{{post.excerpt}}" socialshare-description="terres International Film Festival, from may 31th to june 3rd at 2017"  aria-label="Share to Twitter" ng-mouseenter="opttwi=true" ng-mouseleave="opttwi=false">
+              <md-icon md-svg-src="img/twitter_gray.svg" ng-hide="opttwi"></md-icon>
+              <md-icon md-svg-src="img/twitter_color.svg" ng-show="opttwi"></md-icon>
+            </div>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </md-content>
+  </article>
+</div>
