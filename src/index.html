@@ -1,30 +1,30 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="AppCtrl">
   <head>
     <base href="/">
     <meta charset="utf-8">
-    <title>terres - International tourism film festival</title>
+    <title>terres Catalunya International Eco & Tourism Film Festival</title>
 
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="favicon-32x32.png" />
 
-    <meta name="description" content="terres International Film Festival, from may 31th to june 3rd at 2017">
+    <meta name="description" content="terres Catalunya International Eco & Tourism Film Festival">
     <meta name="keywords" content="film,festival,nature,corporate,terres,tortosa,ebre,delta">
-    <meta name="author" content="MakeInApps.cat & Filmsnòmades">
+    <meta name="author" content="Filmsnòmades - terres Catalunya">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta name="fragment" content="!" />
 
     <meta name="robots" content="index, follow">
     <meta name="google" content="nositelinkssearchbox" />
 
-    <meta property="og:site_name" content="terres - International tourism film festival"/>
-    <meta property="og:title" content="terres International Film Festival, from may 31th to june 3rd at 2017"/>
-    <meta property="og:url" content="http://terres.info"/>
+    <meta property="og:site_name" content="terres Catalunya International Eco & Tourism Film Festival"/>
+    <meta property="og:title" content="terres Catalunya International Eco & Tourism Film Festival, from may 31th to june 3rd at 2017"/>
+    <meta property="og:url" content="http://terres.info/"/>
     <meta property="og:image" itemprop="image" content="http://terres.info/img/logo-terres.png"/>
     <meta property="og:image:type" content="image/png" />
     <meta property="og:locale" content="ca_ES" />
     <meta property="og:locale:alternate" content="es_ES" />
-    <meta property="og:locale:alternate" content="en_EN" /> -->
+    <meta property="og:locale:alternate" content="en_EN" />
 
     <!-- build:css({.tmp,src}) styles/vendor.css -->
     <!-- bower:css -->
@@ -48,38 +48,21 @@
     </script>
   </head>
 
-  <body ng-controller="menuCtrl">
-    <terres-menu>
-      <md-toolbar class="md-hue-1">
-        <div class="md-toolbar-tools">
-          <h2><a ui-sref="index"><img class="logomenu" src="img/terres.png" alt="Logo terres"></a></h2>
-          <span flex></span>
-          <md-button show-gt-sm hide ui-sref="register"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
-          <md-button show-gt-sm hide ui-sref="participate"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
-          <md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-          <md-button show-gt-sm hide ui-sref="news"><span translate>{{'NEWS_MENU'}}</span></md-button>
-          <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button>
-          <md-button show-gt-sm hide ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
-          <md-select show-gt-sm hide ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
-            <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')">{{idi}}</md-option>
-          </md-select>
-          <md-button hide-gt-sm aria-label="menu" ng-click="toggleRight()"><md-icon class="md-default-theme" md-svg-src="img/ic_menu_black_24px.svg"></md-icon></md-button>
-        </div>
-      </md-toolbar>
-    </terres-menu>
-    <div layout="row">
-      <md-sidenav md-component-id="right" class="md-sidenav-right">
-          <md-button hide-gt-sm ui-sref="register" ng-click="close()"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
-          <md-button hide-gt-sm ui-sref="participate" ng-click="close()"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
-          <md-button hide-gt-sm ui-sref="partners" ng-click="close()"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-          <md-button hide-gt-sm ui-sref="news" ng-click="close()"><span translate>{{'NEWS_MENU'}}</span></md-button>
-          <md-button hide-gt-sm ui-sref="about" ng-click="close()"><span translate>{{'ABOUT_MENU'}}</span></md-button>
-          <md-button hide-gt-sm ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
-          <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
-            <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
-          </md-select>
-      </md-sidenav>
-    </div>
+  <body>
+    <terres-menu></terres-menu>
+      <div layout="row">
+        <md-sidenav md-component-id="right" class="md-sidenav-right">
+            <md-button hide-gt-sm ui-sref="register" ng-click="close()"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
+            <md-button hide-gt-sm ui-sref="participate" ng-click="close()"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
+            <md-button hide-gt-sm ui-sref="partners" ng-click="close()"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
+            <md-button hide-gt-sm ui-sref="news" ng-click="close()"><span translate>{{'NEWS_MENU'}}</span></md-button>
+            <md-button hide-gt-sm ui-sref="about" ng-click="close()"><span translate>{{'ABOUT_MENU'}}</span></md-button>
+            <md-button hide-gt-sm ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
+            <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
+              <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
+            </md-select>
+        </md-sidenav>
+      </div>
     <div ui-view></div>
     <terres-footer>
       <footer class="footer" ng-controller="footerCtrl">

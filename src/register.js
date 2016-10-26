@@ -1,6 +1,14 @@
 angular
   .module('app')
-  .controller('RegisterCtrl', function ($scope) {
+  .controller('RegisterCtrl', function ($scope, $rootScope) {
+    $rootScope.metaDescription = "terres Catalunya International Eco & Tourism Film Festival";
+    $rootScope.metaKeywords = "film,festival,nature,corporate,terres,tortosa,ebre,delta,register,torufilm,documentary";
+    $rootScope.metaOGsite = "terres Catalunya International Eco & Tourism Film Festival";
+    $rootScope.metaOGtitle = "Register to terres Catalunya International Eco & Tourism Film Festival";
+    $rootScope.metaOGurl = "http://terres.info/register";
+    $rootScope.metaOGimg = "http://terres.info/img/tourfilm.jpg";
+    $rootScope.metaOGimgType = "image/jpg";
+
     $scope.resources = [
       './video/fonsmenu_selecciocategoria_ok.webm',
       '*.ogv',
