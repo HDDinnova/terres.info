@@ -25,15 +25,7 @@ angular
   .controller('footerCtrl', function ($scope) {
     $scope.any = new Date();
   })
-  .controller('AppCtrl', function () {
-    // $scope.metaDescription = "terres Catalunya International Eco & Tourism Film Festival";
-    // $scope.metaKeywords = "film,festival,nature,corporate,terres,tortosa,ebre,delta";
-    // $scope.metaOGsite = "terres Catalunya International Eco & Tourism Film Festival";
-    // $scope.metaOGtitle = "terres Catalunya International Eco & Tourism Film Festival, from may 31th to june 3rd at 2017";
-    // $scope.metaOGurl = "http://terres.info";
-    // $scope.metaOGimg = "http://terres.info/img/logo-terres.png";
-    // $scope.metaOGimgType = "image/png";
-  })
+  .controller('AppCtrl', function () {})
   .component('terresMenu', {
     templateUrl: 'app/terresmenu.html',
     controller: 'menuCtrl'

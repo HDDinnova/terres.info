@@ -1,0 +1,19 @@
+﻿<section layout="row" layout-align="center center" layout-padding class="loginback" ng-controller="LoginCtrl">
+  <div md-whiteframe="12" flex-gt-sm="60" flex="80" class="login">
+    <form  name="login" ng-submit="formlogin()">
+      <img src="img/logo-terres.png" alt="logo terres" />
+      <h1 translate>{{'LOGIN'}}</h1>
+      <md-input-container>
+        <label for="user" translate>{{'USER'}}</label>
+        <input type="email" name="user" ng-model="formLogin.user" required>
+      </md-input-container>
+      <md-input-container>
+        <label for="password" translate>{{'PASSWORD'}}</label>
+        <input type="password" name="password" ng-model="formLogin.password" required>
+      </md-input-container>
+      <div layout="row" layout-align="center" flex="">
+        <md-button class="md-raised md-primary" type="submit" >{{'SUBMIT' | translate}}</md-button>
+      </div>
+    </form>
+  </div>
+</section>

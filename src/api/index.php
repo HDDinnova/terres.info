@@ -1,6 +1,7 @@
 <?php
 require 'flight/Flight.php';
 require 'flight/helpers.php';
+//require_once 'passwordHash.php';
 
 $dbuser = 'zk1woweu_admin';
 $dbpass = '6S8,fs)u.9Ra';
@@ -235,16 +236,36 @@ Flight::route('/competitors', function(){
 Flight::route('/login', function(){
   $db = Flight::db();
 
-  $dades = file_get_contents('php://input');
-  $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+  $login = file_get_contents('php://input');
+  $get = json_decode($login, true);
 
-  $get = json_decode($dades,true);
-
-  if (isset($get['email']) AND isset($get['password'])) {
-    $secret_key = Flight::get('secret_key');
-		$email = $get['email'];
-		$password = get_crypt_password($get['password'], $secret_key);
-
+  if (isset($get['user']) AND isset($get['password'])) {
+    $sql = "SELECT * FROM competitors WHERE email = :email AND password = :password LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $get['user']);
+    $check->bindParam(':password', $get['password']);
+    $check->execute();
+    $count = $check->rowCount();
+    if ($count > 0) {
+      $user = $check->fetch(PDO::FETCH_ASSOC);
+      if ($user['firstEnter'] === '1') {
+        $response["status"] = 202;
+        $response["message"] = "First enter";
+        Flight::json($response);
+      } else {
+        $response["status"] = 200;
+        $response["message"] = "Login successful";
+        Flight::json($response);
+      }
+    } else {
+      $response["status"] = 401;
+      $response["message"] = "This email not exist in our database";
+      Flight::json($response);
+    }
+  } else {
+    $response["status"] = 404;
+    $response["message"] = "There are no data";
+    Flight::json($response);
   }
 
   $db = NULL;

@@ -450,7 +450,7 @@ section{
   height: 100vh;
 }
 .loginback{
-  background-image: url('img/deltebre-16.jpg');
+  background-image: url('../img/deltebre-16.jpg');
   background-size: cover;
   background-position: bottom;
 }
