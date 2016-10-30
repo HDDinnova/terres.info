@@ -1,0 +1,27 @@
+﻿<section layout="row" layout-align="center center" layout-padding class="loginback">
+  <div md-whiteframe="12" flex-gt-sm="60" flex="80" class="login">
+    <form  name="login" ng-submit="formfe()">
+      <img src="img/logo-terres.png" alt="logo terres" />
+      <h1 translate>{{'LOGIN'}}</h1>
+      <md-input-container>
+        <label for="user" translate>{{'EMAIL'}}</label>
+        <input type="email" name="user" ng-model="formFE.user" required>
+      </md-input-container>
+      <md-input-container>
+        <label for="password" translate>{{'OLDPASSWORD'}}</label>
+        <input type="password" name="password" ng-model="formFE.oldpassword" required>
+      </md-input-container>
+      <md-input-container>
+        <label for="password" translate>{{'NEWPASSWORD'}}</label>
+        <input type="password" name="password" ng-model="formFE.newpassword" required>
+      </md-input-container>
+      <md-input-container>
+        <label for="password" translate>{{'REPEATPASSWORD'}}</label>
+        <input type="password" name="password" ng-model="formFE.repeatpassword" required>
+      </md-input-container>
+      <div layout="row" layout-align="center" flex="">
+        <md-button class="md-raised md-primary" type="submit" >{{'SUBMIT' | translate}}</md-button>
+      </div>
+    </form>
+  </div>
+</section>

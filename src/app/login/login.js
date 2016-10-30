@@ -5,8 +5,8 @@ angular
     $scope.formlogin = function () {
       AuthenticationSvc.login($scope.formLogin)
       .then(function (result) {
-        if (result.status === 202){
-          $state.go('first_enter');
+        if (result.status === 202) {
+          $state.go('chgPassword');
         } else if (result.status === 200) {
           $state.go('intranet');
         }

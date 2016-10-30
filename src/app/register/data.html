@@ -10,17 +10,9 @@
   <h2>{{'CATEGORY' | translate}}: <strong>{{textCat}}</strong></h2>
   <h3>{{'REGISTER.G_INF' | translate}}</h3>
   <div layout="column" layout-gt-xs="row" flex>
-    <md-radio-group ng-model="formData.section" ng-change="updateImport()">
-      <md-radio-button value="1" aria-label="terres"><img class="mini" src="img/terres-mini.png" alt="terres" /></md-radio-button>
-      <md-radio-button value="2" aria-label="terres + Art&Tur"><img class="mini" src="img/terres-art-mini.png" alt="terres + Art&Tur" /></md-radio-button>
-    </md-radio-group>
     <md-input-container>
       <label for="nfilms">{{'REGISTER.N_FILMS' | translate}}</label>
       <input type="number" name="nfilms" ng-model="formData.nfilms" min="1" required="true" ng-change="updateImport()">
-    </md-input-container>
-    <md-input-container>
-      <label for="import">{{'REGISTER.AMOUNT' | translate}}</label>
-      <input type="text" name="import" ng-model="formData.import" ng-value="preu" ng-disabled="true">
     </md-input-container>
     <md-input-container ng-hide="true">
       <label for="category">Category</label>

@@ -20,19 +20,7 @@ Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=zk1woweu_terres
 ///////
 // Function to send HTML email
 ///////
-Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
-
-  $adate = new DateTime();
-  $ldate = new DateTime('2017-01-15');
-  if ($section == 1) {
-    if ($adate > $ldate) {
-      $import = $nfilms * 90;
-    } else {
-      $import = $nfilms * 60;
-    }
-  } else {
-    $import = $nfilms * 150;
-  }
+Flight::map('htmlmail', function($name,$email,$password){
 
   $subject = "terres register confirmation";
 
@@ -72,7 +60,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
               <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
                   <h3>Hola <i>'.$name.'</i></h3>
-                  <h4>Gracias por inscribirte en terres Catalunya.<br/>Para terminar el proceso y poder subir tu película, haz el ingreso de la cuota de inscripción a esta cuenta bancaria:</h4>
+                  <h4>Gracias por inscribirte en <strong>terres Catalunya</strong>.<br/>Para terminar el proceso y poder subir tus películas, accede a la <a href="http://terres.info/login">intranet</a> con los datos siguientes:</h4>
                   <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
                 </td>
               </tr>
@@ -83,19 +71,12 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
           <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
             <table role="presentation" cellspacing="0" cellpadding="0" border="1px solid black" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
               <tr>
-                <td style="padding:10px;background-color: #eceff1;"><strong>BANC SABADELL</strong></td>
+                <td style="padding:10px;background-color: #eceff1;"><strong>USUARIO</strong></td>
+                <td style="padding:10px;background-color: #eceff1;"><strong>CONTRASENYA</strong></td>
               </tr>
               <tr>
-                <td style="padding:10px;">ES64 0081 0132 17 0001308136</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-          <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
-              <tr>
-                <td style="padding:10px;">Una vez efectuado el pago recibrás un correo con el enlace para subir tu película.</td>
+                <td style="padding:10px;">'.$email.'</td>
+                <td style="padding:10px;">'.$password.'</td>
               </tr>
             </table>
           </td>
@@ -104,7 +85,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
           <td style="width: 100%; font-size: 14px; font-family: sans-serif; mso-height-rule: exactly; line-height: 18px; text-align: center; color: #888888; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px 10px;" align="center">
-            <p>¡Gracias!</p>
+            <p>¡Muchas gracias!</p>
           </td>
         </tr>
       </table>
@@ -118,8 +99,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
       </div>
     </center>
   </body>
-  </html>
-  ';
+  </html>';
 
   // Set content-type header for sending HTML email
   $headers = "MIME-Version: 1.0" . "\r\n";
@@ -127,7 +107,7 @@ Flight::map('htmlmail', function($name,$email,$password,$nfilms,$dni,$section){
 
   // Additional headers
   $headers .= 'From: terres International Film Festival <info@terres.info>' . "\r\n";
-  $headers .= 'cc: info@makeinapps.com' . "\r\n";
+  $headers .= 'bcc: info@makeinapps.com' . "\r\n";
 
   // Send email
   if(mail($email,$subject,$htmlContent,$headers)):
@@ -151,14 +131,14 @@ Flight::route('/newCompetitor', function(){
     // Function to generate a random password at registry
     ///////
     function randomPassword() {
-        $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789,.()=*/@#-_{}";
-        $pass = array();
-        $alphaLength = strlen($alphabet) - 1;
-        for ($i = 0; $i < 8; $i++) {
-            $n = rand(0, $alphaLength);
-            $pass[] = $alphabet[$n];
-        }
-        return implode($pass);
+      $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789,.()=*/@#-_{}";
+      $pass = array();
+      $alphaLength = strlen($alphabet) - 1;
+      for ($i = 0; $i < 8; $i++) {
+        $n = rand(0, $alphaLength);
+        $pass[] = $alphabet[$n];
+      }
+      return implode($pass);
     }
 
     $dades = file_get_contents('php://input');
@@ -169,22 +149,18 @@ Flight::route('/newCompetitor', function(){
     ///////
     // Check if user is registered
     ///////
-    $sql = "SELECT * FROM competitors WHERE email = :email AND category = :category LIMIT 1";
+    $sql = "SELECT * FROM competitors WHERE email = :email LIMIT 1";
     $check = $db->prepare($sql);
     $check->bindParam(':email', $post['email']);
-    $check->bindParam(':category', $post['valCat'], PDO::PARAM_INT);
     $check->execute();
     $count = $check->rowCount();
 
     if ($count === 0){
-      $sql = "INSERT INTO competitors(category, section, nfilms, fullName, comName, vat, address, zip, city, country, phone, email, date, website, facebook, password) VALUES (:category, :section, :nfilms, :fullName, :comName, :vat, :address, :zip, :city, :country, :phone, :email, :date, :website, :facebook, :password)";
+      $sql = "INSERT INTO competitors(fullName, comName, vat, address, zip, city, country, phone, email, website, facebook, password) VALUES (:fullName, :comName, :vat, :address, :zip, :city, :country, :phone, :email, :website, :facebook, :password)";
 
       $newpass = randomPassword();
 
       $new = $db->prepare($sql);
-      $new->bindParam(':category', $post['valCat'], PDO::PARAM_INT);
-      $new->bindParam(':section', $post['section']);
-      $new->bindParam(':nfilms', $post['nfilms'], PDO::PARAM_INT);
       $new->bindParam(':fullName', $post['pname']);
       $new->bindParam(':comName', $post['cname']);
       $new->bindParam(':vat', $post['vat']);
@@ -194,14 +170,38 @@ Flight::route('/newCompetitor', function(){
       $new->bindParam(':country', $post['country']);
       $new->bindParam(':phone', $post['phone']);
       $new->bindParam(':email', $post['email']);
-      $new->bindParam(':date', $post['date']);
       $new->bindParam(':website', $post['web']);
       $new->bindParam(':facebook', $post['facebook']);
       $new->bindParam(':password', $newpass);
 
       try {
         if ($new->execute()) {
-          $mail = Flight::htmlmail($post['pname'],$post['email'],$newpass,$post['nfilms'],$post['vat'],$post['section']);
+          $userid = $db->lastInsertId();
+          switch (strval($post['valCat'])) {
+            case '1':
+              $sqlcat = "INSERT INTO tourism(user, nfilms, date) VALUES (:user, :nfilms, NOW())";
+              $insertcat = $db->prepare($sqlcat);
+              $insertcat->bindParam(':user', $userid);
+              $insertcat->bindParam(':nfilms', $post['nfilms']);
+              $insertcat->execute();
+              break;
+            case '2':
+              $sqlcat = "INSERT INTO documentary(user, nfilms, date) VALUES (:user, :nfilms, NOW())";
+              $insertcat = $db->prepare($sqlcat);
+              $insertcat->bindParam(':user', $userid);
+              $insertcat->bindParam(':nfilms', $post['nfilms']);
+              $insertcat->execute();
+              break;
+            case '3':
+              $sqlcat = "INSERT INTO corporate(user, nfilms, date) VALUES (:user, :nfilms, NOW())";
+              $insertcat = $db->prepare($sqlcat);
+              $insertcat->bindParam(':user', $userid);
+              $insertcat->bindParam(':nfilms', $post['nfilms']);
+              $insertcat->execute();
+              break;
+          }
+
+          $mail = Flight::htmlmail($post['pname'],$post['email'],$newpass);
           echo $mail;
         } else {
           echo false;
@@ -214,7 +214,6 @@ Flight::route('/newCompetitor', function(){
     }
 
     $db = NULL;
-
 });
 
 ///////
@@ -240,10 +239,10 @@ Flight::route('/login', function(){
   $get = json_decode($login, true);
 
   if (isset($get['user']) AND isset($get['password'])) {
-    $sql = "SELECT * FROM competitors WHERE email = :email AND password = :password LIMIT 1";
+    $sql = "SELECT * FROM competitors WHERE email = :email LIMIT 1";
     $check = $db->prepare($sql);
     $check->bindParam(':email', $get['user']);
-    $check->bindParam(':password', $get['password']);
+    //$check->bindParam(':password', $get['password']);
     $check->execute();
     $count = $check->rowCount();
     if ($count > 0) {
@@ -253,9 +252,16 @@ Flight::route('/login', function(){
         $response["message"] = "First enter";
         Flight::json($response);
       } else {
-        $response["status"] = 200;
-        $response["message"] = "Login successful";
-        Flight::json($response);
+        if (password_verify($get['password'], $user['password'])) {
+          $response["status"] = 200;
+          $response["message"] = "Login successful";
+          $response["id"] = md5($user['email']);
+          Flight::json($response);
+        } else {
+          $response["status"] = 201;
+          $response["message"] = "Bad credentials";
+          Flight::json($response);
+        }
       }
     } else {
       $response["status"] = 401;
@@ -270,5 +276,52 @@ Flight::route('/login', function(){
 
   $db = NULL;
 });
+
+Flight::route('/firstenter', function(){
+  $db = Flight::db();
+
+  $login = file_get_contents('php://input');
+  $get = json_decode($login, true);
+
+  if (isset($get['user']) AND isset($get['oldpassword'])) {
+    $sql = "SELECT * FROM competitors WHERE email = :email AND password = :password LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $get['user']);
+    $check->bindParam(':password', $get['oldpassword']);
+    $check->execute();
+    $count = $check->rowCount();
+    if ($count > 0) {
+      $hash = password_hash($get['newpassword'], PASSWORD_DEFAULT);
+      $user = $check->fetch(PDO::FETCH_ASSOC);
+      $sql_update = "UPDATE competitors SET password = :newPassword, firstEnter = 0 WHERE id = :id";
+      $update = $db->prepare($sql_update);
+      $update->bindParam(':newPassword', $hash);
+      $update->bindParam(':id', $user['id']);
+      $update->execute();
+      $count = $update->rowCount();
+      if ($count > 0) {
+        $response["status"] = 200;
+        $response["message"] = "Password successfully changed";
+        $response["id"] = md5($get['user']);
+        Flight::json($response);
+      } else {
+        $response["status"] = 500;
+        $response["message"] = "General error, try later";
+        Flight::json($response);
+      }
+    } else {
+      $response["status"] = 401;
+      $response["message"] = "User incorrect";
+      Flight::json($response);
+    }
+  } else {
+    $response["status"] = 404;
+    $response["message"] = "There are no data";
+    Flight::json($response);
+  }
+
+  $db = NULL;
+});
+
 
 Flight::start();

@@ -80,8 +80,13 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       resolve: {
         auth: function ($q, AuthenticationSvc) {
           var userInfo = AuthenticationSvc.getUserInfo();
-          return userInfo ? {status:true, data:userInfo} : {status:false};
+          return userInfo ? {status: true, data: userInfo} : {status: false};
         }
       }
+    })
+    .state('chgPassword', {
+      url: '/intranet/firstenter',
+      templateUrl: 'app/intranet/firstenter.html',
+      controller: 'firstenterCtrl'
     });
 }

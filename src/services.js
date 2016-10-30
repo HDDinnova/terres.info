@@ -28,12 +28,19 @@ function AuthenticationSvc($http, $q, $window) {
 
     $http.post("/api/login", userName)
     .then(function (result) {
-      if (result.data.status === 201 || result.data.status === 202) {
+      if (result.data.status === 200) {
+        userInfo = {
+          status: result.data.status,
+          message: result.data.message,
+          id: result.data.id
+        };
+        $window.sessionStorage.userInfo = JSON.stringify(userInfo);
+        deferred.resolve(userInfo);
+      } else if (result.data.status === 202) {
         userInfo = {
           status: result.data.status,
           message: result.data.message
         };
-        $window.sessionStorage.userInfo = JSON.stringify(userInfo);
         deferred.resolve(userInfo);
       } else {
         errorCode = {

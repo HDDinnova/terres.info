@@ -4,4 +4,7 @@ angular
     if (!auth.status) {
       $state.go('login');
     }
+    if (auth.status === 202) {
+      $state.go('chgPassword');
+    }
   });
