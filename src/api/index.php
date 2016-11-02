@@ -255,7 +255,7 @@ Flight::route('/login', function(){
         if (password_verify($get['password'], $user['password'])) {
           $response["status"] = 200;
           $response["message"] = "Login successful";
-          $response["id"] = md5($user['email']);
+          $response["id"] = base64_encode($user['email']);
           Flight::json($response);
         } else {
           $response["status"] = 201;
@@ -302,7 +302,7 @@ Flight::route('/firstenter', function(){
       if ($count > 0) {
         $response["status"] = 200;
         $response["message"] = "Password successfully changed";
-        $response["id"] = md5($get['user']);
+        $response["id"] = base64_encode($get['user']);
         Flight::json($response);
       } else {
         $response["status"] = 500;

@@ -73,17 +73,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/login',
       templateUrl: 'app/login/login.html'
     })
-    .state('intranet', {
-      url: '/intranet',
-      templateUrl: 'app/intranet/index.html',
-      controller: 'IntraCtrl',
-      resolve: {
-        auth: function ($q, AuthenticationSvc) {
-          var userInfo = AuthenticationSvc.getUserInfo();
-          return userInfo ? {status: true, data: userInfo} : {status: false};
-        }
-      }
-    })
     .state('chgPassword', {
       url: '/intranet/firstenter',
       templateUrl: 'app/intranet/firstenter.html',

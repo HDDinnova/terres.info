@@ -8,7 +8,7 @@ angular
         if (result.status === 202) {
           $state.go('chgPassword');
         } else if (result.status === 200) {
-          $state.go('intranet');
+          $window.location.href = '/intranet';
         }
       }, function (error) {
         $window.alert(error.message);
