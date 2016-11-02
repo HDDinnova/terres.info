@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope, $http, $mdToast, $translate, $state, $stateParams, Cities) {
+  .controller('regTf', function ($scope, $http, $mdToast, $translate, $state, $stateParams, Cities, $mdDialog) {
     $translate('TOURFILM').then(function (value) {
       $scope.textCat = value;
     });
@@ -23,6 +23,15 @@ angular
           });
           $state.go('login');
         }
+      });
+    };
+    $scope.showTerms = function (ev) {
+      $mdDialog.show({
+        templateUrl: 'app/register/term.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
       });
     };
   });

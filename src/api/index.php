@@ -60,7 +60,17 @@ Flight::map('htmlmail', function($name,$email,$password){
               <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
                   <h3>Hola <i>'.$name.'</i></h3>
+                  <h4>Gràcies per inscriure\'t a terres Catalunya. Per acabar el procés i poder pujar les teves pel·lícules, accedeix a la <a href="http://terres.info/login">intranet</a> amb les següents dades</h4>
+                  <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
+                </td>
+                <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
+                  <h3>Hola <i>'.$name.'</i></h3>
                   <h4>Gracias por inscribirte en <strong>terres Catalunya</strong>.<br/>Para terminar el proceso y poder subir tus películas, accede a la <a href="http://terres.info/login">intranet</a> con los datos siguientes:</h4>
+                  <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
+                </td>
+                <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
+                  <h3>Welcome <i>'.$name.'</i></h3>
+                  <h4>Thanks for registering at terres Catalunya. To finish the process and upload your films, please access to the <a href="http://terres.info/login">intranet</a> with the following data</h4>
                   <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
                 </td>
               </tr>
@@ -92,7 +102,7 @@ Flight::map('htmlmail', function($name,$email,$password){
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
           <td style="width: 100%; font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height: 18px; text-align: center; color: #888888; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px 10px;" align="center">
-            Filmsnòmades GS<br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><span style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Carrer Jaume I 44 entresòl 2a, 43870 Amposta, Tarragona, Spain</span><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><span style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">977 70 36 60</span>
+            FILMS NÒMADES GS, SL<br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><span style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Carrer Jaume I 44 entresòl 2a, 43870 Amposta, Tarragona, Spain</span><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><span style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">977 70 20 74</span>
           </td>
         </tr>
       </table>

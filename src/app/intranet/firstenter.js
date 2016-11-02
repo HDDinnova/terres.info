@@ -1,6 +1,8 @@
 angular
   .module('app')
   .controller('firstenterCtrl', function ($scope, $window, $http, $state) {
+    var userInfo = {};
+    var errorCode = {};
     $scope.formFE = {};
     $scope.formfe = function () {
       $http.post("/api/firstenter", $scope.formFE)
