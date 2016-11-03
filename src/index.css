@@ -217,7 +217,7 @@ md-dialog-content{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  animation: slidein 1.5s ease-in-out forwards;
+  animation: slidein 7s ease-in-out forwards;
 }
 
 .ribbon-content {
@@ -273,39 +273,31 @@ md-dialog-content{
 }
 
 @-webkit-keyframes slidein {
-  from {
-    transform: translate(0, -400px);
-  }
-  to {
-    transform: translate(0, 60px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @-o-keyframes slidein {
-  from {
-    transform: translate(0, -400px);
-  }
-  to {
-    transform: translate(0, 60px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @-moz-keyframes slidein {
-  from {
-    transform: translate(0, -400px);
-  }
-  to {
-    transform: translate(0, 60px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @keyframes slidein {
-  from {
-    transform: translate(0, -400px);
-  }
-  to {
-    transform: translate(0, 60px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 .overlay-ribbon-mobile {
@@ -335,7 +327,7 @@ md-dialog-content{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  animation: slideinmobile 1.5s ease-in-out forwards;
+  animation: slideinmobile 7s ease-in-out forwards;
 }
 
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
@@ -400,39 +392,31 @@ md-dialog-content{
 }
 
 @-webkit-keyframes slideinmobile {
-  from {
-    transform: translate(0, 400px);
-  }
-  to {
-    transform: translate(0, -120px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @-o-keyframes slideinmobile {
-  from {
-    transform: translate(0, 400px);
-  }
-  to {
-    transform: translate(0, -120px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @-moz-keyframes slideinmobile {
-  from {
-    transform: translate(0, 400px);
-  }
-  to {
-    transform: translate(0, -120px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 @keyframes slideinmobile {
-  from {
-    transform: translate(0, 400px);
-  }
-  to {
-    transform: translate(0, -120px);
-  }
+  0%  {transform: translate(0, -400px);}
+  10% {transform: translate(0, 60px);}
+  90% {transform: translate(0, 60px);}
+  100%  {transform: translate(0, -400px);}
 }
 
 /**********************/

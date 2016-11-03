@@ -32,7 +32,7 @@
     "EMAIL": "Correo electrónico",
     "WEB": "Página web",
     "COUNTRY": "País",
-    "SATISFACTORY": "El registro se ha realitzado correctament, revisa el correo para más información"
+    "SATISFACTORY": "El registro se ha realitzado correctament, revisa el correo para más información. If in a few minutes it not also reached look at the spam folder"
   },
   "NEWSLETTER": {
     "THANKS": "Gracias por suscribirte a la Newsletter",

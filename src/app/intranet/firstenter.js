@@ -24,6 +24,7 @@ angular
           /*
             Implementar error al canviar contrasenya
           */
+          console.log(errorCode);
         }
       });
     };
