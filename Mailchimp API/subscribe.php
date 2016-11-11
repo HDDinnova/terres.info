@@ -12,7 +12,8 @@ $user = json_decode($post,true);
 $optional_parameters = array(
   "merge_fields" => array(
     "FNAME" => $user['name'],
-    "LNAME" => $user['surname']
+    "LNAME" => $user['surname'],
+    "LANG" => $user['lang']
   )
 );
 

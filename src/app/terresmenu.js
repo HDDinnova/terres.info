@@ -57,6 +57,7 @@ angular
                 );
               });
             } else {
+              console.log(data);
               $translate('NEWSLETTER.THANKYOU').then(function (value) {
                 $mdToast.show(
                   $mdToast.simple()
@@ -86,7 +87,8 @@ angular
         var persona = {
           name: $scope.newsName,
           surname: $scope.newsSurname,
-          mail: $scope.newsEmail
+          mail: $scope.newsEmail,
+          lang: $translate.use()
         };
         $mdDialog.hide(persona);
         rightMenu();
