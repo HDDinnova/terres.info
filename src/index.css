@@ -147,9 +147,10 @@ md-select-menu .md-text{
 }
 #terreslab img{
   width: 50vw;
+  margin-top: 1rem;
 }
 #terreslab h1{
-  font-size: 3vw;
+  font-size: 2vw;
   color: black;
   text-decoration: none;
 }
