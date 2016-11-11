@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /intranet/
+Allow: /*.css$
+Allow: /*.js$
