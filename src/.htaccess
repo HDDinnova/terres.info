@@ -1,8 +1,10 @@
-RewriteEngine on
+RewriteEngine On
+
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|facebot|Twitterbot|Pinterest|Google.*snippet)
+RewriteRule (.*)$ http://terres.info/api/rrss/$1 [P]
+
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
-RewriteRule ^(admin|intranet2)($|/) - [L]
-
 RewriteRule ^(.*) /index.html [NC,L]

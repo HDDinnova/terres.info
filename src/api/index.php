@@ -127,10 +127,6 @@ Flight::map('htmlmail', function($name,$email,$password){
   endif;
 });
 
-Flight::route('/', function(){
-    echo 'terres';
-});
-
 ///////
 // Register a new competitor
 ///////
@@ -331,6 +327,48 @@ Flight::route('/firstenter', function(){
   }
 
   $db = NULL;
+});
+
+Flight::route('/rrss/@page', function($page){
+  $db = Flight::db();
+
+  if ($page === 'index.php') {
+    $page = 'index';
+  }
+
+  $sql = "SELECT * FROM rrss WHERE page = :page";
+  $info = $db->prepare($sql);
+  $info->bindParam(':page', $page);
+  $info->execute();
+  $data = $info->fetch(PDO::FETCH_ASSOC);
+
+  $db = NULL;
+
+  echo '<!DOCTYPE html>
+  <html>
+      <head>
+        <title>terres Catalunya International Eco & Tourism Film Festival</title>
+
+        <meta name="description" content="'.$data['description'].'">
+        <meta name="keywords" content="'.$data['tags'].'">
+        <meta name="author" content="Filmsnòmades - terres Catalunya">
+
+        <meta property="og:site_name" content="terres Catalunya International Eco & Tourism Film Festival"/>
+        <meta property="og:url" content="'.$data['url'].'"/>
+        <meta property="og:title" content="'.$data['title'].'"/>
+        <meta property="og:description" content="'.utf8_encode($data['description']).'"/>
+        <meta property="og:image" itemprop="image" content="'.$data['image'].'"/>
+        <meta property="og:image:type" content="'.$data['imagetype'].'" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="ca_ES" />
+        <meta property="og:locale:alternate" content="es_ES" />
+      </head>
+      <body>
+          <p>'.utf8_encode($data['description']).'</p>
+          <img src="'.$data['image'].'">
+      </body>
+  </html>';
 });
 
 
