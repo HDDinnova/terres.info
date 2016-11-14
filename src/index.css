@@ -145,18 +145,29 @@ md-select-menu .md-text{
 .terreslablogo{
   cursor: pointer;
 }
+#terreslab{
+  background-image: url('img/tortosanocturn.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
+#terreslab md-content.md-default-theme, md-content{
+  background-color: rgba(0,0,0,0);
+}
 #terreslab img{
-  width: 50vw;
+  width: 40vw;
   margin-top: 1rem;
 }
 #terreslab h1{
-  font-size: 2vw;
-  color: black;
+  font-size: 1.2vw;
+  color: white;
   text-decoration: none;
+}
+#terreslab p{
+  color: white;
 }
 #terreslab a img{
   margin-top: 1.5em;
-  width: 20px;
+  width: 1rem;
 }
 .terres{
   letter-spacing: -0.05rem;
