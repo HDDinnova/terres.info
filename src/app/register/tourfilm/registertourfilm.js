@@ -26,8 +26,9 @@ angular
       });
     };
     $scope.showTerms = function (ev) {
+      var url = 'app/register/term_' + $translate.use() + '.html';
       $mdDialog.show({
-        templateUrl: 'app/register/term.html',
+        templateUrl: url,
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true,

@@ -124,3 +124,6 @@ register-cf:hover{
     -webkit-flex-direction: row !important;
   }
 }
+.term ul {
+  list-style-position: inside;
+}
