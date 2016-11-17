@@ -1,8 +1,13 @@
 angular
   .module('app')
-  .controller('regTf', function ($scope, $http, $mdToast, $translate, $state, $stateParams, Cities, $mdDialog) {
+  .controller('regTf', function ($scope, $rootScope, $http, $mdToast, $translate, $state, $stateParams, Cities, $mdDialog) {
     $translate('TOURFILM').then(function (value) {
       $scope.textCat = value;
+    });
+    $rootScope.$on('langChange', function () {
+      $translate('TOURFILM').then(function (value) {
+        $scope.textCat = value;
+      });
     });
     $scope.countries = Cities.query();
     $scope.formData = {};
