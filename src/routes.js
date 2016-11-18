@@ -42,6 +42,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/terreslab',
       templateUrl: 'app/terreslab/terreslab.html'
     })
+    .state('tlregister', {
+      url: '/terreslab/register',
+      templateUrl: 'app/terreslab/register.html',
+      controller: 'tlregCtrl'
+    })
     .state('tourfilm', {
       url: '/register/tourfilm',
       templateUrl: 'app/register/tourfilm/registertourfilm.html',

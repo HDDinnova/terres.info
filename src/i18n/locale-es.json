@@ -69,5 +69,17 @@
   "READMORE": "Leer más",
   "TERM1": "Para poder registrarte debes acceptar las ",
   "TERM2": "bases",
-  "CLICK_REGISTER": "Puedes también inscribir tus producciones en"
+  "CLICK_REGISTER": "Puedes también inscribir tus producciones en",
+  "TL_REG": {
+    "NEW": "Registrate a <strong>terres LAB</strong>",
+    "NOM": "Nombre",
+    "COGNOMS": "Apellidos",
+    "EMAIL": "Correo electrónico",
+    "DIRECCIO": "Dirección",
+    "CATEGORIA": "Categoria",
+    "ESTUDIANT": "Estudiante",
+    "INVESTIGADOR": "Investigador",
+    "PROFESSIONAL": "Profesional",
+    "INSTITUCIO": "Institución / Empresa"
+  }
 }

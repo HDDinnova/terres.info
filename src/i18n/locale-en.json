@@ -69,5 +69,17 @@
   "READMORE": "Read more",
   "TERM1": "To register you must accept ",
   "TERM2": "terms",
-  "CLICK_REGISTER": "You can also submit your film through"
+  "CLICK_REGISTER": "You can also submit your film through",
+  "TL_REG": {
+    "NEW": "Register to <strong>terres LAB</strong>",
+    "NOM": "Name",
+    "COGNOMS": "Surname",
+    "EMAIL": "Email",
+    "DIRECCIO": "Address",
+    "CATEGORIA": "Category",
+    "ESTUDIANT": "Student",
+    "INVESTIGADOR": "Investigator",
+    "PROFESSIONAL": "Professional",
+    "INSTITUCIO": "Institution / Company"
+  }
 }
