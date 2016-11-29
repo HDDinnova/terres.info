@@ -371,5 +371,66 @@ Flight::route('/rrss/@page', function($page){
   </html>';
 });
 
+///////
+// Register to terres LAB
+///////
+Flight::route('/regTerreslab', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $dades = file_get_contents('php://input');
+    $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+    $post = json_decode($dades,true);
+
+    ///////
+    // Check if user is registered
+    ///////
+    $sql = "SELECT id FROM terreslab WHERE email = :email LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $post['email']);
+    $check->execute();
+    $count = $check->rowCount();
+    if (isset($post['matricula'])) {
+      $post['matricula'] = $post['matricula']['base64'];
+    } else {
+      $post['matricula'] = '';
+    }
+
+    if ($count === 0){
+      $sql = "INSERT INTO terreslab(nom, cognoms, email, direccio, ciutat, pais, categoria, institucio, justificant) VALUES (:nom, :cognoms, :email, :direccio, :ciutat, :pais, :categoria, :institucio, :justificant)";
+
+      $new = $db->prepare($sql);
+      $new->bindParam(':nom', $post['nom']);
+      $new->bindParam(':cognoms', $post['cognoms']);
+      $new->bindParam(':email', $post['email']);
+      $new->bindParam(':direccio', $post['direccio']);
+      $new->bindParam(':ciutat', $post['city']);
+      $new->bindParam(':pais', $post['country']);
+      $new->bindParam(':categoria', $post['categoria']);
+      $new->bindParam(':institucio', $post['institucio']);
+      $new->bindParam(':justificant', $post['matricula']);
+
+      try {
+        if ($new->execute()) {
+          $data['status'] = 200;
+          $data['message'] = 'User created succesfully';
+        } else {
+          $data['status'] = 400;
+          $data['message'] = 'Unknown error';
+        }
+      } catch (Exception $e) {
+        echo 'Exception: ',  $e->getMessage();
+      }
+    } else {
+      $data['status'] = 404;
+      $data['message'] = 'User exist';
+    }
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
 
 Flight::start();

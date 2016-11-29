@@ -1,22 +1,27 @@
 angular
   .module('app')
-  .controller('tlregCtrl', function ($scope, $http, $translate, $state, Cities, $mdToast) {
+  .controller('tlregCtrl', function ($scope, $http, $translate, $state, Cities) {
     $scope.countries = Cities.query();
     $scope.formData = {};
+    $scope.registered = false;
+    $scope.allready = false;
+    $scope.unknown = false;
 
-    $scope.processCf = function () {
+    $scope.processTL = function () {
       $http.post('/api/regTerreslab', $scope.formData)
       .success(function (data) {
-        if (data === '200') {
-          $translate('REGISTER.SATISFACTORY').then(function (value) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent(value)
-                .position('top right')
-                .hideDelay(6000)
-            );
-          });
-          $state.go('terreslab');
+        switch (data.status) {
+          case 200:
+            $scope.registered = true;
+            break;
+          case 404:
+            $scope.allready = true;
+            break;
+          case 400:
+            $scope.unknown = true;
+            break;
+          default:
+            console.log(data);
         }
       });
     };

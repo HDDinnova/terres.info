@@ -11,6 +11,7 @@ body, h1, h2, h3 {
 
 .main-container ._md{
   padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .footer a {
@@ -148,6 +149,9 @@ md-select-menu .md-text{
 .terreslab_desc{
   text-align: center;
 }
+#terreslab .layout-row{
+  height: 100%;
+}
 @media only screen and (orientation: landscape) {
   #terreslab{
     background-image: url('../img/tortosanocturn.jpg');
@@ -159,7 +163,11 @@ md-select-menu .md-text{
     background-color: rgba(0,0,0,0);
   }
   #terreslablogo{
-    height: 30vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    max-height: 10%;
   }
   #terreslab h1{
     margin-left: .6rem;
@@ -185,8 +193,10 @@ md-select-menu .md-text{
     padding-top: 10vh;
   }
   #terreslablogo{
-    max-width: 70vw;
-    max-height: 30vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
   }
   .white_trans{
     padding: 1rem 0 1rem 0;
@@ -235,6 +245,9 @@ terres-footer{
 md-dialog-content{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.smallvat{
+  font-size: 0.5rem;
 }
 
 /**************************/
@@ -296,7 +309,14 @@ md-dialog-content{
 .ribbon-content > p {
   color: #24505a;
   margin: 0;
-  padding: 10px;
+  padding-left: 10px;
+}
+
+.ribbon-content > small {
+  color: #24505a;
+  margin: 0;
+  padding-left: 10px;
+  font-size: 0.6rem;
 }
 
 .overlay-ribbon:before {
@@ -418,6 +438,10 @@ md-dialog-content{
   font-size: .6rem;
 }
 
+.ribbon-content-mobile > .smallvat {
+  font-size: .3rem;
+}
+
 .overlay-ribbon-mobile:before {
   content: "";
   position: absolute;
@@ -464,10 +488,10 @@ md-dialog-content{
 }
 
 @keyframes slideinmobile {
-  0%  {transform: translate(0, -400px);}
-  10% {transform: translate(0, 60px);}
-  90% {transform: translate(0, 60px);}
-  100%  {transform: translate(0, -400px);}
+  0%  {transform: translate(0, 800px);}
+  10% {transform: translate(0, -200px);}
+  90% {transform: translate(0, -200px);}
+  100%  {transform: translate(0, 800px);}
 }
 
 /*******************************************/

@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngResource', 'angular-magnificent', 'pascalprecht.translate', 'ngCookies', 'ngSanitize', 'ngCovervid', '720kb.socialshare'])
+  .module('app', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngResource', 'angular-magnificent', 'pascalprecht.translate', 'ngCookies', 'ngSanitize', 'ngCovervid', '720kb.socialshare', 'naif.base64'])
   .config(function ($mdThemingProvider, $translateProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('blue-grey', {

@@ -1,43 +1,45 @@
 <form name="tl_register" class="register-tl" layout="column" layout-padding layout-margin>
   <h1 translate>{{'TL_REG.NEW'}}</h1>
-    <div layout="column" layout-gt-md="row">
-      <div layout="column" layout-gt-xs="row" flex="100">
-        <md-input-container flex="100">
-          <label for="nom">{{'TL_REG.NOM' | translate}}</label>
-          <input type="text" name="nom" ng-model="formData.nom" required="true">
-        </md-input-container>
-        <md-input-container flex="100">
-          <label for="cognoms">{{'TL_REG.COGNOMS' | translate}}</label>
-          <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-gt-xs="row" flex="100">
-        <md-input-container flex="100">
-          <label for="email">{{'TL_REG.EMAIL' | translate}}</label>
-          <input type="email" name="email" ng-model="formData.email" required="true">
-        </md-input-container>
-        <md-input-container flex="100">
-          <label for="direccio">{{'TL_REG.DIRECCIO' | translate}}</label>
-          <input type="text" name="direccio" ng-model="formData.direccio" required="true">
-        </md-input-container>
-      </div>
+  <h3 translate>{{'TL_REG.SUBHEAD'}}</h3>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <md-input-container flex="100">
+        <label for="nom">{{'TL_REG.NOM' | translate}}</label>
+        <input type="text" name="nom" ng-model="formData.nom" required="true">
+      </md-input-container>
+      <md-input-container flex="100">
+        <label for="cognoms">{{'TL_REG.COGNOMS' | translate}}</label>
+        <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
+      </md-input-container>
     </div>
-    <div layout="column" layout-gt-md="row">
-      <div layout="column" layout-gt-xs="row" flex="100">
-        <md-input-container flex="100">
-          <label for="city">{{'REGISTER.CITY' | translate}}</label>
-          <input type="text" name="city" ng-model="formData.city" required="true">
-        </md-input-container>
-        <md-input-container flex="100">
-          <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
-          <md-select ng-model="formData.country" required="true" flex="100">
-            <md-option ng-repeat="country in countries" ng-value="country.translations.es">
-              {{country.translations.es}}
-            </md-option>
-          </md-select>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-gt-xs="row" flex="100">
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <md-input-container flex="100">
+        <label for="email">{{'TL_REG.EMAIL' | translate}}</label>
+        <input type="email" name="email" ng-model="formData.email" required="true">
+      </md-input-container>
+      <md-input-container flex="100">
+        <label for="direccio">{{'TL_REG.DIRECCIO' | translate}}</label>
+        <input type="text" name="direccio" ng-model="formData.direccio" required="true">
+      </md-input-container>
+    </div>
+  </div>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <md-input-container flex="100">
+        <label for="city">{{'REGISTER.CITY' | translate}}</label>
+        <input type="text" name="city" ng-model="formData.city" required="true">
+      </md-input-container>
+      <md-input-container flex="100">
+        <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
+        <md-select ng-model="formData.country" required="true" flex="100">
+          <md-option ng-repeat="country in countries" ng-value="country.translations.es">
+            {{country.translations.es}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <div  layout="column">
         <md-input-container flex="100">
           <label for="categoria">{{'TL_REG.CATEGORIA' | translate}}</label>
           <md-select ng-model="formData.categoria" required="true" flex="100">
@@ -46,16 +48,45 @@
             <md-option value="professional">{{'TL_REG.PROFESSIONAL' | translate}}</md-option>
           </md-select>
         </md-input-container>
-        <md-input-container flex="100">
-          <label for="institucio">{{'TL_REG.INSTITUCIO' | translate}}</label>
-          <input type="text" name="institucio" ng-model="formData.institucio" required="true">
+        <md-input-container ng-if="formData.categoria === 'estudiant'">
+          <small translate>{{'TL_REG.MATRICULA'}}</small>
+          <input type="file" ng-model="formData.matricula" accept="application/pdf" base-sixty-four-input required aria-label="Justificante matricla">
         </md-input-container>
       </div>
+      <md-input-container flex="100">
+        <label for="institucio">{{'TL_REG.INSTITUCIO' | translate}}</label>
+        <input type="text" name="institucio" ng-model="formData.institucio" required="true">
+      </md-input-container>
     </div>
+  </div>
   <div layout="row" layout-align="center">
-    <md-button class="md-raised md-primary" type="submit" ng-disabled="tl_register.$invalid">{{'SUBMIT' | translate}}</md-button>
+    <md-button class="md-raised md-primary" ng-click="processTL()" ng-disabled="tl_register.$invalid">{{'SUBMIT' | translate}}</md-button>
   </div>
 </form>
-<div layout="row" layout-align="center" ng-if="tl_register.$valid">
-  
+<div layout="column" layout-align="center center" ng-if="registered">
+  <p>{{'TL_REG.SUCCESSFULL' | translate}}</p>
+  <!-- PayPal Student -->
+  <div layout="row" ng-if="formData.categoria === 'estudiant'">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="KARQDD4VQE58U">
+      <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+      <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+  <!-- PayPal General -->
+  <div layout="row" ng-if="formData.categoria === 'investigador' || formData.categoria === 'professional'">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="YM274VAK4XKZA">
+      <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+      <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+</div>
+<div layout="row" layout-align="center" ng-if="allready">
+  <p class="md-warn">{{'TL_REG.ALLREADY' | translate}}</p>
+</div>
+<div layout="row" layout-align="center" ng-if="unknown">
+  <p class="md-warn">{{'TL_REG.UNKNOWN' | translate}}</p>
 </div>
