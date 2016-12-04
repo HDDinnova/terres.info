@@ -149,25 +149,38 @@ md-select-menu .md-text{
 .terreslab_desc{
   text-align: center;
 }
-#terreslab .layout-row{
-  height: 100%;
+.tl_pay{
+  height: 150px;
+  background-image: url(../img/Horta_MG_0011.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.tl_partner{
+  width: 100%;
+}
+html.md-default-theme, html, body.md-default-theme, body{
+  background-color: rgba(0,0,0,0);
 }
 @media only screen and (orientation: landscape) {
-  #terreslab{
+  #tl_background{
     background-image: url('../img/tortosanocturn.jpg');
     background-size: cover;
     background-position: center bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+
   }
-  #terreslab md-content.md-default-theme, md-content{
+  #terreslab{
     padding-top: 10vh;
     background-color: rgba(0,0,0,0);
+    /*overflow-y: scroll;*/
   }
   #terreslablogo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40%;
-    max-height: 10%;
+    height: 30vh;
   }
   #terreslab h1{
     margin-left: .6rem;
@@ -178,31 +191,40 @@ md-select-menu .md-text{
   #terreslab p{
     color: white;
   }
-  #terreslab a{
+  #terreslab ul{
+    color: white;
+  }
+  #terreslab .tl_link a{
     color: #00dec1;
   }
 }
 @media only screen and (orientation: portrait) {
-  #terreslab{
+  #tl_background{
     background-image: url('../img/_MG_0537.jpg');
     background-size: cover;
     background-position: center bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
   }
-  #terreslab md-content.md-default-theme, md-content{
+  #tl_logo{
+    margin-left: -16px;
+  }
+  #terreslab{
     background-color: rgba(0,0,0,0);
-    padding-top: 10vh;
+    padding-top: 6vh;
+    overflow-y: scroll;
   }
   #terreslablogo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+    height: 15vh;
   }
   .white_trans{
-    padding: 1rem 0 1rem 0;
     width: 100vw;
     background-color: rgba(255,255,255,.3);
-    margin-bottom: 2rem;
+    margin-bottom: 1.3rem;
   }
   #terreslab h1{
     margin-left: .6rem;
@@ -214,7 +236,10 @@ md-select-menu .md-text{
   #terreslab p{
     color: white;
   }
-  #terreslab a{
+  #terreslab ul{
+    color: white;
+  }
+  #terreslab .tl_link a{
     color: #00dec1;
   }
 }
@@ -249,7 +274,9 @@ md-dialog-content{
 .smallvat{
   font-size: 0.5rem;
 }
-
+.newspost p{
+  text-align: justify;
+}
 /**************************/
 /* Start Ribbon early fee */
 /**************************/

@@ -46,10 +46,12 @@
             <md-option value="estudiant">{{'TL_REG.ESTUDIANT' | translate}}</md-option>
             <md-option value="investigador">{{'TL_REG.INVESTIGADOR' | translate}}</md-option>
             <md-option value="professional">{{'TL_REG.PROFESSIONAL' | translate}}</md-option>
+            <md-option value="periodista">{{'TL_REG.JOURNALIST' | translate}}</md-option>
           </md-select>
         </md-input-container>
-        <md-input-container ng-if="formData.categoria === 'estudiant'">
-          <small translate>{{'TL_REG.MATRICULA'}}</small>
+        <md-input-container ng-if="(formData.categoria === 'estudiant') || (formData.categoria === 'periodista')">
+          <small translate ng-if="formData.categoria === 'estudiant'">{{'TL_REG.MATRICULA'}}</small>
+          <small translate ng-if="formData.categoria === 'periodista'">{{'TL_REG.CERTIFICATE'}}</small>
           <input type="file" ng-model="formData.matricula" accept="application/pdf" base-sixty-four-input required aria-label="Justificante matricla">
         </md-input-container>
       </div>

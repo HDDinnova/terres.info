@@ -13,6 +13,9 @@ angular
         switch (data.status) {
           case 200:
             $scope.registered = true;
+            if ($scope.formData.categoria === 'periodista') {
+              $state.go('tlpay');
+            }
             break;
           case 404:
             $scope.allready = true;

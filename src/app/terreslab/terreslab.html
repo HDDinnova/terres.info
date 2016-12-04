@@ -1,13 +1,18 @@
-<div class="main-container" id="terreslab">
-  <md-content layout="column" layout-padding>
-      <div layout="row" class="white_trans">
-        <img src="img/terresLAB.png" alt="logo terres lab" id="terreslablogo" />
+<md-content layout="column" layout-padding layout-margin id="terreslab">
+    <div layout="row" class="white_trans" layout-align="center" id="tl_logo">
+      <img src="img/terresLAB.png" alt="logo terres lab" id="terreslablogo" />
+    </div>
+    <div layout="row" layout-align="center" class="tl_link">
+      <a href="https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723" target="_blank"><img src="img/mark.png" alt="Tortosa location" /></a> <h1 layout-padding> {{'TERRESLAB_DATE' | translate}}</h1>
+    </div>
+    <div layout="row">
+      <div translate>{{'TERRESLAB'}}</div>
+    </div>
+    <div layout="row" layout-align="center">
+      <div layout="column">
+        <p translate>{{"TL_REG.REGISTERTEXT"}}</p>
+        <md-button class="md-raised" ui-sref="tlregister" aria-label="register to terres LAB" ripple-size="partial">{{"TL_REG.REGISTER" | translate}}</md-button>
       </div>
-      <div layout="row" layout-align="center" layout-wrap>
-        <a href="https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723" target="_blank"><img src="img/mark.png" alt="Tortosa location" /></a> <h1> {{'TERRESLAB_DATE' | translate}}</h1>
-      </div>
-      <div layout="row" layout-wrap>
-        <p translate>{{'TERRESLAB'}} </p>
-      </div>
-  </md-content>
-</div>
+    </div>
+</md-content>
+<md-content id="tl_background"></md-content>
