@@ -5,7 +5,7 @@
     <md-button show-gt-sm hide ui-sref="register"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="participate"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-    <md-button show-gt-sm hide ui-sref="news"><span translate>{{'NEWS_MENU'}}</span></md-button>
+    <md-button show-gt-sm hide ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
     <md-select show-gt-sm hide ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">

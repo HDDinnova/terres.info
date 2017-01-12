@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('menuCtrl', function ($scope, $rootScope, $translate, $timeout, $mdDialog, $http, $mdToast, $mdSidenav, $window) {
+  .controller('menuMobileCtrl', function ($scope, $rootScope, $translate, $mdDialog, $http, $mdToast, $mdSidenav, $window) {
     $scope.docs = function () {
       $window.location.href = '/docs';
     };
@@ -35,9 +35,6 @@ angular
       $translate.use($scope.userLang.toLowerCase());
       $rootScope.$broadcast('langChange', $scope.userLang.toLowerCase());
     };
-    $timeout(function () {
-      angular.element(document.querySelector('terres-menu')).addClass('actiu');
-    }, 3000);
 
     // Subscribe to Newsletter
     $scope.showNewsletter = function (ev) {
