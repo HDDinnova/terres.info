@@ -50,19 +50,8 @@
 
   <body>
     <terres-menu></terres-menu>
-      <div layout="row">
-        <md-sidenav md-component-id="right" class="md-sidenav-right">
-            <md-button hide-gt-sm ui-sref="register" ng-click="close()"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
-            <md-button hide-gt-sm ui-sref="participate" ng-click="close()"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
-            <md-button hide-gt-sm ui-sref="partners" ng-click="close()"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-            <md-button hide-gt-sm ui-sref="news" ng-click="close()"><span translate>{{'NEWS_MENU'}}</span></md-button>
-            <md-button hide-gt-sm ui-sref="about" ng-click="close()"><span translate>{{'ABOUT_MENU'}}</span></md-button>
-            <md-button hide-gt-sm ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
-            <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
-              <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
-            </md-select>
-        </md-sidenav>
-      </div>
+    <terres-menu-mobile></terres-menu-mobile>
+
     <div ui-view></div>
     <terres-footer>
       <footer class="footer" ng-controller="footerCtrl">

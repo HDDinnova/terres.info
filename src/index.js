@@ -25,8 +25,14 @@ angular
   .controller('footerCtrl', function ($scope) {
     $scope.any = new Date();
   })
-  .controller('AppCtrl', function () {})
+  .controller('AppCtrl', function () {
+
+  })
   .component('terresMenu', {
     templateUrl: 'app/terresmenu.html',
     controller: 'menuCtrl'
+  })
+  .component('terresMenuMobile', {
+    templateUrl: 'app/terresmenumobile.html',
+    controller: 'menuMobileCtrl'
   });
