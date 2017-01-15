@@ -77,7 +77,7 @@
     </div>
   </div>
   <div layout="row" layout-align="center" flex="">
-    <md-button ng-disabled="!accept_terms" class="md-raised md-primary" type="submit">{{'SUBMIT' | translate}}</md-button>
+    <md-button ng-disabled="!accept_terms" ng-click="process()" class="md-raised md-primary" type="submit">{{'SUBMIT' | translate}}</md-button>
     <md-checkbox ng-model="accept_terms" name="accept_terms" aria-label="terms">
       <span>{{'TERM1' | translate}}<a href="#" ng-click="showTerms()">{{'TERM2' | translate}}</a></span>
     </md-checkbox>

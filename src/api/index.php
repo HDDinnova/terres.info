@@ -61,17 +61,18 @@ Flight::map('htmlmail', function($name,$email,$password){
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
                   <h3>Hola <i>'.$name.'</i></h3>
                   <h4>Gràcies per inscriure\'t a terres Catalunya. Per acabar el procés i poder pujar les teves pel·lícules, accedeix a la <a href="http://terres.info/login">intranet</a> amb les següents dades</h4>
-                  <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
                 </td>
+              </tr>
+              <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
                   <h3>Hola <i>'.$name.'</i></h3>
                   <h4>Gracias por inscribirte en <strong>terres Catalunya</strong>.<br/>Para terminar el proceso y poder subir tus películas, accede a la <a href="http://terres.info/login">intranet</a> con los datos siguientes:</h4>
-                  <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
                 </td>
+              </tr>
+              <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
                 <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
                   <h3>Welcome <i>'.$name.'</i></h3>
                   <h4>Thanks for registering at terres Catalunya. To finish the process and upload your films, please access to the <a href="http://terres.info/login">intranet</a> with the following data</h4>
-                  <br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" /><br style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" />
                 </td>
               </tr>
             </table>
@@ -87,6 +88,27 @@ Flight::map('htmlmail', function($name,$email,$password){
               <tr>
                 <td style="padding:10px;">'.$email.'</td>
                 <td style="padding:10px;">'.$password.'</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+          <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto;">
+              <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
+                  <h4>Vols assistir a terres LAB - Congrés sobre Paisatge, Turisme i Cinema? Aprofita el descompte especial del 20% en la taxa d\'inscripció a terres LAB per a tots els productors que presenten pel.lícules a terres Catalunya!<br>A la teva intranet trobaràs l’enllaç per formalitzar la inscripció.</h4>
+                </td>
+              </tr>
+              <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
+                  <h4>¿Quieres asistir a terres LAB, Congreso sobre Paisaje, Turismo y Cine? ¡Aprovecha el descuento especial del 20% en la tasa de inscripción a terres LAB para todos los productores que presentan películas a terres Catalunya! En tu intranet encontrarás el enlace para formalizar la inscripción.</h4>
+                </td>
+              </tr>
+              <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                <td style="text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; padding: 40px;" align="center">
+                  <h4>Do you want to assist to terres LAB - Congress on Landscape, Tourism and Cinema? Take advantage of the special 20% reduction in the registration fee of terres LAB for all the producers submitting a film in terres Catalunya! In your intranet, you’ll find the link to the registration form.</h4>
+                </td>
               </tr>
             </table>
           </td>
@@ -220,22 +242,6 @@ Flight::route('/newCompetitor', function(){
     }
 
     $db = NULL;
-});
-
-///////
-// List all competitors
-///////
-Flight::route('/competitors', function(){
-  $db = Flight::db();
-
-  $sql = "SELECT * FROM competitors";
-  $comp = $db->prepare($sql);
-  $comp->execute();
-  $comps = $comp->fetch(PDO::FETCH_ASSOC);
-
-  $db = NULL;
-
-  return json_encode($comps);
 });
 
 Flight::route('/login', function(){
@@ -431,6 +437,5 @@ Flight::route('/regTerreslab', function(){
 
     Flight::json($data);
 });
-
 
 Flight::start();

@@ -13,7 +13,7 @@ angular
     $scope.formData = {};
     $scope.formData.nfilms = 1;
     $scope.formData.valCat = 2;
-    $scope.processDoc = function () {
+    $scope.process = function () {
       $http.post('/api/newCompetitor', $scope.formData)
       .success(function (data) {
         if (data === 'emailOK') {

@@ -3,7 +3,6 @@ angular
   .factory('Cities', Cities)
   .factory('Competitors', Competitors)
   .factory('AuthenticationSvc', AuthenticationSvc);
-  // .factory('SaveMember', SaveMember);
 
 function Cities($resource) {
   return $resource('https://restcountries.eu/rest/v1/region/europe', {}, {

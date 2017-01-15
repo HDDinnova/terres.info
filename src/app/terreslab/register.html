@@ -2,34 +2,34 @@
   <h1 translate>{{'TL_REG.NEW'}}</h1>
   <h3 translate>{{'TL_REG.SUBHEAD'}}</h3>
   <div layout="column" layout-gt-md="row">
-    <div layout="column" layout-gt-xs="row" flex="100">
-      <md-input-container flex="100">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
         <label for="nom">{{'TL_REG.NOM' | translate}}</label>
         <input type="text" name="nom" ng-model="formData.nom" required="true">
       </md-input-container>
-      <md-input-container flex="100">
+      <md-input-container>
         <label for="cognoms">{{'TL_REG.COGNOMS' | translate}}</label>
         <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
       </md-input-container>
     </div>
     <div layout="column" layout-gt-xs="row" flex="100">
-      <md-input-container flex="100">
+      <md-input-container>
         <label for="email">{{'TL_REG.EMAIL' | translate}}</label>
         <input type="email" name="email" ng-model="formData.email" required="true">
       </md-input-container>
-      <md-input-container flex="100">
+      <md-input-container>
         <label for="direccio">{{'TL_REG.DIRECCIO' | translate}}</label>
         <input type="text" name="direccio" ng-model="formData.direccio" required="true">
       </md-input-container>
     </div>
   </div>
   <div layout="column" layout-gt-md="row">
-    <div layout="column" layout-gt-xs="row" flex="100">
-      <md-input-container flex="100">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
         <label for="city">{{'REGISTER.CITY' | translate}}</label>
         <input type="text" name="city" ng-model="formData.city" required="true">
       </md-input-container>
-      <md-input-container flex="100">
+      <md-input-container>
         <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
         <md-select ng-model="formData.country" required="true" flex="100">
           <md-option ng-repeat="country in countries" ng-value="country.translations.es">
@@ -38,9 +38,9 @@
         </md-select>
       </md-input-container>
     </div>
-    <div layout="column" layout-gt-xs="row" flex="100">
+    <div layout="column" layout-gt-xs="row">
       <div  layout="column">
-        <md-input-container flex="100">
+        <md-input-container>
           <label for="categoria">{{'TL_REG.CATEGORIA' | translate}}</label>
           <md-select ng-model="formData.categoria" required="true" flex="100">
             <md-option value="estudiant">{{'TL_REG.ESTUDIANT' | translate}}</md-option>
@@ -55,7 +55,7 @@
           <input type="file" ng-model="formData.matricula" accept="application/pdf" base-sixty-four-input required aria-label="Justificante matricla">
         </md-input-container>
       </div>
-      <md-input-container flex="100">
+      <md-input-container>
         <label for="institucio">{{'TL_REG.INSTITUCIO' | translate}}</label>
         <input type="text" name="institucio" ng-model="formData.institucio" required="true">
       </md-input-container>

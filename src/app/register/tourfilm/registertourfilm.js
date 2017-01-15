@@ -13,7 +13,7 @@ angular
     $scope.formData = {};
     $scope.formData.nfilms = 1;
     $scope.formData.valCat = 1;
-    $scope.processTf = function () {
+    $scope.process = function () {
       $http.post('/api/newCompetitor', $scope.formData)
       .success(function (data) {
         console.log(data);

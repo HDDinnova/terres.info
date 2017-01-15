@@ -11,6 +11,11 @@ angular
         $scope.news = data;
       });
     });
+
+    var urlapi = 'api/news/' + $translate.use();
+    $http.get(urlapi).success(function (data) {
+      console.log(data);
+    });
   })
   .controller('NewsPostCtrl', function ($scope, $stateParams, $http, $translate, $rootScope, $location) {
     $scope.socialurl = 'http://terres.info' + $location.path();

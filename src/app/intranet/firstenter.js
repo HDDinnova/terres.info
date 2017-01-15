@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('firstenterCtrl', function ($scope, $window, $http, $state) {
+  .controller('firstenterCtrl', function ($scope, $window, $http) {
     var userInfo = {};
     var errorCode = {};
     $scope.formFE = {};
@@ -15,7 +15,7 @@ angular
             id: result.data.email
           };
           $window.sessionStorage.userInfo = JSON.stringify(userInfo);
-          $state.go('intranet');
+          $window.location.href = '/intranet';
         } else {
           errorCode = {
             status: result.data.status,
