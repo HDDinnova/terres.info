@@ -15,7 +15,7 @@ angular
             id: result.data.email
           };
           $window.sessionStorage.userInfo = JSON.stringify(userInfo);
-          $state.go('intranet');
+          $window.location.href = '/intranet';
         } else {
           errorCode = {
             status: result.data.status,
