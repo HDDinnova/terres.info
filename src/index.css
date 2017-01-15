@@ -535,6 +535,11 @@ md-dialog-content{
   border-top: 1px solid #DCDCDC;
 }
 
+.clickfooter a{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
 .register-form-data{
   padding-bottom: 100px;
 }
