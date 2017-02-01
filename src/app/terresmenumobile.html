@@ -1,13 +1,21 @@
 <div layout="row">
   <md-sidenav md-component-id="right" class="md-sidenav-right">
-      <md-button hide-gt-sm ui-sref="register" ng-click="close()"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
-      <md-button hide-gt-sm ui-sref="participate" ng-click="close()"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
-      <md-button hide-gt-sm ui-sref="partners" ng-click="close()"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-      <md-button hide-gt-sm ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
-      <md-button hide-gt-sm ui-sref="about" ng-click="close()"><span translate>{{'ABOUT_MENU'}}</span></md-button>
-      <md-button hide-gt-sm ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
-      <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
-        <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
-      </md-select>
+    <md-button hide-gt-sm ui-sref="register" ng-click="close()"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
+    <md-button hide-gt-sm ui-sref="participate" ng-click="close()"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
+    <md-button hide-gt-sm ui-sref="partners" ng-click="close()"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
+    <md-menu hide-gt-sm>
+        <md-button ng-click="$mdOpenMenu()" aria-label="View jury">
+          {{'JURY' | translate}}
+        </md-button>
+        <md-menu-content>
+          <md-menu-item ng-repeat="j in jury"><md-button ng-disabled="{{j.enabled}}" ng-click="goJury(j.url)">{{j.nom}}</md-button></md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <md-button hide-gt-sm ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
+    <md-button hide-gt-sm ui-sref="about" ng-click="close()"><span translate>{{'ABOUT_MENU'}}</span></md-button>
+    <md-button hide-gt-sm ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
+    <md-select hide-gt-sm ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
+      <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')" ng-click="close()">{{idi}}</md-option>
+    </md-select>
   </md-sidenav>
 </div>

@@ -44,6 +44,11 @@ terres-menu{
 }
 .logomenu{
   height: 1.2rem;
+  margin-right: 2rem;
+}
+.logomenuterres{
+  height: 40px;
+  margin-right: 2rem;
 }
 .actiu{
   top: 0;

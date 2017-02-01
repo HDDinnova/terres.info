@@ -1,18 +1,23 @@
-<md-content layout="column" layout-padding layout-margin id="terreslab">
-    <div layout="row" class="white_trans" layout-align="center" id="tl_logo">
-      <img src="img/terresLAB.png" alt="logo terres lab" id="terreslablogo" />
-    </div>
-    <div layout="row" layout-align="center" class="tl_link">
-      <a href="https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723" target="_blank"><img src="img/mark.png" alt="Tortosa location" /></a> <h1 layout-padding> {{'TERRESLAB_DATE' | translate}}</h1>
-    </div>
-    <div layout="row">
-      <div translate>{{'TERRESLAB'}}</div>
-    </div>
+<div class="main-container">
+  <md-content layout-padding layout-wrap>
+  <div layout="row" layout-align="center">
+    <img src="img/terresLAB_mini.png" alt="logo terres lab" class="logotl">
+  </div>
+    <div class="terreslab_img" flex="100"></div>
+    <p translate flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
+      {{'TL.PAR1'}}
+    </p>
+    <p translate flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
+      {{'TL.PAR2'}}
+    </p>
+    <p translate flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
+      {{'TL.PAR3'}}
+    </p>
     <div layout="row" layout-align="center">
       <div layout="column">
         <p translate>{{"TL_REG.REGISTERTEXT"}}</p>
-        <md-button class="md-raised" ui-sref="tlregister" aria-label="register to terres LAB" ripple-size="partial">{{"TL_REG.REGISTER" | translate}}</md-button>
+        <md-button class="md-raised md-warn" ui-sref="tlregister" aria-label="register to terres LAB" ripple-size="partial">{{"TL_REG.REGISTER" | translate}}</md-button>
       </div>
     </div>
-</md-content>
-<md-content id="tl_background"></md-content>
+  </md-content>
+</div>

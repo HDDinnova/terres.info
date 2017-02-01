@@ -5,6 +5,10 @@ angular
       $window.location.href = '/docs';
     };
 
+    $scope.goJury = function (url) {
+      $window.location.href = 'http://terres.info/docs/' + $translate.use() + '/' + url;
+    };
+
     $scope.toggleRight = function () {
       $mdSidenav('right').toggle();
     };
@@ -18,6 +22,44 @@ angular
         $mdSidenav('right').close();
       }
     }
+
+    $scope.jury = {
+      0: {
+        nom: "Swen Waterreus",
+        url: "swen-waterreus",
+        enabled: false
+      },
+      1: {
+        nom: "Dorothée Adam",
+        url: "dorothee-adam",
+        enabled: false
+      },
+      2: {
+        nom: "Alejandra Medina",
+        url: "#",
+        enabled: true
+      },
+      3: {
+        nom: "George Pessis",
+        url: "#",
+        enabled: true
+      },
+      4: {
+        nom: "Kymisha Carey",
+        url: "#",
+        enabled: true
+      },
+      5: {
+        nom: "Hugo Marcos",
+        url: "#",
+        enabled: true
+      },
+      6: {
+        nom: "Joanna Pardos",
+        url: "#",
+        enabled: true
+      }
+    };
 
     $scope.langs = [
       'CA',

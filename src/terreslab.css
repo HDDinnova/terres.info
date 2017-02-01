@@ -1,0 +1,9 @@
+.terreslab_img{
+  height: 150px;
+  background-image: url(../img/_MG_0537.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.logotl{
+  max-width: 80vw;
+}

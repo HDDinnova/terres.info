@@ -1,10 +1,19 @@
 <md-toolbar class="md-hue-1">
   <div class="md-toolbar-tools">
     <h2><a ui-sref="index"><img class="logomenu" src="img/terres.png" alt="Logo terres"></a></h2>
+    <h2><a ui-sref="terreslab"><img class="logomenuterres" src="img/terresLAB_mini.png" alt="Logo terresLAB"></a></h2>
     <span flex></span>
     <md-button show-gt-sm hide ui-sref="register"><span translate>{{'REGISTRATION_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="participate"><span translate>{{'PARTICIPATE_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
+    <md-menu show-gt-sm hide>
+        <md-button ng-click="$mdOpenMenu()" aria-label="View jury">
+          {{'JURY' | translate}}
+        </md-button>
+        <md-menu-content>
+          <md-menu-item ng-repeat="j in jury"><md-button ng-disabled="{{j.enabled}}" ng-click="goJury(j.url)">{{j.nom}}</md-button></md-menu-item>
+        </md-menu-content>
+    </md-menu>
     <md-button show-gt-sm hide ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
