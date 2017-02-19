@@ -90,5 +90,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/intranet/firstenter',
       templateUrl: 'app/intranet/firstenter.html',
       controller: 'firstenterCtrl'
+    })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'app/contact/contact.html'
     });
 }

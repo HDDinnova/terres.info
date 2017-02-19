@@ -1,0 +1,13 @@
+.contact_img_1{
+  height: 150px;
+  background-image: url(../img/Amp_MG_0914.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.contact_img_2{
+  margin-top: 25px;
+  height: 70px;
+  background-image: url(../img/deltebre-36.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}

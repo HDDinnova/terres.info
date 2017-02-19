@@ -17,6 +17,7 @@
     <md-button show-gt-sm hide ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
+    <md-button show-gt-sm hide ui-sref="contact"><span translate>{{'CONTACT_MENU'}}</span></md-button>
     <md-select show-gt-sm hide ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">
       <md-option ng-repeat="idi in langs" value="{{idi}}" aria.label="{{idi}}" ng-selected="isCurrentLang('{{idi | lowercase}}')">{{idi}}</md-option>
     </md-select>

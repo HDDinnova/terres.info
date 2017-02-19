@@ -1,22 +1,4 @@
 <div class="main-container" ng-controller="MainCtrl" id="main">
-  <!-- Start Early fee -->
-  <div class="overlay-ribbon show-gt-md hide" ng-show="earlyfee()">
-    <div class="ribbon-content">
-      <h2>60€</h2>
-      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
-      <p translate>{{'SINCE31'}}</p>
-      <p translate class="smallvat">{{'NO_VAT'}}</p>
-    </div>
-  </div>
-  <div class="overlay-ribbon-mobile hide-gt-md" ng-show="earlyfee()">
-    <div class="ribbon-content-mobile">
-      <h2>60€</h2>
-      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
-      <p translate>{{'SINCE31'}}</p>
-      <p translate class="smallvat">{{'NO_VAT'}}</p>
-    </div>
-  </div>
-  <!-- End Early fee -->
   <main class="main">
     <terres-title>
       <div class="title">
@@ -27,14 +9,6 @@
         <magnificent magnificent="magnificent"></magnificent>
       </div>
     </terres-title>
-    <div class="terreslab_center">
-      <div layout="row" layout-align="end center">
-        <div layout="row" ui-sref="terreslab" class="terreslablogo">
-          <img src="img/terresLAB_mini.png" alt="logo terres LAB" />
-          <md-icon md-svg-src="img/ic_arrow_right.svg"></md-icon>
-        </div>
-      </div>
-    </div>
     <div class="social">
       <div layout="row" layout-align="center">
         <div socialshare socialshare-provider="facebook" socialshare-media="http://terres.info/img/Buda.jpg" socialshare-url="http://terres.info" aria-label="Share to Facebook" ng-mouseenter="optface=true" ng-mouseleave="optface=false">

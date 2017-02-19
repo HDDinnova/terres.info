@@ -6,26 +6,26 @@
 }
 @media screen and (max-width: 599px) {
   .part_org{
-    width: 80vw;
+    width: 60vw;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .part_org{
-    width: 50vw;
+    width: 30vw;
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1279px) {
   .part_org{
-    width: 30vw;
+    width: 20vw;
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .part_org{
-    width: 20vw;
+    width: 10vw;
   }
 }
 @media screen and (min-width: 1920px) {
   .part_org{
-    width: 10vw;
+    width: 5vw;
   }
 }
