@@ -7,3 +7,28 @@
 .logotl{
   max-width: 80vw;
 }
+.ponent{
+  width: 100%;
+}
+.ponent img{
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+  .ponent img{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+  .ponent img{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

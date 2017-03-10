@@ -314,23 +314,24 @@ Flight::route('/firstenter', function(){
       if ($count > 0) {
         $response["status"] = 200;
         $response["message"] = "Password successfully changed";
-        $response["id"] = base64_encode($get['user']);
-        Flight::json($response);
+        $response["email"] =  base64_encode($user['email']);
       } else {
         $response["status"] = 500;
         $response["message"] = "General error, try later";
-        Flight::json($response);
+        $response["id"] = "General error, try later";
       }
     } else {
       $response["status"] = 401;
       $response["message"] = "User incorrect";
-      Flight::json($response);
+      $response["id"] = "User incorrect";
     }
   } else {
     $response["status"] = 404;
     $response["message"] = "There are no data";
-    Flight::json($response);
+    $response["id"] = "There are no data";
   }
+
+  Flight::json($response);
 
   $db = NULL;
 });

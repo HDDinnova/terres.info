@@ -40,12 +40,23 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('terreslab', {
       url: '/terreslab',
-      templateUrl: 'app/terreslab/terreslab.html'
+      templateUrl: 'app/terreslab/terreslab.html',
+      controller: 'Terreslab'
     })
     .state('tlregister', {
       url: '/terreslab/register',
       templateUrl: 'app/terreslab/register.html',
       controller: 'tlregCtrl'
+    })
+    .state('terreslab20off', {
+      url: '/terreslab/register20off',
+      templateUrl: 'app/terreslab/terreslab20off.html',
+      controller: 'tlreg20OffCtrl'
+    })
+    .state('terreslab50off', {
+      url: '/terreslab/register50off',
+      templateUrl: 'app/terreslab/terreslab50off.html',
+      controller: 'tlreg50OffCtrl'
     })
     .state('tlpay', {
       url: '/terreslab/register/pay',

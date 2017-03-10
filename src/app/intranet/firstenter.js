@@ -14,6 +14,7 @@ angular
             message: result.data.message,
             id: result.data.email
           };
+          $window.sessionStorage.clear();
           $window.sessionStorage.userInfo = JSON.stringify(userInfo);
           $window.location.href = '/intranet';
         } else {

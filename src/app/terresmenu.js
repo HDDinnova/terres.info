@@ -36,18 +36,18 @@ angular
       },
       2: {
         nom: "Alejandra Medina",
-        url: "#",
-        enabled: true
+        url: "alejandra-medina",
+        enabled: false
       },
       3: {
         nom: "George Pessis",
-        url: "#",
-        enabled: true
+        url: "georges-pessis",
+        enabled: false
       },
       4: {
         nom: "Kymisha Carey",
-        url: "#",
-        enabled: true
+        url: "kymisha_carey",
+        enabled: false
       },
       5: {
         nom: "Hugo Marcos",
