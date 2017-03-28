@@ -1,4 +1,18 @@
 <div class="main-container" ng-controller="MainCtrl" id="main">
+  <!-- Start Early fee -->
+  <div class="overlay-ribbon show-gt-md hide" ng-show="earlyfee()">
+    <div class="ribbon-content">
+      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
+      <p translate>{{'SINCE31'}}</p>
+    </div>
+  </div>
+  <div class="overlay-ribbon-mobile hide-gt-md" ng-show="earlyfee()">
+    <div class="ribbon-content-mobile">
+      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
+      <p translate>{{'SINCE31'}}</p>
+    </div>
+  </div>
+  <!-- End Early fee -->
   <main class="main">
     <terres-title>
       <div class="title">

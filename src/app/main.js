@@ -3,7 +3,7 @@ angular
   .controller('MainCtrl', function ($scope) {
     $scope.earlyfee = function () {
       var data = new Date();
-      var dataFinal = new Date('2017-01-15');
+      var dataFinal = new Date('2017-04-10');
       if (data <= dataFinal) {
         return true;
       }

@@ -51,13 +51,13 @@ angular
       },
       5: {
         nom: "Hugo Marcos",
-        url: "#",
-        enabled: true
+        url: "hugo-marcos",
+        enabled: false
       },
       6: {
         nom: "Joanna Pardos",
-        url: "#",
-        enabled: true
+        url: "joanna-pardos",
+        enabled: false
       }
     };
 

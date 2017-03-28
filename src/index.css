@@ -288,11 +288,11 @@ md-dialog-content{
 @import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
 .overlay-ribbon {
   position: absolute;
-  width: 10em;
+  width: 15em;
   height: 10em;
   z-index: 5;
   top: 0;
-  left: 3%;
+  left: 2%;
   background: #2ec4b6;
   padding: 5px 0;
   /* IE10 Consumer Preview */
@@ -313,7 +313,7 @@ md-dialog-content{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  animation: slidein 7s ease-in-out forwards;
+  animation: slidein 15s ease-in-out forwards;
 }
 
 .ribbon-content {
@@ -321,21 +321,22 @@ md-dialog-content{
   position: relative;
   margin: 0 5px;
 }
-
+/*
 .ribbon-content h2 {
   margin: 0;
   padding: 5px 0 5px 0;
   color: #24505a;
   text-align: center;
   font-size: 5rem;
-}
+}*/
 
 .ribbon-content h3 {
   margin: 0;
   padding: 5px 0 5px 0;
-  line-height: 16px;
   color: #24505a;
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .ribbon-content > p {
@@ -405,11 +406,11 @@ md-dialog-content{
 
 .overlay-ribbon-mobile {
   position: absolute;
-  width: 5em;
+  width: 10em;
   height: 5em;
   z-index: 5;
   bottom: 0;
-  left: calc(50% - 2.5em);
+  left: calc(50% - 5em);
   background: #2ec4b6;
   padding: 5px 0;
   /* IE10 Consumer Preview */
@@ -430,7 +431,7 @@ md-dialog-content{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  animation: slideinmobile 7s ease-in-out forwards;
+  animation: slideinmobile 15s ease-in-out forwards;
 }
 
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
@@ -444,7 +445,7 @@ md-dialog-content{
   position: relative;
   margin: 0 5px;
 }
-
+/*
 .ribbon-content-mobile h2 {
   margin: 0;
   padding: 5px 0 5px 0;
@@ -452,15 +453,15 @@ md-dialog-content{
   text-align: center;
   font-size: 2.2rem;
   line-height: .8em;
-}
+}*/
 
 .ribbon-content-mobile h3 {
   margin: 0;
   padding: 5px 0 5px 0;
-  line-height: 10px;
   color: #24505a;
   text-align: center;
-  font-size: .8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .ribbon-content-mobile > p {
@@ -482,7 +483,7 @@ md-dialog-content{
   width: 0;
   height: 0;
   border-top: 6em solid #2ec4b6;
-  border-right: 4em solid transparent;
+  border-right: 5.5em solid transparent;
   z-index: 997;
 }
 
@@ -494,7 +495,7 @@ md-dialog-content{
   width: 0;
   height: 0;
   border-top: 6em solid #2ec4b6;
-  border-left: 4em solid transparent;
+  border-left: 5.5em solid transparent;
   z-index: 998;
 }
 
