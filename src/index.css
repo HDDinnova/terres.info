@@ -73,18 +73,23 @@ md-select-menu .md-text{
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   height: calc(100vh - 50px);
   padding-top: 50px;
 }
 
 // Estils per a la pàgina principal
-.main {
-  flex: 1;
+.mainvideo{
+  position: absolute;
+  height: 100vh;
+  z-index: -9999;
+  top: 0;
+  left: 0;
+  /*flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 .title {
