@@ -1,0 +1,38 @@
+.logo_sust{
+  max-width: 30vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo_sust_program{
+  max-width: 80vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+  .logo_sust{
+    max-width: 70vw;
+  }
+  .logo_sust_program{
+    max-width: 95vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+  .logo_sust{
+    max-width: 40vw;
+  }
+  .logo_sust_program{
+    max-width: 90vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.input_sust{
+  margin: 5px 0 !important;
+  min-width: 50%;
+}

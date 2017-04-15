@@ -11,15 +11,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'app/main.html'
     })
-    .state('register', {
-      url: '/register',
-      templateUrl: 'app/register/register.html',
-      controller: 'RegisterCtrl'
-    })
-    .state('participate', {
-      url: '/participate',
-      templateUrl: 'app/participate/participate.html'
-    })
     .state('about', {
       url: '/about',
       templateUrl: 'app/about/about.html'
@@ -42,6 +33,19 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/terreslab',
       templateUrl: 'app/terreslab/terreslab.html',
       controller: 'Terreslab'
+    })
+    .state('sustainable', {
+      url: '/sustainable-day',
+      templateUrl: 'app/sustain/sustain.html',
+      controller: 'Sustain'
+    })
+    .state('sustainableSorry', {
+      url: '/sustainable-day/sorry',
+      templateUrl: 'app/sustain/sustainsorry.html'
+    })
+    .state('sustainableOk', {
+      url: '/sustainable-day/thankyou',
+      templateUrl: 'app/sustain/sustainok.html'
     })
     .state('tlregister', {
       url: '/terreslab/register',
@@ -105,5 +109,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('contact', {
       url: '/contact',
       templateUrl: 'app/contact/contact.html'
+    })
+    .state('competition', {
+      url: '/official-competition',
+      templateUrl: 'app/competition/competition.html',
+      controller: 'competitionCtrl'
+    })
+    .state('howarrive', {
+      url: '/how-to-arrive',
+      templateUrl: 'app/arrive/arrive.html'
     });
 }

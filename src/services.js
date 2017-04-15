@@ -2,6 +2,7 @@ angular
   .module('app')
   .factory('Cities', Cities)
   .factory('Competitors', Competitors)
+  .factory('Films', Films)
   .factory('AuthenticationSvc', AuthenticationSvc);
 
 function Cities($resource) {
@@ -17,6 +18,12 @@ function Competitors($resource) {
       });
     }
   };
+}
+function Films($resource) {
+  var url = 'api/films/';
+  return $resource(url, {}, {
+    query: {method: 'GET'}
+  });
 }
 function AuthenticationSvc($http, $q, $window) {
   var userInfo;

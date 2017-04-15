@@ -439,4 +439,117 @@ Flight::route('/regTerreslab', function(){
     Flight::json($data);
 });
 
+///////
+// Register to Sustainable day
+///////
+Flight::route('/regSustain', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $dades = file_get_contents('php://input');
+    $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+    $post = json_decode($dades,true);
+
+    ///////
+    // Check if user is registered
+    ///////
+    $sql = "SELECT id FROM sustain WHERE email = :email LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $post['email']);
+    $check->execute();
+    $count = $check->rowCount();
+
+    if ($count === 0){
+      $sql = "INSERT INTO sustain(nom, cognoms, email, direccio, ciutat, pais) VALUES (:nom, :cognoms, :email, :direccio, :ciutat, :pais)";
+
+      $new = $db->prepare($sql);
+      $new->bindParam(':nom', $post['nom']);
+      $new->bindParam(':cognoms', $post['cognoms']);
+      $new->bindParam(':email', $post['email']);
+      $new->bindParam(':direccio', $post['direccio']);
+      $new->bindParam(':ciutat', $post['city']);
+      $new->bindParam(':pais', $post['country']);
+
+      try {
+        if ($new->execute()) {
+          $data['status'] = 200;
+          $data['message'] = 'User created succesfully';
+        } else {
+          $data['status'] = 400;
+          $data['message'] = 'Unknown error';
+        }
+      } catch (Exception $e) {
+        echo 'Exception: ',  $e->getMessage();
+      }
+    } else {
+      $data['status'] = 404;
+      $data['message'] = 'User exist';
+    }
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
+///////
+// Return number assistants to Sustainable day
+///////
+Flight::route('/numSustain', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $sql = "SELECT id FROM sustain";
+    $check = $db->prepare($sql);
+    $check->execute();
+    $data['assistants'] = $check->rowCount();
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
+///////
+// List all films by section
+///////
+Flight::route('GET /films/', function(){
+  $db = Flight::db();
+
+  $films = [];
+
+  $sql = "SELECT title, director FROM corporatefilms ORDER BY title ASC";
+  $q = $db->prepare($sql);
+  $q->execute();
+  $corporate = [];
+  while ($row = $q->fetch(PDO::FETCH_ASSOC)) {
+    $corporate[] = $row;
+  }
+
+  $films['corporate'] = $corporate;
+
+  $sql = "SELECT title, director FROM documentaryfilms ORDER BY title ASC";
+  $q = $db->prepare($sql);
+  $q->execute();
+  $documentary = [];
+  while ($row = $q->fetch(PDO::FETCH_ASSOC)) {
+    $documentary[] = $row;
+  }
+
+  $films['documentary'] = $documentary;
+
+  $sql = "SELECT title, director FROM tourismfilms ORDER BY title ASC";
+  $q = $db->prepare($sql);
+  $q->execute();
+  $tourism = [];
+  while ($row = $q->fetch(PDO::FETCH_ASSOC)) {
+    $tourism[] = $row;
+  }
+
+  $films['tourism'] = $tourism;
+
+  $db = NULL;
+
+  Flight::json($films);
+});
+
 Flight::start();

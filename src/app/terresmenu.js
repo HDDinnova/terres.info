@@ -1,6 +1,14 @@
 angular
   .module('app')
   .controller('menuCtrl', function ($scope, $rootScope, $translate, $timeout, $mdDialog, $http, $mdToast, $mdSidenav, $window) {
+    $scope.enddate = function () {
+      var data = new Date();
+      var dataFinal = new Date('2017-04-11');
+      if (data <= dataFinal) {
+        return true;
+      }
+    };
+
     $scope.docs = function () {
       $window.location.href = '/docs';
     };

@@ -1,6 +1,7 @@
 {
   "LANGUAGE": "Idioma",
   "REGISTRATION_MENU": "Registro",
+  "FREEREG": "Registro gratuito",
   "PARTICIPATE_MENU": "CÓMO PARTICIPAR",
   "PARTNERS_MENU": "Patrocinadores",
   "NEWS_MENU": "Noticias",
@@ -108,5 +109,19 @@
     "PAR1": "<strong>terres Lab</strong>, coordinado por Jordi Treserras del Laboratorio de Patrimonio, Turismo, Cultura y Creatividad de la Universitat de Barcelona (LABPATC), quiere ofrecer un marco de debate para reflexionar sobre las interrelaciones entre la industria del turismo y la del audiovisual, con el objetivo de anticipar y analizar las tendencias comunicativas más exitosas, así como explorar nuevas sinergias.",
     "PAR2": "Se calcula que el año 2030 se llegará a los 1.800 millones de turistas de acuerdo con el informe de la OMT “Tourism Towards 2030”. El año 1959 eran 25 millones las personas que viajaban por el mundo y el año 2015 fueron 1.186 millones. El incremento exponencial del turismo se traduce en impactos de todo tipo. He ahí que la sostenibilidad sea un reto clave para todas las regiones y países. Esto explica en buena medida que la ONU haya designado el año 2017 como el Año Internacional del Turismo Sostenible. Paralelamente a este proceso, la industria audiovisual ha impactado de lleno en la transformación del turismo como sector económico.",
     "PAR3": "Hay estudios que ponen de manifiesto que uno de cada cinco turistas viaja motivado por las películas o documentales que ha visto. De ahí se desprende la necesitad de analizar  esta interrelación entre las dos industrias. Este análisis es el que propone <strong>terres Lab</strong>."
+  },
+  "SUSTAIN": {
+    "SORRY": "Muchas gracies por tu interés por el Dia del Turismo Sostenible, pero ja no hay plazas disponibles",
+    "OK": "Muchas gracias, el registro se ha efectuado correctamente"
+  },
+  "OFFICIAL-COMPETITION": "Competición oficial",
+  "ARRIVE": {
+    "1": "CÓMO LLEGAR",
+    "2": "Las proyecciones del <strong>festival terres Catalunya</strong> tienen lugar en el <a href='https://www.google.es/maps/place/Teatro+Auditorio+Felip+Pedrell/@40.8059874,0.5145785,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e4a59b23740f:0x3d790ced3501b7e2!8m2!3d40.8059874!4d0.5167672' target='_blank'>Teatro-Auditorio Felip Pedrell.</a>",
+    "3": "El medio de transporte recomendado desde Barcelona es el <a href='http://hife.es/' target='_blank'>autobús.</a>",
+    "4": "La estación de autobuses de Tortosa se encuentra a 5 minutos del Teatro-Auditorio Felip-Pedrell.",
+    "5": "Tortosa tiene también estación de tren.",
+    "6": "Las sesiones de <strong>terres LAB - Congreso sobre Paisaje, Turismo y Cine</strong> tienen lugar en el hotel <a href='https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723' target='_blank'>SB Corona.</a>",
+    "7": "El hotel SB Corona se encuentra a 25 minutos de la estación de autobuses de Tortosa."
   }
 }

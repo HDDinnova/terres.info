@@ -1,0 +1,54 @@
+<div class="main-container">
+  <md-content layout-padding layout-wrap>
+    <div>
+      <img src="img/sustainable-tourism-day.png" alt="logo terres lab" class="logo_sust">
+    </div>
+    <form layout="column" layout-padding layout-margin>
+      <strong translate>{{'REGISTRATION_MENU'}}</strong>
+      <div layout="column" layout-gt-md="row">
+        <div layout="column" layout-gt-xs="row">
+          <md-input-container class="input_sust">
+            <label for="nom">{{'TL_REG.NOM' | translate}}</label>
+            <input type="text" name="nom" ng-model="formData.nom" required="true">
+          </md-input-container>
+          <md-input-container class="input_sust">
+            <label for="cognoms">{{'TL_REG.COGNOMS' | translate}}</label>
+            <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
+          </md-input-container>
+        </div>
+        <div layout="column" layout-gt-xs="row">
+          <md-input-container class="input_sust">
+            <label for="email">{{'TL_REG.EMAIL' | translate}}</label>
+            <input type="email" name="email" ng-model="formData.email" required="true">
+          </md-input-container>
+          <md-input-container class="input_sust">
+            <label for="direccio">{{'TL_REG.DIRECCIO' | translate}}</label>
+            <input type="text" name="direccio" ng-model="formData.direccio" required="true">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout="column" layout-gt-md="row">
+        <div layout="column" layout-gt-xs="row">
+          <md-input-container class="input_sust">
+            <label for="city">{{'REGISTER.CITY' | translate}}</label>
+            <input type="text" name="city" ng-model="formData.city" required="true">
+          </md-input-container>
+          <md-input-container class="input_sust">
+            <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
+            <md-select ng-model="formData.country" required="true" flex="100">
+              <md-option ng-repeat="country in countries" ng-value="country.translations.es">
+                {{country.translations.es}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+      </div>
+      <div layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="processSUST()" ng-disabled="tl_register.$invalid">{{'FREEREG' | translate}}</md-button>
+      </div>
+    </form>
+    <div>
+      <img src="img/SUSTAINABLE-TOURISM-DAY.jpg" alt="programa" class="logo_sust_program">
+    </div>
+  </md-content>
+</div>

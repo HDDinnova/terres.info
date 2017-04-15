@@ -43,8 +43,8 @@ terres-menu{
   margin-right: auto;
 }
 .logomenu{
-  height: 1.2rem;
-  margin-right: 2rem;
+  width: 55px;
+  margin-right: .8rem;
 }
 .logomenuterres{
   height: 40px;
@@ -108,9 +108,9 @@ md-select-menu .md-text{
   margin: 1rem;
 }
 .title-logo {
-  max-height: 18rem;
-  max-width: 60vw;
-  margin-top: 5rem;
+  height: 8rem;
+  /*max-width: 40vw;*/
+  margin-top: calc(50vh - 8rem);
   position: relative;
   z-index: 1;
 }
@@ -575,11 +575,28 @@ section{
   background-position: bottom;
 }
 
-
-
 /****************************/
 /*      TL REGISTER         */
 /****************************/
 .register-tl{
   padding-top: 50px;
+}
+
+/***********************************/
+/*      OFFICIAL COMPETITION       */
+/***********************************/
+.logo_official{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.logo_official img{
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.films h3{
+  text-transform: uppercase;
+  font-weight: bolder;
 }

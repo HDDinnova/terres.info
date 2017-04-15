@@ -1,0 +1,26 @@
+<div class="main-container">
+  <md-content layout-padding layout-wrap>
+    <div class="logo_official">
+      <img src="img/official_selection.png" alt="Official selection">
+      <h1 translate>{{'OFFICIAL-COMPETITION'}}</h1>
+    </div>
+    <div class="films">
+      <h3 translate><strong>{{'TOURFILM'}}</strong></h3>
+      <ol>
+        <li ng-repeat="film in films.tourism" ng-bind-html="film.title"></li>
+      </ol>
+    </div>
+    <div class="films">
+      <h3 translate><strong>{{'DOCUMENTARY'}}</strong></h3>
+      <ol>
+        <li ng-repeat="film in films.documentary" ng-bind-html="film.title"></li>
+      </ol>
+    </div>
+    <div class="films">
+      <h3 translate><strong>{{'CORPORATE'}}</strong></h3>
+      <ol>
+        <li ng-repeat="film in films.corporate" ng-bind-html="film.title"></li>
+      </ol>
+    </div>
+  </md-content>
+</div>
