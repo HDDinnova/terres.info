@@ -123,5 +123,21 @@
     "5": "Tortosa has also a train station.",
     "6": "The sessions of <strong>terres LAB - Congress on Landscape, Tourism and Cinema</strong> will take place at the <a href='https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723' target='_blank'>SB Corona Hotel.</a>",
     "7": "The SB Corona Hotel is at 25 minutes walking from Tortosa’s bus station."
-  }
+  },
+  "PROGRAM": {
+    "1_1": "<h2><strong>SECTION 1</strong></h2><h3><strong>31/05/2017 - Exhibition room 1</strong><p>Theater-Auditorium Felip Pedrell (Tortosa). OFFICIAL COMPETITION screenings. Free entry.</p></h3><h4>19h. Documentaries</h4>",
+    "1_2": "<h2><strong>SECTION 2</strong></h2><h3><strong>31/05/2017 - Exhibition room 2</strong><p>Theater-Auditorium Felip Pedrell (Tortosa). OFFICIAL COMPETITION screenings. Free entry.</p></h3><h4>19h. Documentaries</h4>",
+    "1_3": "<h4>20’40h. Touristic Films</h4>",
+    "2_1": "<h2><strong>1/06/2017 - Exhibition room 1</strong></h2><h3><strong>SECTION 3</strong><p>Theater-Auditorium Felip Pedrell (Tortosa). OFFICIAL COMPETITION screenings. Free entry.</p></h3><h4>19h. Documentaries</h4>",
+    "2_2": "<h2><strong>1/06/2017 - Exhibition room 2</strong></h2><h3><strong>SECTION 4</strong><p>Theater-Auditorium Felip Pedrell (Tortosa). OFFICIAL COMPETITION screenings. Free entry.</p></h3><h4>19h. Corporate Films</h4>",
+    "2_3": "<h4>19’30h. Touristic Films</h4>",
+    "2_4": "<h4>21’30h. Documentaries</h4>",
+    "3_1": "<h2><strong>2/06/2017</strong></h2>",
+    "3_2": "19h. Award Cerimony at Villa Retiro Hotel (Xerta). Restricted access by invitation of the organization",
+    "4_1": "<h2><strong>3/06/2017</strong></h2>",
+    "4_2": "18h. Theater-Auditorium Felip Pedrell (Tortosa). OFFICIAL COMPETITION Award Winners screening. Free entry.",
+    "5_1": "<strong>Parallel activities</strong>",
+    "5_2": "<ul><li>Exhibition “Regards croisés sur l'avenir de la planète”, by the French NGO “An Eye for an Eye”, exhibited in the meeting rooms of the COP21 in Paris in 2015. Lobby of the Theater-Auditorium Felip Pedrell (Tortosa)</li><li>Exhibition “Costa Rica, small giant” by photographer Álvaro Cubero. In partnership with B-The Travel Brand. Marcel·lí Domingo Library (Tortosa).</li></ul>"
+  },
+  "PROGRAMA": "Program"
 }

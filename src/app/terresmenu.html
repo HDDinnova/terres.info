@@ -5,6 +5,7 @@
     <h2><a ui-sref="sustainable"><img class="logomenu" src="img/logo-sustain.png" alt="Sustainable Day"></a></h2>
     <span flex></span>
     <md-button show-gt-sm hide ui-sref="competition"><span translate>{{'OFFICIAL-COMPETITION'}}</span></md-button>
+    <md-button show-gt-sm hide ui-sref="program"><span translate>{{'PROGRAMA'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="howarrive"><span translate>{{'ARRIVE.1'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
     <md-menu show-gt-sm hide>
@@ -16,7 +17,7 @@
         </md-menu-content>
     </md-menu>
     <md-button show-gt-sm hide ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>
-    <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button>
+    <!-- <md-button show-gt-sm hide ui-sref="about"><span translate>{{'ABOUT_MENU'}}</span></md-button> -->
     <md-button show-gt-sm hide ng-click="showNewsletter($event)"><span translate>{{'NEWSLETTER_MENU'}}</span></md-button>
     <md-button show-gt-sm hide ui-sref="contact"><span translate>{{'CONTACT_MENU'}}</span></md-button>
     <md-select show-gt-sm hide ng-model="userLang" aria-label="Select language" ng-change="setLang()" class="md-no-underline">

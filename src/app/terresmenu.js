@@ -47,11 +47,6 @@ angular
         url: "alejandra-medina",
         enabled: false
       },
-      3: {
-        nom: "George Pessis",
-        url: "georges-pessis",
-        enabled: false
-      },
       4: {
         nom: "Kymisha Carey",
         url: "kymisha_carey",

@@ -11,9 +11,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'app/main.html'
     })
-    .state('about', {
-      url: '/about',
-      templateUrl: 'app/about/about.html'
+    .state('program', {
+      url: '/program',
+      templateUrl: 'app/program/program.html',
+      controller: 'programCtrl'
     })
     .state('partners', {
       url: '/partners',

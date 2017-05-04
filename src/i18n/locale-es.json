@@ -123,5 +123,21 @@
     "5": "Tortosa tiene también estación de tren.",
     "6": "Las sesiones de <strong>terres LAB - Congreso sobre Paisaje, Turismo y Cine</strong> tienen lugar en el hotel <a href='https://www.google.es/maps/place/Hotel+SB+Corona+Tortosa/@40.8165648,0.5107836,17z/data=!3m1!4b1!4m5!3m4!1s0x12a0e49623939dd9:0xe0a04ee55c58cd5c!8m2!3d40.8165648!4d0.5129723' target='_blank'>SB Corona.</a>",
     "7": "El hotel SB Corona se encuentra a 25 minutos de la estación de autobuses de Tortosa."
-  }
+  },
+  "PROGRAM": {
+    "1_1": "<h2><strong>31/05/2017 - Sala 1</strong></h2><h3><strong>BLOQUE 1</strong><p>Teatro-Auditorio Felip Pedrell (Tortosa). Proyeccion de las películas seleccionadas en la COMPETICIÓN OFICIAL. Entrada gratuita.</p></h3><h4>19h. Documentales</h4>",
+    "1_2": "<h2><strong>31/05/2017 - Sala 2</strong></h2><h3><strong>BLOQUE 2</strong><p>Teatro-Auditorio Felip Pedrell (Tortosa). Proyeccion de las películas seleccionadas en la COMPETICIÓN OFICIAL. Entrada gratuita.</p></h3><h4>19h. Documentales</h4>",
+    "1_3": "<h4>20’40h. Films Turísticos</h4>",
+    "2_1": "<h2><strong>1/06/2017 - Sala 1</strong></h2><h3><strong>BLOQUE 3</strong><p>Teatro-Auditorio Felip Pedrell (Tortosa). Proyeccion de las películas seleccionadas en la COMPETICIÓN OFICIAL. Entrada gratuita.</p></h3><h4>19h. Documentales</h4>",
+    "2_2": "<h2><strong>1/06/2017 - Sala 2</strong></h2><h3><strong>BLOQUE 4</strong><p>Teatro-Auditorio Felip Pedrell (Tortosa). Proyeccion de las películas seleccionadas en la COMPETICIÓN OFICIAL. Entrada gratuita.</p></h3><h4>19h. Films Corporativos</h4>",
+    "2_3": "<h4>19’30h. Films Turísticos</h4>",
+    "2_4": "<h4>21’30h. Documentales</h4>",
+    "3_1": "<h2><strong>2/06/2017</strong></h2>",
+    "3_2": "19h. Ceremonia de entrega de trofeos en el hotel Villa Retiro (Xerta). Acceso restringido por invitación de la organización.",
+    "4_1": "<h2><strong>3/06/2017</strong></h2>",
+    "4_2": "18h. Teatro-Auditorio Felip Pedrell (Tortosa). Sala grande. Proyección de las películas ganadoras del festival <strong>terres Catalunya - INTERNATIONAL ECO & TOURISM FILM FESTIVAL</strong>. Entrada gratuita.",
+    "5_1": "<strong>Actividades paralelas</strong>",
+    "5_2": "<ul><li>Exposición “Regards croisés sur l’avenir de la planète”, de l’ONG francesa “An Eye For An Eye”, exhibida en los salones de reuniones de la COP21 de Paris el 2015. Vestíbulo del Teatre-Auditori Felip Pedrell (Tortosa).</li><li>Exposición “Costa Rica, pequeño gigante”, del fotógrafo Álvaro Cubero. En partenariado con B-The Travel Brand. Biblioteca Marcel·lí Domingo de Tortosa.</li></ul>"
+  },
+  "PROGRAMA": "Programa"
 }
