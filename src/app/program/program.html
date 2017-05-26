@@ -1,6 +1,13 @@
 <div class="main-container" ng-controller="programCtrl">
+  <div class="popup" ng-if="popup">
+    <div class="popup-text">
+      <img src="img/logo-terres.png" alt="logo terres">
+      <h1 translate>{{'CHANGE1'}}</h1>
+      <p translate>{{'CHANGE2'}}</p>
+    </div>
+  </div>
   <md-content layout-padding layout-wrap>
-    <div class="about_img" flex="100"></div>
+    <div class="program_img" flex="100"></div>
     <div flex-xl="50" flex-offset-xl="25" flex-lg="50" flex-offset-lg="25" flex-md="70" flex-offset-md="15" flex-sm="90" flex-offset-sm="5" flex-xs="100">
       <span translate>{{'PROGRAM.1_1'}}</span>
       <md-table-container>

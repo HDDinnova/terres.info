@@ -1,0 +1,51 @@
+<form name="tl_register" class="register-tl" layout="column" layout-padding layout-margin>
+  <h1>Registre a l'acte de lliurament de premis de <strong>terres Catalunya</strong></h1>
+  <h3>que tindrà lloc el proper divendres 2 de juny a les 19.00h</h3>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" ng-model="formData.nom" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="cognoms">Cognoms</label>
+        <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
+      </md-input-container>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <md-input-container>
+        <label for="email">Correu electrònic</label>
+        <input type="email" name="email" ng-model="formData.email" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="direccio">Adreça</label>
+        <input type="text" name="direccio" ng-model="formData.direccio" required="true">
+      </md-input-container>
+    </div>
+  </div>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
+        <label for="city">Ciutat</label>
+        <input type="text" name="city" ng-model="formData.city" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="country">País</label>
+        <md-select ng-model="formData.country" required="true" flex="100">
+          <md-option ng-repeat="country in countries" ng-value="country.translations.es">
+            {{country.translations.es}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+  </div>
+  <div layout="row" layout-align="center">
+    <md-button class="md-raised md-primary" ng-click="processTL()" ng-disabled="tl_register.$invalid">Registrar</md-button>
+  </div>
+</form>
+<div layout="row" layout-align="center" ng-if="allready">
+  <p class="md-warn">Aquest correu electrònic ja ha estat registrat anteriorment</p>
+</div>
+<div layout="row" layout-align="center" ng-if="unknown">
+  <p class="md-warn">Disculpa les molèsties, però hi ha hagut un error desconegut, si us plau, torna-ho a intentar més tard o envia un missatge a <a href='mailto:contact@terres.info'>contact@terres.info</a></p>
+</div>

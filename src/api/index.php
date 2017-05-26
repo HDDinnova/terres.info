@@ -552,4 +552,165 @@ Flight::route('GET /films/', function(){
   Flight::json($films);
 });
 
+///////
+// Register to sopar
+///////
+Flight::route('POST /sopar', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $dades = file_get_contents('php://input');
+    $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+    $post = json_decode($dades,true);
+
+    ///////
+    // Check if user is registered
+    ///////
+    $sql = "SELECT id FROM sopar WHERE email = :email LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $post['email']);
+    $check->execute();
+    $count = $check->rowCount();
+
+    if ($count === 0){
+      $sql = "INSERT INTO sopar(nom, cognoms, email, direccio, ciutat, pais) VALUES (:nom, :cognoms, :email, :direccio, :ciutat, :pais)";
+
+      $new = $db->prepare($sql);
+      $new->bindParam(':nom', $post['nom']);
+      $new->bindParam(':cognoms', $post['cognoms']);
+      $new->bindParam(':email', $post['email']);
+      $new->bindParam(':direccio', $post['direccio']);
+      $new->bindParam(':ciutat', $post['city']);
+      $new->bindParam(':pais', $post['country']);
+
+      try {
+        if ($new->execute()) {
+          $data['status'] = 200;
+          $data['message'] = 'User created succesfully';
+        } else {
+          $data['status'] = 400;
+          $data['message'] = 'Unknown error';
+        }
+      } catch (Exception $e) {
+        echo 'Exception: ',  $e->getMessage();
+      }
+    } else {
+      $data['status'] = 404;
+      $data['message'] = 'User exist';
+    }
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
+///////
+// Register 1 day student to terres LAB
+///////
+Flight::route('/regTerreslabStudent', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $dades = file_get_contents('php://input');
+    $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+    $post = json_decode($dades,true);
+
+    ///////
+    // Check if user is registered
+    ///////
+    $sql = "SELECT id FROM terreslab_student WHERE email = :email LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $post['email']);
+    $check->execute();
+    $count = $check->rowCount();
+
+    if ($count === 0){
+      $sql = "INSERT INTO terreslab_student(nom, cognoms, email, direccio, ciutat, pais, dia) VALUES (:nom, :cognoms, :email, :direccio, :ciutat, :pais, :dia)";
+
+      $new = $db->prepare($sql);
+      $new->bindParam(':nom', $post['nom']);
+      $new->bindParam(':cognoms', $post['cognoms']);
+      $new->bindParam(':email', $post['email']);
+      $new->bindParam(':direccio', $post['direccio']);
+      $new->bindParam(':ciutat', $post['city']);
+      $new->bindParam(':pais', $post['country']);
+      $new->bindParam(':dia', $post['dia']);
+
+      try {
+        if ($new->execute()) {
+          $data['status'] = 200;
+          $data['message'] = 'User created succesfully';
+        } else {
+          $data['status'] = 400;
+          $data['message'] = 'Unknown error';
+        }
+      } catch (Exception $e) {
+        echo 'Exception: ',  $e->getMessage();
+      }
+    } else {
+      $data['status'] = 404;
+      $data['message'] = 'User exist';
+    }
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
+///////
+// Register 1 day to terres LAB
+///////
+Flight::route('/regTerreslabOneday', function(){
+    $db = Flight::db();
+    $data = [];
+
+    $dades = file_get_contents('php://input');
+    $dades = mb_convert_encoding($dades, 'HTML-ENTITIES', "UTF-8");
+
+    $post = json_decode($dades,true);
+
+    ///////
+    // Check if user is registered
+    ///////
+    $sql = "SELECT id FROM terreslab_oneday WHERE email = :email LIMIT 1";
+    $check = $db->prepare($sql);
+    $check->bindParam(':email', $post['email']);
+    $check->execute();
+    $count = $check->rowCount();
+
+    if ($count === 0){
+      $sql = "INSERT INTO terreslab_oneday(nom, cognoms, email, direccio, ciutat, pais, dia) VALUES (:nom, :cognoms, :email, :direccio, :ciutat, :pais, :dia)";
+
+      $new = $db->prepare($sql);
+      $new->bindParam(':nom', $post['nom']);
+      $new->bindParam(':cognoms', $post['cognoms']);
+      $new->bindParam(':email', $post['email']);
+      $new->bindParam(':direccio', $post['direccio']);
+      $new->bindParam(':ciutat', $post['city']);
+      $new->bindParam(':pais', $post['country']);
+      $new->bindParam(':dia', $post['dia']);
+
+      try {
+        if ($new->execute()) {
+          $data['status'] = 200;
+          $data['message'] = 'User created succesfully';
+        } else {
+          $data['status'] = 400;
+          $data['message'] = 'Unknown error';
+        }
+      } catch (Exception $e) {
+        echo 'Exception: ',  $e->getMessage();
+      }
+    } else {
+      $data['status'] = 404;
+      $data['message'] = 'User exist';
+    }
+
+    $db = NULL;
+
+    Flight::json($data);
+});
+
 Flight::start();

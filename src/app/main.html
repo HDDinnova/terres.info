@@ -1,18 +1,4 @@
 <div class="main-container" ng-controller="MainCtrl" id="main">
-  <!-- Start Early fee -->
-  <div class="overlay-ribbon show-gt-md hide" ng-show="earlyfee()">
-    <div class="ribbon-content">
-      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
-      <p translate>{{'SINCE31'}}</p>
-    </div>
-  </div>
-  <div class="overlay-ribbon-mobile hide-gt-md" ng-show="earlyfee()">
-    <div class="ribbon-content-mobile">
-      <h3 translate><strong>{{'EARLYFEE'}}</strong></h3>
-      <p translate>{{'SINCE31'}}</p>
-    </div>
-  </div>
-  <!-- End Early fee -->
   <main class="main">
     <terres-title>
       <div class="title">
@@ -27,6 +13,16 @@
         </covervid>
       </div>
     </terres-title>
+    <div class="terreslab_center" show-gt-sm hide>
+      <div layout="row" layout-align="space-between">
+        <div ui-sref="sustainable" class="terreslablogo">
+          <img src="img/sustainable-tourism-day.png" alt="logo Sustainable Day" />
+        </div>
+        <div ui-sref="terreslab" class="terreslablogo">
+          <img src="img/terresLAB_mini.png" alt="logo terres LAB" />
+        </div>
+      </div>
+    </div>
     <div class="social">
       <div layout="row" layout-align="center">
         <div socialshare socialshare-provider="facebook" socialshare-media="http://terres.info/img/Buda.jpg" socialshare-url="http://terres.info" aria-label="Share to Facebook" ng-mouseenter="optface=true" ng-mouseleave="optface=false">

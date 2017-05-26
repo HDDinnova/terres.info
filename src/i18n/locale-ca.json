@@ -80,8 +80,10 @@
     "PROGRAMB": "Veure programa",
     "REGISTER": "INSCRIU-TE",
     "REGISTERTEXT": "Si vols assistir a terres LAB, registra’t",
+    "ONEDAYREGISTER": "Registre d'un sol dia",
     "NEW": "Registra't a <strong>terres LAB</strong>",
     "SUBHEAD": "Preu de la inscripció: 200€ (professionals) i 150€ (estudiants)<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
+    "SUBHEADONEDAY": "Preu de la inscripció: 100€<br>La quota d'inscripció inclou el dinar del dia seleccionat al restaurant de l'Hotel SB Corona Tortosa",
     "SUBHEAD20OFF": "Preu de la inscripció: 160€ amb un 20% de descompte inclòs<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
     "SUBHEAD50OFF": "Preu de la inscripció: 100€ amb un 50% de descompte inclòs<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
     "NOM": "Nom",
@@ -100,8 +102,14 @@
     "ALLREADY": "Aquest correu electrònic ja ha estat registrat anteriorment",
     "UNKNOWN": "Disculpa les molèsties, però hi ha hagut un error desconegut, si us plau, torna-ho a intentar més tard o envia un missatge a <a href='mailto:contact@terres.info'>contact@terres.info</a>",
     "THANKYOU": "Gràcies per inscriure't a terres LAB, Congrés sobre Paisatge, Turisme i Cinema.",
-    "PROGRAM": "Estem elaborant el programa de terres LAB. En breu, rebràs un correu electrònic amb el programa.",
-    "PARTNER": "Vols allotjar-te a l’hotel on tindrà lloc terres LAB beneficiant-te d’una oferta especial del nostre partner?"
+    "PROGRAM": "Pots trobar el programa de terres LAB al següent enllaç <a href='https://terres.info/docs/programa-terres-lab-congres-sobre-paisatge-turisme-cinema/' target='_blank'>PROGRAMA</a>",
+    "PARTNER": "Vols allotjar-te a l’hotel on tindrà lloc terres LAB beneficiant-te d’una oferta especial del nostre partner?",
+    "STUDENT": "Registre d'un dia a <strong>terres LAB</strong>",
+    "SUBHEADSTUDENT": "Aquest registre només és vàlid per a estudiants universitaris que facin el registre mitjançant el correu d'alumne del seu centre.",
+    "DIA": "Dia",
+    "MAY31": "Dimecres 31 de maig",
+    "JUNE1": "Dijous 1 de juny",
+    "DISCLAIMER": "La inscripció només inclou l’assistència a les xerrades, no inclou allotjament ni dinar."
   },
   "TERRESLAB": "<p><strong>Envia la teva proposta de ponència a <a href='mailto:contact@terres.info'>contact@terres.info</a></strong></p><p>Has d’incloure la informació:<ul><li>Nom complet</li><li>Institució i la seva funció o càrrec</li><li>Ciutat</li><li>País</li><li>Títol de la comunicació proposta</li><li>Resum d'entre 150 i 200 paraules</li></ul></p><p>La ponència s’haurà de realitzar amb un dels idiomes següents: català, l'anglès, el francès, l'italià, el portuguès i l'espanyol (Les traduccions en espanyol i en anglès seran proporcionades per interprets).</p><p><strong>DATA LÍMIT</strong> per a recepció de sol·licituts: <strong>28 de febrer de 2017</strong></p><p>Aquesta convocatòria sol·licita ponències i treballs teòrics, conceptuals i desenvolupats. En les presentacions sol·licitades poden aparèixer els següents temes.<ul><li>Art cinematogràfic i turisme</li><li>Film commissions i turisme</li><li>Investigació sobre pel·lícules turístiques</li><li>La filmació en paisatges protegits (Patrimoni de la humanitat, les reserves de la biosfera, geoparcs, NATURA 2000, ...)</li><li>Foodscapes, gastronomia i turisme de cinema</li><li>Imaginari, imatge de la destinació turística i turisme induït pel cinema</li><li>La promoció de destinacions a través del cinema turístic i les localitzacions</li><li>Experiències en les rutes de cinema</li><li>Videojoc i turisme</li><li>...</li></ul></p><p>Terres LAB serà coordinat per:<br>El Dr. Jordi Tresserras Juan (LABPATC, Universitat de Barcelona)<br>Sr. Santi Valldepérez (Filmsnòmades)<br>La Dra. Núria Gil Duran (Universitat Rovira i Virgili)</p><p>Comitè científic:<br>La Dra. Núria Gil Duran (Universitat Rovira i Virgili)<br>Dra. Maria Gravari-Barbes (IREST, UNIVERSITAT PARÍS 1 Panthéon Sorbonne / càtedra UNESCO de Cultura, Turisme, Desenvolupament)<br>Sr. Pere Parramon Rubio (Universitat de Girona)<br>Dr. F. F. Xavier Medina (Universitat oberta de Catalunya / càtedra UNESCO menjar, Turisme, desenvolupament)<br>El Dr. Jordi Treserras Joan (LABPATC, Universitat de Barcelona)<br>La Sra. Teresa Vidal Peig (ENTI Universitat de Barcelona)<br>Dr. Francisco Dias (IPLeiria-ESTM)<br>Dra. Isabel Marques (Universidade Lusófona de Porto)</p>",
   "TERRESLAB_DATE": "TORTOSA / 31 MAIG - 1 JUNY",
@@ -139,5 +147,7 @@
     "5_1": "<strong>Activitats paral·leles</strong>",
     "5_2": "<ul><li>Exposició “Regards croisés sur l’avenir de la planète”, de l’ONG francesa “An Eye For An Eye”, exhibida als salons de reunions de la COP21 de Paris de l’any 2015. Vestíbul del Teatre-Auditori Felip Pedrell (Tortosa).</li><li>Exposició “Costa Rica, petit gegant”, del fotògraf Álvaro Cubero. En partenariat amb B-The Travel Brand. Biblioteca Marcel·lí Domingo de Tortosa.</li></ul>"
   },
-  "PROGRAMA": "Programa"
+  "PROGRAMA": "Programa",
+  "CHANGE1": "Canvi de programació. Sala 1",
+  "CHANGE2": "The Lerchenberg Adventure, nova projecció, dimecres 31/5<br>Cozumel, un paraíso en el Caribe maya, nova projecció, dijous 1/6"
 }

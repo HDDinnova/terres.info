@@ -1,6 +1,11 @@
 angular
   .module('app')
-  .controller('programCtrl', function ($scope, $http) {
+  .controller('programCtrl', function ($scope, $http, $timeout) {
+    $scope.popup = true;
+    $timeout(function () {
+      $scope.popup = false;
+    }, 7000);
+
     $http.get('bloc1sala1.json')
     .then(function (res) {
       $scope.films1_1 = res.data;

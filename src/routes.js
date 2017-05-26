@@ -63,6 +63,20 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/terreslab/terreslab50off.html',
       controller: 'tlreg50OffCtrl'
     })
+    .state('terreslabstudent', {
+      url: '/terreslab/student',
+      templateUrl: 'app/terreslab/terreslabstudent.html',
+      controller: 'tlregStudentCtrl'
+    })
+    .state('terreslabstudentok', {
+      url: '/terreslab/student/thankyou',
+      templateUrl: 'app/terreslab/thankyou.html'
+    })
+    .state('terreslaboneday', {
+      url: '/terreslab/oneday',
+      templateUrl: 'app/terreslab/terreslaboneday.html',
+      controller: 'tlregOnedayCtrl'
+    })
     .state('tlpay', {
       url: '/terreslab/register/pay',
       templateUrl: 'app/terreslab/pay.html'
@@ -119,5 +133,18 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('howarrive', {
       url: '/how-to-arrive',
       templateUrl: 'app/arrive/arrive.html'
+    })
+    .state('soparregistre', {
+      url: '/invitacio/sopar',
+      templateUrl: 'app/sopar/invitacio.html',
+      controller: 'soparInvitacioCtrl'
+    })
+    .state('soparpagat', {
+      url: '/invitacio/thankyou',
+      templateUrl: 'app/sopar/thankyou.html'
+    })
+    .state('soparerror', {
+      url: '/invitacio/error',
+      templateUrl: 'app/sopar/error.html'
     });
 }
