@@ -119,6 +119,10 @@ md-select-menu .md-text{
   position: relative;
   z-index: 1;
 }
+.title-program {
+  position: relative;
+  z-index: 1;
+}
 .title-h2 {
   font-weight: 300;
   font-size: 1rem;

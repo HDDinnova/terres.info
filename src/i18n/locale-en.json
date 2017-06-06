@@ -21,6 +21,7 @@
   "EARLYFEE": "EXTENDED DEADLINE",
   "SINCE31": "<strong>April 10th.</strong> LAST DAY to submit films at <strong>terres Catalunya</strong>",
   "NO_VAT": "Price without VAT. Total price with VAT included: 72,60€",
+  "WINNERS": "WINNERS",
   "REGISTER": {
     "NEW": "Register new competitor",
     "AMOUNT": "Amount",
@@ -84,6 +85,7 @@
     "NEW": "Register to <strong>terres LAB</strong>",
     "SUBHEAD": "Registration Fee: 200€ (professionals) and 150€ (students).<br>The registration Fee includes the lunch for the days May 31th and 1st of June at SB Corona Tortosa Hotel.",
     "SUBHEADONEDAY": "Registration Fee: 100€<br>The registration Fee includes the lunch for the selected day at SB Corona Tortosa Hotel.",
+    "SUBHEADONEDAYOFFER": "Registration Fee: 75€<br>The registration Fee includes the lunch for the selected day at SB Corona Tortosa Hotel.",
     "SUBHEAD20OFF": "Registration Fee: 160€ including a 20% off<br>The registration Fee includes the lunch for the days May 31th and 1st of June at SB Corona Tortosa Hotel.",
     "SUBHEAD50OFF": "Registration Fee: 100€ including a 50% off<br>The registration Fee includes the lunch for the days May 31th and 1st of June at SB Corona Tortosa Hotel.",
     "NOM": "Name",
@@ -147,6 +149,7 @@
     "5_1": "<strong>Parallel activities</strong>",
     "5_2": "<ul><li>Exhibition “Regards croisés sur l'avenir de la planète”, by the French NGO “An Eye for an Eye”, exhibited in the meeting rooms of the COP21 in Paris in 2015. Lobby of the Theater-Auditorium Felip Pedrell (Tortosa)</li><li>Exhibition “Costa Rica, small giant” by photographer Álvaro Cubero. In partnership with B-The Travel Brand. Marcel·lí Domingo Library (Tortosa).</li></ul>"
   },
+  "DOWNLOAD": "Download catalog",
   "PROGRAMA": "Program",
   "CHANGE1": "Schedule change. Screening room 1",
   "CHANGE2": "The Lerchenberg Adventure, new screening, Wednesday 31/5<br>Cozumel, un paraíso en el Caribe maya, Thursday 1/6"

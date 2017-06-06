@@ -1,0 +1,61 @@
+<form name="tl_register" class="register-tl" layout="column" layout-padding layout-margin>
+  <h1 translate>{{'TL_REG.STUDENT'}}</h1>
+  <h3 translate>{{'TL_REG.SUBHEADONEDAYOFFER'}}</h3>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
+        <label for="nom">{{'TL_REG.NOM' | translate}}</label>
+        <input type="text" name="nom" ng-model="formData.nom" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="cognoms">{{'TL_REG.COGNOMS' | translate}}</label>
+        <input type="text" name="cognoms" ng-model="formData.cognoms" required="true">
+      </md-input-container>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex="100">
+      <md-input-container>
+        <label for="email">{{'TL_REG.EMAIL' | translate}}</label>
+        <input type="email" name="email" ng-model="formData.email" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="direccio">{{'TL_REG.DIRECCIO' | translate}}</label>
+        <input type="text" name="direccio" ng-model="formData.direccio" required="true">
+      </md-input-container>
+    </div>
+  </div>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
+        <label for="city">{{'REGISTER.CITY' | translate}}</label>
+        <input type="text" name="city" ng-model="formData.city" required="true">
+      </md-input-container>
+      <md-input-container>
+        <label for="country">{{'REGISTER.COUNTRY' | translate}}</label>
+        <md-select ng-model="formData.country" required="true" flex="100">
+          <md-option ng-repeat="country in countries" ng-value="country.translations.es">
+            {{country.translations.es}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-gt-xs="row">
+      <md-input-container>
+        <label for="categoria">{{'TL_REG.DIA' | translate}}</label>
+        <md-select ng-model="formData.dia" required="true" flex="100">
+          <md-option value="dimecres31">{{'TL_REG.MAY31' | translate}}</md-option>
+          <md-option value="dijous1">{{'TL_REG.JUNE1' | translate}}</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+  </div>
+  <div layout="row" layout-align="center">
+    <md-button class="md-raised md-primary" ng-click="processTL()" ng-disabled="tl_register.$invalid">{{'SUBMIT' | translate}}</md-button>
+  </div>
+</form>
+
+<div layout="row" layout-align="center" ng-if="allready">
+  <p class="md-warn">{{'TL_REG.ALLREADY' | translate}}</p>
+</div>
+<div layout="row" layout-align="center" ng-if="unknown">
+  <p class="md-warn">{{'TL_REG.UNKNOWN' | translate}}</p>
+</div>

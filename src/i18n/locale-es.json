@@ -21,6 +21,7 @@
   "EARLYFEE": "FECHA LÍMITE POSTERGADA",
   "SINCE31": "<strong>10 de abril</strong> ÚLTIMO DÍA para inscribir películas a <strong>terres Catalunya</strong>",
   "NO_VAT": "Precio sin IVA. Precio con IVA incluido: 72,60€",
+  "WINNERS": "PALMARÉS",
   "REGISTER": {
     "NEW": "Registro de nuevo participante",
     "AMOUNT": "Importe",
@@ -84,6 +85,7 @@
     "NEW": "Regístrate a <strong>terres LAB</strong>",
     "SUBHEAD": "Precio de la inscripción: 200€ (profesionales) y 150€ (estudiantes)<br>La cuota de inscripción incluye el almuerzo de los días 31 de mayo y 1 de junio en el restaurante del Hotel SB Corona Tortosa.",
     "SUBHEADONEDAY": "Precio de la inscripción: 100€<br>La cuota de inscripción incluye el almuerzo del dia seleccionado en el restaurante del Hotel SB Corona Tortosa.",
+    "SUBHEADONEDAYOFFER": "Precio de la inscripción: 75€<br>La cuota de inscripción incluye el almuerzo del dia seleccionado en el restaurante del Hotel SB Corona Tortosa.",
     "SUBHEAD20OFF": "Precio de la inscripción: 160€ con un 20% de descuento incluido<br>La cuota de inscripción incluye el almuerzo de los días 31 de mayo y 1 de junio en el restaurante del Hotel SB Corona Tortosa.",
     "SUBHEAD50OFF": "Precio de la inscripción: 100€ con un 50% de descuento incluido<br>La cuota de inscripción incluye el almuerzo de los días 31 de mayo y 1 de junio en el restaurante del Hotel SB Corona Tortosa.",
     "NOM": "Nombre",
@@ -147,6 +149,7 @@
     "5_1": "<strong>Actividades paralelas</strong>",
     "5_2": "<ul><li>Exposición “Regards croisés sur l’avenir de la planète”, de l’ONG francesa “An Eye For An Eye”, exhibida en los salones de reuniones de la COP21 de Paris el 2015. Vestíbulo del Teatre-Auditori Felip Pedrell (Tortosa).</li><li>Exposición “Costa Rica, pequeño gigante”, del fotógrafo Álvaro Cubero. En partenariado con B-The Travel Brand. Biblioteca Marcel·lí Domingo de Tortosa.</li></ul>"
   },
+  "DOWNLOAD": "Descarga el catálogo",
   "PROGRAMA": "Programa",
   "CHANGE1": "Cambio de programación. Sala 1",
   "CHANGE2": "The Lerchenberg Adventure, nueva proyección, miércoles 31/5<br>Cozumel, un paraíso en el Caribe maya, nueva proyección, jueves 1/6"

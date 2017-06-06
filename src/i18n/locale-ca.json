@@ -21,6 +21,7 @@
   "EARLYFEE": "DATA LÍMIT PRORROGADA",
   "SINCE31": "<strong>10 d’abril</strong> ÚLTIM DIA per inscriure pel·lícules a <strong>terres Catalunya</strong>",
   "NO_VAT": "Preu sense IVA. Preu amb IVA inclòs: 72,60€",
+  "WINNERS": "PALMARÈS",
   "REGISTER": {
     "NEW": "Registre de nou participant",
     "AMOUNT": "Import",
@@ -84,6 +85,7 @@
     "NEW": "Registra't a <strong>terres LAB</strong>",
     "SUBHEAD": "Preu de la inscripció: 200€ (professionals) i 150€ (estudiants)<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
     "SUBHEADONEDAY": "Preu de la inscripció: 100€<br>La quota d'inscripció inclou el dinar del dia seleccionat al restaurant de l'Hotel SB Corona Tortosa",
+    "SUBHEADONEDAYOFFER": "Preu de la inscripció: 75€<br>La quota d'inscripció inclou el dinar del dia seleccionat al restaurant de l'Hotel SB Corona Tortosa",
     "SUBHEAD20OFF": "Preu de la inscripció: 160€ amb un 20% de descompte inclòs<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
     "SUBHEAD50OFF": "Preu de la inscripció: 100€ amb un 50% de descompte inclòs<br>La quota d'inscripció inclou els dinars dels dies 31 de maig i 1 de juny al restaurant de l'Hotel SB Corona Tortosa",
     "NOM": "Nom",
@@ -147,6 +149,7 @@
     "5_1": "<strong>Activitats paral·leles</strong>",
     "5_2": "<ul><li>Exposició “Regards croisés sur l’avenir de la planète”, de l’ONG francesa “An Eye For An Eye”, exhibida als salons de reunions de la COP21 de Paris de l’any 2015. Vestíbul del Teatre-Auditori Felip Pedrell (Tortosa).</li><li>Exposició “Costa Rica, petit gegant”, del fotògraf Álvaro Cubero. En partenariat amb B-The Travel Brand. Biblioteca Marcel·lí Domingo de Tortosa.</li></ul>"
   },
+  "DOWNLOAD": "Descarrega el catàleg",
   "PROGRAMA": "Programa",
   "CHANGE1": "Canvi de programació. Sala 1",
   "CHANGE2": "The Lerchenberg Adventure, nova projecció, dimecres 31/5<br>Cozumel, un paraíso en el Caribe maya, nova projecció, dijous 1/6"

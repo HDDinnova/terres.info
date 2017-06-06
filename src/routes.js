@@ -77,6 +77,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/terreslab/terreslaboneday.html',
       controller: 'tlregOnedayCtrl'
     })
+    .state('terreslabonedayoffer', {
+      url: '/terreslab/oneday/oferta',
+      templateUrl: 'app/terreslab/terreslabonedayoffer.html',
+      controller: 'tlregOnedayOfferCtrl'
+    })
     .state('tlpay', {
       url: '/terreslab/register/pay',
       templateUrl: 'app/terreslab/pay.html'
