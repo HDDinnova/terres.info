@@ -4,15 +4,24 @@
     <h2><a ui-sref="sustainable"><img class="logomenu" src="img/logo-sustain.png" alt="Sustainable Day"></a></h2>
     <h2><a ui-sref="terreslab"><img class="logomenu" src="img/terresLAB_mini.png" alt="Logo terresLAB"></a></h2>
     <span flex></span>
-    <md-button show-gt-sm hide ui-sref="competition"><span translate>{{'OFFICIAL-COMPETITION'}}</span></md-button>
-    <md-button show-gt-sm hide ui-sref="program"><span translate>{{'WINNERS'}}</span></md-button>
-    <md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button>
-    <md-menu show-gt-sm hide>
-        <md-button ng-click="$mdOpenMenu()" aria-label="View jury">
-          {{'JURY' | translate}}
+    <md-menu md-offset="0 0">
+        <!-- Trigger element is a md-button with an icon -->
+        <md-button ng-click="$mdOpenMenu()" class="md-icon-button" aria-label="Open 2017 edition">
+            2017
         </md-button>
         <md-menu-content>
-          <md-menu-item ng-repeat="j in jury"><md-button ng-disabled="{{j.enabled}}" ng-click="goJury(j.url)">{{j.nom}}</md-button></md-menu-item>
+            <md-menu-item><md-button show-gt-sm hide ui-sref="competition"><span translate>{{'OFFICIAL-COMPETITION'}}</span></md-button></md-menu-item>
+            <md-menu-item><md-button show-gt-sm hide ui-sref="winners"><span translate>{{'WINNERS'}}</span></md-button></md-menu-item>
+            <md-menu-item><md-button show-gt-sm hide ui-sref="galeria"><span translate>{{'GALERIA'}}</span></md-button></md-menu-item>
+            <md-menu-item><md-button show-gt-sm hide ui-sref="partners"><span translate>{{'PARTNERS_MENU'}}</span></md-button></md-menu-item>
+            <md-menu-item><md-menu>
+                <md-button ng-click="$mdOpenMenu()" aria-label="View jury">
+                  {{'JURY' | translate}}
+                </md-button>
+                <md-menu-content>
+                  <md-menu-item ng-repeat="j in jury"><md-button ng-disabled="{{j.enabled}}" ng-click="goJury(j.url)">{{j.nom}}</md-button></md-menu-item>
+                </md-menu-content>
+            </md-menu></md-menu-item>
         </md-menu-content>
     </md-menu>
     <md-button show-gt-sm hide ng-click="docs()"><span translate>{{'NEWS_MENU'}}</span></md-button>

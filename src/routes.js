@@ -11,24 +11,18 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'app/main.html'
     })
-    .state('program', {
-      url: '/program',
-      templateUrl: 'app/program/program.html',
-      controller: 'programCtrl'
-    })
     .state('partners', {
       url: '/partners',
       templateUrl: 'app/partners/partners.html'
     })
-    .state('news', {
-      url: '/news',
-      templateUrl: 'app/news/news.html',
-      controller: 'NewsCtrl'
+    .state('winners', {
+      url: '/winners',
+      templateUrl: 'app/winners/winners.html'
     })
-    .state('post', {
-      url: '/news/:id',
-      templateUrl: 'app/news/news-post.html',
-      controller: 'NewsPostCtrl'
+    .state('galeria', {
+      url: '/gallery',
+      templateUrl: 'app/galeria/galeria.html',
+      controller: 'terresGallery'
     })
     .state('terreslab', {
       url: '/terreslab',
@@ -134,10 +128,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/official-competition',
       templateUrl: 'app/competition/competition.html',
       controller: 'competitionCtrl'
-    })
-    .state('howarrive', {
-      url: '/how-to-arrive',
-      templateUrl: 'app/arrive/arrive.html'
     })
     .state('soparregistre', {
       url: '/invitacio/sopar',

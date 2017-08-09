@@ -360,15 +360,14 @@ Flight::route('/rrss/@page', function($page){
         <meta name="keywords" content="'.$data['tags'].'">
         <meta name="author" content="Filmsnòmades - terres Catalunya">
 
+        <meta property="fb:app_id" content="202296976862575"/>
         <meta property="og:site_name" content="terres Catalunya International Eco & Tourism Film Festival"/>
         <meta property="og:url" content="'.$data['url'].'"/>
         <meta property="og:title" content="'.$data['title'].'"/>
         <meta property="og:description" content="'.utf8_encode($data['description']).'"/>
         <meta property="og:image" itemprop="image" content="'.$data['image'].'"/>
         <meta property="og:image:type" content="'.$data['imagetype'].'" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:locale" content="ca_ES" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:locale:alternate" content="es_ES" />
       </head>
       <body>

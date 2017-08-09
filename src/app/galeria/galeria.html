@@ -1,0 +1,12 @@
+<div class="main-container">
+  <md-content layout-padding  layout-xs="column" layout="row" layout-wrap>
+    <div flex-xs flex-gt-xs="50" flex-gt-md="25" layout="column" layout-gt-xs="row" ng-repeat="image in list">
+      <md-card class="gallery">
+        <img class="md-card-image" ng-src="img/gallery/thumb/{{image.url}}" alt="Gala terres Catalunya">
+        <div class="md-actions" layout="row" layout-align="end">
+           <a class="md-fab" md-ripple-size="full" target="_self" ng-href="img/gallery/{{image.url}}" download aria-label="download"><ng-md-icon icon="cloud_download"></ng-md-icon></a>
+         </div>
+      </md-card>
+    </div>
+  </md-content>
+</div>

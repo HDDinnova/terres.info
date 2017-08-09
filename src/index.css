@@ -71,6 +71,9 @@ md-select-menu md-option{
 md-select-menu .md-text{
   font-size: 15px;
 }
+md-menu-item span{
+  text-transform: uppercase;
+}
 
 .main-container {
   /*display: flex;
@@ -115,7 +118,6 @@ md-select-menu .md-text{
 .title-logo {
   max-height: 8rem;
   max-width: 70vw !important;
-  margin-top: calc(50vh - 8rem);
   position: relative;
   z-index: 1;
 }
@@ -133,6 +135,18 @@ md-select-menu .md-text{
 }
 .title-h2 img{
   height: 1.5rem;
+}
+.title div{
+  margin-top: calc(50vh - 15rem);
+}
+.title .black{
+  background-color: rgba(0,0,0,.7);
+  width: 100vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.covervid-video{
+  z-index: -1;
 }
 .magnificent-slider{
   z-index: 0 !important;
@@ -639,4 +653,7 @@ section{
   margin-left: auto;
   margin-right: auto;
   width: 250px;
+}
+.gallery{
+  padding-bottom: 0 !important;
 }
